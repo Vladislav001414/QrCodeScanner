@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QrCode Scanner</string>
+    <string name="qr_type_url">यूआरएल (URL)</string>
+    <string name="qr_type_wifi">वाई-फ़ाई</string>
+    <string name="qr_type_contact">संपर्क जानकारी</string>
+    <string name="qr_type_phone">फ़ोन नंबर</string>
+    <string name="qr_type_email">ईमेल</string>
+    <string name="qr_type_sms">एसएमएस संदेश</string>
+    <string name="qr_type_geo">भौगोलिक निर्देशांक</string>
+    <string name="qr_type_calendar">कैंलेडर कार्यक्रम</string>
+    <string name="qr_type_driver_license">ड्राइविंग लाइसेंस</string>
+    <string name="qr_type_product">उत्पाद बारकोड</string>
+    <string name="qr_type_isbn">पुस्तक आईएसबीएन (ISBN)</string>
+    <string name="qr_type_text">पाठ (Text)</string>
+    <string name="qr_type_unknown">अज्ञात प्रकार</string>
+    <string name="qr_type_vcard_title">विज़िटिंग कार्ड (vCard)</string>
+    <string name="qr_type_mecard_title">त्वरित संपर्क</string>
+    <string name="error_qr_not_found">कोई क्यूआर कोड नहीं मिला</string>
+    <string name="error_gallery_scan_failed">छवि को स्कैन करने में विफल। कृपया पुनः प्रयास करें या कोई अन्य फ़ोटो चुनें।</string>
+
+    <string name="action_share">साझा करें</string>
+    <string name="action_copy">कॉपी करें</string>
+
+    <string name="action_open_browser">ब्राउज़र में खोलें</string>
+    <string name="action_search_google">गूगल पर खोजें</string>
+    <string name="action_connect_wifi">वाई-फ़ाई से कनेक्ट करें</string>
+    <string name="action_add_contact">संपर्क में जोड़ें</string>
+    <string name="action_call_phone">कॉल करें</string>
+    <string name="action_send_sms">एसएमएस भेजें</string>
+    <string name="action_send_email">ईमेल भेजें</string>
+    <string name="action_open_maps">मैप्स में खोलें</string>
+    <string name="action_add_calendar">कैलेंडर में जोड़ें</string>
+    <string name="action_find_product">उत्पाद ढूंढें</string>
+
+    <string name="nothing_to_copy">कॉपी करने के लिए कुछ नहीं है</string>
+    <string name="copied_to_clipboard">क्लिपबोर्ड पर कॉपी किया गया</string>
+    <string name="share_via">के माध्यम से साझा करें…</string>
+    <string name="share_file">फ़ाइल साझा करें…</string>
+
+    <string name="file_creation_error">फ़ाइल बनाने में त्रुटि</string>
+
+    <string name="record_from_qr">क्यूआर से स्कैन किया गया</string>
+    <string name="event">कार्यक्रम</string>
+    <string name="text">पाठ (Text)</string>
+
+    <string name="wi_fi_network">वाई-फ़ाई नेटवर्क</string>
+    <string name="no_password">कोई पासवर्ड नहीं</string>
+    <string name="password">पासवर्ड</string>
+    <string name="unknown_wifi">अज्ञात वाई-फ़ाई</string>
+
+    <string name="email">ईमेल</string>
+    <string name="to">प्रति (To)</string>
+    <string name="subject">विषय</string>
+    <string name="sms_message">एसएमएस संदेश</string>
+
+    <string name="contact">संपर्क</string>
+    <string name="name">नाम</string>
+    <string name="contact_phone">फ़ोन नंबर</string>
+
+    <string name="calendar_summary">शीर्षक</string>
+    <string name="calendar_description">विवरण</string>
+    <string name="calendar_location">स्थान</string>
+    <string name="calendar_start">प्रारंभ</string>
+    <string name="calendar_end">समाप्त</string>
+
+    <string name="copy_password">पासवर्ड कॉपी करें</string>
+    <string name="copy_link">लिंक कॉपी करें</string>
+    <string name="copy_phone_number">फ़ोन नंबर कॉपी करें</string>
+    <string name="copy_email">ईमेल कॉपी करें</string>
+    <string name="copy_event_details">कार्यक्रम का विवरण कॉपी करें</string>
+    <string name="copy_contact_name">संपर्क का नाम कॉपी करें</string>
+    <string name="copy_text">पाठ कॉपी करें</string>
+
+    <string name="contact_title">संपर्क विवरण</string>
+    <string name="contact_from_phonebook">संपर्कों से आयात करें</string>
+    <string name="label_full_name">पूरा नाम</string>
+    <string name="hint_full_name">राहुल शर्मा</string>
+    <string name="label_organization">संगठन</string>
+    <string name="hint_organization">कंपनी का नाम</string>
+    <string name="label_phone_number">फ़ोन नंबर</string>
+    <string name="hint_phone_number">+91 98765 43210</string>
+    <string name="label_email">ईमेल पता</string>
+    <string name="hint_email">example@mail.com</string>
+    <string name="label_address">पता</string>
+    <string name="hint_address">123 सड़क, शहर, देश</string>
+    <string name="label_notes">नोट्स</string>
+    <string name="hint_notes">अतिरिक्त विवरण...</string>
+
+    <string name="email_qr_title">ईमेल विवरण</string>
+    <string name="label_email_address">ईमेल पता</string>
+    <string name="hint_email_address">recipient@example.com</string>
+    <string name="label_email_subject">विषय</string>
+    <string name="hint_email_subject">विषय दर्ज करें...</string>
+    <string name="label_email_body">संदेश की सामग्री</string>
+    <string name="hint_email_body">संदेश दर्ज करें...</string>
+
+    <string name="sms_qr_title">एसएमएस संदेश</string>
+    <string name="label_sms_phone_number">फ़ोन नंबर</string>
+    <string name="hint_sms_phone_number">+91 98765 43210</string>
+    <string name="label_sms_message">संदेश</string>
+    <string name="hint_sms_message">संदेश दर्ज करें...</string>
+
+    <string name="gps_qr_title">जीपीएस स्थान</string>
+    <string name="label_gps_latitude">अक्षांश (Latitude)</string>
+    <string name="hint_gps_latitude">उदा. 28.6139</string>
+    <string name="label_gps_longitude">देशांतर (Longitude)</string>
+    <string name="hint_gps_longitude">उदा. 77.2090</string>
+    <string name="label_gps_query">स्थान खोज / नाम (वैकल्पिक)</string>
+    <string name="hint_gps_query">उदा. एफिल टॉवर, पेरिस</string>
+    <string name="btn_select_on_map">मानचित्र पर स्थान चुनें</string>
+    <string name="text_or">या</string>
+
+    <string name="phone_qr_title">फ़ोन नंबर</string>
+    <string name="label_phone_number_input">फ़ोन नंबर</string>
+    <string name="hint_phone_number_input">+91 98765 43210</string>
+
+    <string name="event_qr_title">कैलेंडर कार्यक्रम</string>
+    <string name="label_event_title">कार्यक्रम का शीर्षक</string>
+    <string name="hint_event_title">उदा. टीम मीटिंग</string>
+    <string name="label_all_day">पूरे दिन का कार्यक्रम</string>
+    <string name="label_start_date">प्रारंभ तिथि और समय</string>
+    <string name="hint_start_date">प्रारंभ तिथि चुनें</string>
+    <string name="label_end_date">समाप्ति तिथि और समय</string>
+    <string name="hint_end_date">समाप्ति तिथि चुनें</string>
+    <string name="label_event_location">स्थान</string>
+    <string name="hint_event_location">उदा. कार्यालय / ज़ूम लिंक</string>
+    <string name="label_event_description">विवरण</string>
+    <string name="hint_event_description">विवरण या नोट्स जोड़ें...</string>
+
+    <string name="wifi_qr_title">वाई-फ़ाई नेटवर्क</string>
+    <string name="label_wifi_ssid">नेटवर्क का नाम (SSID)</string>
+    <string name="hint_wifi_ssid">उदा. Home_Network</string>
+    <string name="label_wifi_password">पासवर्ड</string>
+    <string name="hint_wifi_password">वाई-फ़ाई पासवर्ड दर्ज करें</string>
+    <string name="label_wifi_encryption">एनक्रिप्शन का प्रकार</string>
+    <string name="label_wifi_hidden">छिपा हुआ नेटवर्क</string>
+
+    <string-array name="wifi_encryption_types">
+        <item>WPA / WPA2</item>
+        <item>WPA3</item>
+        <item>WEP</item>
+        <item>कोई नहीं (खुला)</item>
+    </string-array>
+
+    <string name="myqr_title">मेरा प्रोफ़ाइल क्यूआर</string>
+    <string name="label_myqr_full_name">पूरा नाम</string>
+    <string name="hint_myqr_full_name">राहुल शर्मा</string>
+    <string name="label_myqr_organization">संगठन</string>
+    <string name="hint_myqr_organization">कंपनी का नाम</string>
+    <string name="label_myqr_phone_number">फ़ोन नंबर</string>
+    <string name="hint_myqr_phone_number">+91 98765 43210</string>
+    <string name="label_myqr_email">ईमेल पता</string>
+    <string name="hint_myqr_email">example@mail.com</string>
+    <string name="label_myqr_address">पता</string>
+    <string name="hint_myqr_address">123 सड़क, शहर, देश</string>
+    <string name="label_myqr_notes">नोट्स</string>
+    <string name="hint_myqr_notes">अतिरिक्त विवरण...</string>
+
+    <string name="create_qr_title">क्यूआर कोड बनाएं</string>
+    <string name="btn_generate_qr">क्यूआर कोड जनरेट करें</string>
+
+    <string name="scan_qr_code">क्यूआर कोड स्कैन करें</string>
+    <string name="scan_history">स्कैन इतिहास</string>
+    <string name="profile">प्रोफ़ाइल</string>
+    <string name="history_and_favorites">इतिहास और पसंदीदा</string>
+
+    <string name="all">सभी</string>
+    <string name="favorites">पसंदीदा</string>
+    <string name="created">बनाए गए</string>
+    <string name="scanned">स्कैन किए गए</string>
+    <string name="list_is_empty">सूची खाली है</string>
+
+    <string name="back">वापस</string>
+    <string name="close">बंद करें</string>
+    <string name="add_to_favorites">पसंदीदा में जोड़ें</string>
+    <string name="qr_code_created">क्यूआर कोड बन गया है</string>
+
+    <string name="qr_code">क्यूआर कोड</string>
+    <string name="download">डाउनलोड करें</string>
+    <string name="information">जानकारी</string>
+    <string name="type">प्रकार</string>
+    <string name="content">सामग्री</string>
+    <string name="created_date">बनाने की तिथि</string>
+    <string name="view_details">विवरण देखें</string>
+    <string name="qr_code_details">क्यूआर कोड विवरण</string>
+    <string name="qr_type">क्यूआर प्रकार</string>
+    <string name="type_label">प्रकार:</string>
+
+    <string name="turn_on_flashlight">फ़्लैशलाइट चालू करें</string>
+    <string name="flip_camera">कैमरा बदलें</string>
+    <string name="select_from_gallery">गैलरी से चुनें</string>
+    <string name="camera_permission_denied">कैमरा अनुमति अस्वीकृत</string>
+
+    <string name="enter_your_text">अपना पाठ दर्ज करें...</string>
+    <string name="url_address">यूआरएल (URL) पता</string>
+    <string name="specify_name_or_phone">नाम या फ़ोन नंबर दर्ज करें</string>
+    <string name="enter_text">पाठ दर्ज करें</string>
+    <string name="enter_email">ईमेल दर्ज करें</string>
+    <string name="enter_url">यूआरएल (URL) दर्ज करें</string>
+    <string name="enter_network_name_ssid">नेटवर्क नाम (SSID) दर्ज करें</string>
+    <string name="enter_phone_number">फ़ोन नंबर दर्ज करें</string>
+    <string name="required">आवश्यक</string>
+    <string name="enter_event_title">कार्यक्रम का शीर्षक दर्ज करें</string>
+
+    <string name="address_label">पता:</string>
+    <string name="note_label">नोट:</string>
+    <string name="company_label">कंपनी:</string>
+    <string name="geolocation_label">स्थान:</string>
+    <string name="select_date">तिथि चुनें</string>
+
+    <string name="settings_title">सेटिंग्स</string>
+    <string name="preferences_header">प्राथमिकताएं</string>
+    <string name="label_language">भाषा</string>
+    <string name="label_theme">थीम</string>
+
+    <string name="lang_english">English</string>
+    <string name="lang_russian">Русский</string>
+    <string name="lang_spanish">Español</string>
+    <string name="lang_chinese">简体中文</string>
+    <string name="lang_german">Deutsch</string>
+    <string name="lang_french">Français</string>
+    <string name="lang_japanese">日本語</string>
+    <string name="lang_polish">Polski</string>
+    <string name="lang_portuguese">Português (Brasil)</string>
+    <string name="lang_arabic">العربية</string>
+    <string name="lang_korean">한국어</string>
+    <string name="lang_ukrainian">Українська</string>
+    <string name="lang_hindi">हिन्दी</string>
+
+    <string name="theme_system">सिस्टम के अनुसार</string>
+    <string name="theme_light">लाइट (Light)</string>
+    <string name="theme_dark">डार्क (Dark)</string>
+
+    <string name="qr_saved_to_gallery">QR कोड गैलरी में सहेजा गया!</string>
+    <string name="qr_save_error">सहेजने में त्रुटि हुई</string>
+    <string name="qr_share_message">यह मेरा QR कोड है:</string>
+    <string name="qr_share_title">QR कोड साझा करें</string>
+    <string name="qr_share_error">साझा करने में त्रुटि हुई</string>
+</resources>

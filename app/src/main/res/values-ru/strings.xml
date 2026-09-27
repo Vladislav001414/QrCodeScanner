@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QrCode Scanner</string>
+    <string name="qr_type_url">URL</string>
+    <string name="qr_type_wifi">Wi-Fi</string>
+    <string name="qr_type_contact">Контактные данные</string>
+    <string name="qr_type_phone">Номер телефона</string>
+    <string name="qr_type_email">Эл. почта</string>
+    <string name="qr_type_sms">SMS-сообщение</string>
+    <string name="qr_type_geo">Геоданные</string>
+    <string name="qr_type_calendar">Событие календаря</string>
+    <string name="qr_type_driver_license">Водительские права</string>
+    <string name="qr_type_product">Штрихкод товара</string>
+    <string name="qr_type_isbn">ISBN книги</string>
+    <string name="qr_type_text">Текст</string>
+    <string name="qr_type_unknown">Неизвестный тип</string>
+    <string name="qr_type_vcard_title">Визитная карточка (vCard)</string>
+    <string name="qr_type_mecard_title">Быстрый контакт</string>
+    <string name="error_qr_not_found">QR-код не найден</string>
+    <string name="error_gallery_scan_failed">Не удалось распознать изображение. Попробуйте еще раз или выберите другое фото.</string>
+
+    <string name="action_share">Поделиться</string>
+    <string name="action_copy">Копировать</string>
+
+    <string name="action_open_browser">Открыть в браузере</string>
+    <string name="action_search_google">Искать в Google</string>
+    <string name="action_connect_wifi">Подключиться к Wi-Fi</string>
+    <string name="action_add_contact">Добавить в контакты</string>
+    <string name="action_call_phone">Позвонить</string>
+    <string name="action_send_sms">Отправить SMS</string>
+    <string name="action_send_email">Отправить эл. письмо</string>
+    <string name="action_open_maps">Открыть на картах</string>
+    <string name="action_add_calendar">Добавить в календарь</string>
+    <string name="action_find_product">Найти товар</string>
+
+    <string name="nothing_to_copy">Нечего копировать</string>
+    <string name="copied_to_clipboard">Скопировано в буфер обмена</string>
+    <string name="share_via">Поделиться через…</string>
+    <string name="share_file">Поделиться файлом…</string>
+
+    <string name="file_creation_error">Ошибка создания файла</string>
+
+    <string name="record_from_qr">Отсканировано из QR</string>
+    <string name="event">Событие</string>
+    <string name="text">Текст</string>
+
+    <string name="wi_fi_network">Сеть Wi-Fi</string>
+    <string name="no_password">Без пароля</string>
+    <string name="password">Пароль</string>
+    <string name="unknown_wifi">Неизвестный Wi-Fi</string>
+
+    <string name="email">Эл. почта</string>
+    <string name="to">Кому</string>
+    <string name="subject">Тема</string>
+    <string name="sms_message">SMS-сообщение</string>
+
+    <string name="contact">Контакт</string>
+    <string name="name">Имя</string>
+    <string name="contact_phone">Номер телефона</string>
+
+    <string name="calendar_summary">Название</string>
+    <string name="calendar_description">Описание</string>
+    <string name="calendar_location">Местоположение</string>
+    <string name="calendar_start">Начало</string>
+    <string name="calendar_end">Конец</string>
+
+    <string name="copy_password">Скопировать пароль</string>
+    <string name="copy_link">Скопировать ссылку</string>
+    <string name="copy_phone_number">Скопировать номер телефона</string>
+    <string name="copy_email">Скопировать эл. почту</string>
+    <string name="copy_event_details">Скопировать детали события</string>
+    <string name="copy_contact_name">Скопировать имя контакта</string>
+    <string name="copy_text">Скопировать текст</string>
+
+    <string name="contact_title">Контактные данные</string>
+    <string name="contact_from_phonebook">Импорт из контактов</string>
+    <string name="label_full_name">Полное имя</string>
+    <string name="hint_full_name">Иван Иванов</string>
+    <string name="label_organization">Организация</string>
+    <string name="hint_organization">Название компании</string>
+    <string name="label_phone_number">Номер телефона</string>
+    <string name="hint_phone_number">+7 999 123 4567</string>
+    <string name="label_email">Адрес эл. почты</string>
+    <string name="hint_email">example@mail.com</string>
+    <string name="label_address">Адрес</string>
+    <string name="hint_address">ул. Ленина, д. 1, Город, Страна</string>
+    <string name="label_notes">Заметки</string>
+    <string name="hint_notes">Дополнительная информация...</string>
+
+    <string name="email_qr_title">Детали эл. письма</string>
+    <string name="label_email_address">Адрес эл. почты</string>
+    <string name="hint_email_address">recipient@example.com</string>
+    <string name="label_email_subject">Тема</string>
+    <string name="hint_email_subject">Введите тему...</string>
+    <string name="label_email_body">Текст сообщения</string>
+    <string name="hint_email_body">Введите текст сообщения...</string>
+
+    <string name="sms_qr_title">SMS-сообщение</string>
+    <string name="label_sms_phone_number">Номер телефона</string>
+    <string name="hint_sms_phone_number">+7 999 123 4567</string>
+    <string name="label_sms_message">Сообщение</string>
+    <string name="hint_sms_message">Введите текст сообщения...</string>
+
+    <string name="gps_qr_title">GPS-координаты</string>
+    <string name="label_gps_latitude">Широта</string>
+    <string name="hint_gps_latitude">например, 55.7558</string>
+    <string name="label_gps_longitude">Долгота</string>
+    <string name="hint_gps_longitude">например, 37.6173</string>
+    <string name="label_gps_query">Запрос места / Название (опционально)</string>
+    <string name="hint_gps_query">например, Красная площадь, Москва</string>
+    <string name="btn_select_on_map">Выбрать место на карте</string>
+    <string name="text_or">ИЛИ</string>
+
+    <string name="phone_qr_title">Номер телефона</string>
+    <string name="label_phone_number_input">Номер телефона</string>
+    <string name="hint_phone_number_input">+7 999 123 4567</string>
+
+    <string name="event_qr_title">Событие календаря</string>
+    <string name="label_event_title">Название события</string>
+    <string name="hint_event_title">например, Встреча команды</string>
+    <string name="label_all_day">Весь день</string>
+    <string name="label_start_date">Дата и время начала</string>
+    <string name="hint_start_date">Выберите дату начала</string>
+    <string name="label_end_date">Дата и время окончания</string>
+    <string name="hint_end_date">Выберите дату окончания</string>
+    <string name="label_event_location">Местоположение</string>
+    <string name="hint_event_location">например, Офис / Ссылка на Zoom</string>
+    <string name="label_event_description">Описание</string>
+    <string name="hint_event_description">Добавьте детали события или заметки...</string>
+
+    <string name="wifi_qr_title">Сеть Wi-Fi</string>
+    <string name="label_wifi_ssid">Имя сети (SSID)</string>
+    <string name="hint_wifi_ssid">например, Home_Network</string>
+    <string name="label_wifi_password">Пароль</string>
+    <string name="hint_wifi_password">Введите пароль Wi-Fi</string>
+    <string name="label_wifi_encryption">Тип шифрования</string>
+    <string name="label_wifi_hidden">Скрытая сеть</string>
+
+    <string-array name="wifi_encryption_types">
+        <item>WPA / WPA2</item>
+        <item>WPA3</item>
+        <item>WEP</item>
+        <item>Нет (Открытая)</item>
+    </string-array>
+
+    <string name="myqr_title">Мой QR-профиль</string>
+    <string name="label_myqr_full_name">Полное имя</string>
+    <string name="hint_myqr_full_name">Иван Иванов</string>
+    <string name="label_myqr_organization">Организация</string>
+    <string name="hint_myqr_organization">Название компании</string>
+    <string name="label_myqr_phone_number">Номер телефона</string>
+    <string name="hint_myqr_phone_number">+7 999 123 4567</string>
+    <string name="label_myqr_email">Адрес эл. почты</string>
+    <string name="hint_myqr_email">example@mail.com</string>
+    <string name="label_myqr_address">Адрес</string>
+    <string name="hint_myqr_address">ул. Ленина, д. 1, Город, Страна</string>
+    <string name="label_myqr_notes">Заметки</string>
+    <string name="hint_myqr_notes">Дополнительная информация...</string>
+
+    <string name="create_qr_title">Создать QR-код</string>
+    <string name="btn_generate_qr">Сгенерировать QR-код</string>
+
+    <string name="scan_qr_code">Сканировать QR-код</string>
+    <string name="scan_history">История сканирования</string>
+    <string name="profile">Профиль</string>
+    <string name="history_and_favorites">История и Избранное</string>
+
+    <string name="all">Все</string>
+    <string name="favorites">Избранное</string>
+    <string name="created">Создано</string>
+    <string name="scanned">Отсканировано</string>
+    <string name="list_is_empty">Список пуст</string>
+
+    <string name="back">Назад</string>
+    <string name="close">Закрыть</string>
+    <string name="add_to_favorites">Добавить в избранное</string>
+    <string name="qr_code_created">QR-код создан</string>
+
+    <string name="qr_code">QR-код</string>
+    <string name="download">Скачать</string>
+    <string name="information">Информация</string>
+    <string name="type">Тип</string>
+    <string name="content">Содержимое</string>
+    <string name="created_date">Создано</string>
+    <string name="view_details">Подробнее</string>
+    <string name="qr_code_details">Детали QR-кода</string>
+    <string name="qr_type">Тип QR</string>
+    <string name="type_label">Тип:</string>
+
+    <string name="turn_on_flashlight">Включить вспышку</string>
+    <string name="flip_camera">Сменить камеру</string>
+    <string name="select_from_gallery">Выбрать из галереи</string>
+    <string name="camera_permission_denied">Нет доступа к камере</string>
+
+    <string name="enter_your_text">Введите ваш текст...</string>
+    <string name="url_address">URL-адрес</string>
+    <string name="specify_name_or_phone">Введите имя или номер телефона</string>
+    <string name="enter_text">Введите текст</string>
+    <string name="enter_email">Введите эл. почту</string>
+    <string name="enter_url">Введите URL</string>
+    <string name="enter_network_name_ssid">Введите имя сети (SSID)</string>
+    <string name="enter_phone_number">Введите номер телефона</string>
+    <string name="required">Обязательно</string>
+    <string name="enter_event_title">Введите название события</string>
+
+    <string name="address_label">Адрес:</string>
+    <string name="note_label">Заметка:</string>
+    <string name="company_label">Компания:</string>
+    <string name="geolocation_label">Местоположение:</string>
+    <string name="select_date">Выберите дату</string>
+
+    <string name="settings_title">Настройки</string>
+    <string name="preferences_header">НАСТРОЙКИ</string>
+    <string name="label_language">Язык</string>
+    <string name="label_theme">Тема</string>
+
+    <string name="lang_english">English</string>
+    <string name="lang_russian">Русский</string>
+    <string name="lang_spanish">Español</string>
+    <string name="lang_chinese">简体中文</string>
+    <string name="lang_german">Deutsch</string>
+    <string name="lang_french">Français</string>
+    <string name="lang_japanese">日本語</string>
+    <string name="lang_polish">Polski</string>
+    <string name="lang_portuguese">Português (Brasil)</string>
+    <string name="lang_arabic">العربية</string>
+    <string name="lang_korean">한국어</string>
+    <string name="lang_ukrainian">Українська</string>
+    <string name="lang_hindi">हिन्दी</string>
+
+    <string name="theme_system">Системная</string>
+    <string name="theme_light">Светлая</string>
+    <string name="theme_dark">Тёмная</string>
+
+    <string name="qr_saved_to_gallery">QR-код сохранен в галерею!</string>
+    <string name="qr_save_error">Ошибка при сохранении</string>
+    <string name="qr_share_message">Вот мой QR-код:</string>
+    <string name="qr_share_title">Поделиться QR-кодом</string>
+    <string name="qr_share_error">Ошибка при попытке поделиться</string>
+</resources>

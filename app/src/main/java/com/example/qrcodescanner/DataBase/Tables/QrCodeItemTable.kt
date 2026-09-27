@@ -9,7 +9,7 @@ import java.sql.Date
 data class QrCodeItemTable(
     @PrimaryKey(autoGenerate = true)
     val id: Long? = 0,
-    val qrType: Int,
+    val qrType: String,
     val rawValue: String,
     val status: String,
     val favorite: Boolean,

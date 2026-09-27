@@ -14,6 +14,14 @@
         android:name="com.example.qrcodescanner.Fragments.QrCreatorFragment"
         android:label="Create" />
     <fragment
+        android:id="@+id/nav_history"
+        android:name="com.example.qrcodescanner.Fragments.QrCodeHistoryFragment"
+        android:label="Qr History" />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.qrcodescanner.Fragments.ProfileFragment"
+        android:label="Profile" />
+    <fragment
         android:id="@+id/qrCreationFragment"
         android:name="com.example.qrcodescanner.Fragments.QrInsertDataFragment"
         android:label="Create Form" />
@@ -21,4 +29,5 @@
         android:id="@+id/qrViewFragment"
         android:name="com.example.qrcodescanner.Fragments.QrViewFragment"
         android:label="View QR" />
+
 </navigation>

@@ -91,8 +91,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:contentDescription="Toggle Password Visibility"
-                android:src="@android:drawable/ic_menu_view"
+                android:src="@drawable/outline_visibility_24"
                 app:tint="@color/text_secondary" />
         </RelativeLayout>
     </LinearLayout>
@@ -107,9 +106,10 @@
         android:textSize="12sp" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEncryption"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="52dp"
         android:layout_marginBottom="12dp"
         app:boxBackgroundColor="@color/bg_main"
         app:boxCornerRadiusBottomEnd="14dp"
@@ -121,25 +121,26 @@
         app:endIconTint="@color/secondary"
         app:hintEnabled="false">
 
-        <AutoCompleteTextView
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
             android:id="@+id/spinnerEncryption"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:background="@null"
+            android:layout_height="match_parent"
             android:inputType="none"
             android:paddingStart="14dp"
             android:paddingTop="0dp"
             android:paddingEnd="14dp"
             android:paddingBottom="0dp"
-            android:text="WPA / WPA2"
+            android:popupBackground="@color/surface_card"
             android:textColor="@color/text_primary"
             android:textSize="14sp" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="4dp">
+        android:paddingHorizontal="4dp"
+        android:visibility="visible">
 
         <TextView
             android:layout_width="wrap_content"

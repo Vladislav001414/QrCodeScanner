@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QrCode Scanner</string>
+    <string name="qr_type_url">URL</string>
+    <string name="qr_type_wifi">Wi-Fi</string>
+    <string name="qr_type_contact">연락처 정보</string>
+    <string name="qr_type_phone">전화번호</string>
+    <string name="qr_type_email">이메일</string>
+    <string name="qr_type_sms">SMS 메시지</string>
+    <string name="qr_type_geo">지리 좌표</string>
+    <string name="qr_type_calendar">캘린더 일정</string>
+    <string name="qr_type_driver_license">운전면허증</string>
+    <string name="qr_type_product">상품 바코드</string>
+    <string name="qr_type_isbn">도서 ISBN</string>
+    <string name="qr_type_text">텍스트</string>
+    <string name="qr_type_unknown">알 수 없는 유형</string>
+    <string name="qr_type_vcard_title">명함 (vCard)</string>
+    <string name="qr_type_mecard_title">빠른 연락처</string>
+    <string name="error_qr_not_found">QR 코드를 찾을 수 없습니다</string>
+    <string name="error_gallery_scan_failed">이미지를 스캔하지 못했습니다. 다시 시도하거나 다른 사진을 선택해 주세요.</string>
+
+    <string name="action_share">공유</string>
+    <string name="action_copy">복사</string>
+
+    <string name="action_open_browser">브라우저에서 열기</string>
+    <string name="action_search_google">Google에서 검색</string>
+    <string name="action_connect_wifi">Wi-Fi 연결</string>
+    <string name="action_add_contact">연락처에 추가</string>
+    <string name="action_call_phone">전화 걸기</string>
+    <string name="action_send_sms">SMS 보내기</string>
+    <string name="action_send_email">이메일 보내기</string>
+    <string name="action_open_maps">지도에서 열기</string>
+    <string name="action_add_calendar">캘린더에 추가</string>
+    <string name="action_find_product">상품 검색</string>
+
+    <string name="nothing_to_copy">복사할 내용이 없습니다</string>
+    <string name="copied_to_clipboard">클립보드에 복사되었습니다</string>
+    <string name="share_via">다음으로 공유…</string>
+    <string name="share_file">파일 공유…</string>
+
+    <string name="file_creation_error">파일 생성 오류</string>
+
+    <string name="record_from_qr">QR 코드에서 스캔됨</string>
+    <string name="event">일정</string>
+    <string name="text">텍스트</string>
+
+    <string name="wi_fi_network">Wi-Fi 네트워크</string>
+    <string name="no_password">비밀번호 없음</string>
+    <string name="password">비밀번호</string>
+    <string name="unknown_wifi">알 수 없는 Wi-Fi</string>
+
+    <string name="email">이메일</string>
+    <string name="to">받는 사람</string>
+    <string name="subject">제목</string>
+    <string name="sms_message">SMS 메시지</string>
+
+    <string name="contact">연락처</string>
+    <string name="name">이름</string>
+    <string name="contact_phone">전화번호</string>
+
+    <string name="calendar_summary">제목</string>
+    <string name="calendar_description">설명</string>
+    <string name="calendar_location">위치</string>
+    <string name="calendar_start">시작</string>
+    <string name="calendar_end">종료</string>
+
+    <string name="copy_password">비밀번호 복사</string>
+    <string name="copy_link">링크 복사</string>
+    <string name="copy_phone_number">전화번호 복사</string>
+    <string name="copy_email">이메일 복사</string>
+    <string name="copy_event_details">일정 상세 복사</string>
+    <string name="copy_contact_name">연락처 이름 복사</string>
+    <string name="copy_text">텍스트 복사</string>
+
+    <string name="contact_title">연락처 상세</string>
+    <string name="contact_from_phonebook">연락처에서 가져오기</string>
+    <string name="label_full_name">성명</string>
+    <string name="hint_full_name">홍길동</string>
+    <string name="label_organization">조직/회사</string>
+    <string name="hint_organization">회사명</string>
+    <string name="label_phone_number">전화번호</string>
+    <string name="hint_phone_number">+82 10 1234 5678</string>
+    <string name="label_email">이메일 주소</string>
+    <string name="hint_email">example@mail.com</string>
+    <string name="label_address">주소</string>
+    <string name="hint_address">도로명 주소, 도시, 국가</string>
+    <string name="label_notes">메모</string>
+    <string name="hint_notes">추가 상세 내용...</string>
+
+    <string name="email_qr_title">이메일 상세</string>
+    <string name="label_email_address">이메일 주소</string>
+    <string name="hint_email_address">recipient@example.com</string>
+    <string name="label_email_subject">제목</string>
+    <string name="hint_email_subject">제목을 입력하세요...</string>
+    <string name="label_email_body">본문</string>
+    <string name="hint_email_body">메시지 내용을 입력하세요...</string>
+
+    <string name="sms_qr_title">SMS 메시지</string>
+    <string name="label_sms_phone_number">전화번호</string>
+    <string name="hint_sms_phone_number">+82 10 1234 5678</string>
+    <string name="label_sms_message">메시지</string>
+    <string name="hint_sms_message">메시지 내용을 입력하세요...</string>
+
+    <string name="gps_qr_title">GPS 위치</string>
+    <string name="label_gps_latitude">위도</string>
+    <string name="hint_gps_latitude">예: 37.5665</string>
+    <string name="label_gps_longitude">경도</string>
+    <string name="hint_gps_longitude">예: 126.9780</string>
+    <string name="label_gps_query">위치 검색 / 장소명 (선택사항)</string>
+    <string name="hint_gps_query">예: 에펠탑, 파리</string>
+    <string name="btn_select_on_map">지도에서 위치 선택</string>
+    <string name="text_or">또는</string>
+
+    <string name="phone_qr_title">전화번호</string>
+    <string name="label_phone_number_input">전화번호</string>
+    <string name="hint_phone_number_input">+82 10 1234 5678</string>
+
+    <string name="event_qr_title">캘린더 일정</string>
+    <string name="label_event_title">일정 제목</string>
+    <string name="hint_event_title">예: 팀 회의</string>
+    <string name="label_all_day">하루 종일</string>
+    <string name="label_start_date">시작 날짜 및 시간</string>
+    <string name="hint_start_date">시작 날짜 선택</string>
+    <string name="label_end_date">종료 날짜 및 시간</string>
+    <string name="hint_end_date">종료 날짜 선택</string>
+    <string name="label_event_location">위치</string>
+    <string name="hint_event_location">예: 회의실 / Zoom 링크</string>
+    <string name="label_event_description">설명</string>
+    <string name="hint_event_description">일정 상세 내용 또는 메모 추가...</string>
+
+    <string name="wifi_qr_title">Wi-Fi 네트워크</string>
+    <string name="label_wifi_ssid">네트워크 이름 (SSID)</string>
+    <string name="hint_wifi_ssid">예: Home_Network</string>
+    <string name="label_wifi_password">비밀번호</string>
+    <string name="hint_wifi_password">Wi-Fi 비밀번호 입력</string>
+    <string name="label_wifi_encryption">암호화 유형</string>
+    <string name="label_wifi_hidden">숨겨진 네트워크</string>
+
+    <string-array name="wifi_encryption_types">
+        <item>WPA / WPA2</item>
+        <item>WPA3</item>
+        <item>WEP</item>
+        <item>개방 (없음)</item>
+    </string-array>
+
+    <string name="myqr_title">내 프로필 QR</string>
+    <string name="label_myqr_full_name">성명</string>
+    <string name="hint_myqr_full_name">홍길동</string>
+    <string name="label_myqr_organization">조직/회사</string>
+    <string name="hint_myqr_organization">회사명</string>
+    <string name="label_myqr_phone_number">전화번호</string>
+    <string name="hint_myqr_phone_number">+82 10 1234 5678</string>
+    <string name="label_myqr_email">이메일 주소</string>
+    <string name="hint_myqr_email">example@mail.com</string>
+    <string name="label_myqr_address">주소</string>
+    <string name="hint_myqr_address">도로명 주소, 도시, 국가</string>
+    <string name="label_myqr_notes">메모</string>
+    <string name="hint_myqr_notes">추가 상세 내용...</string>
+
+    <string name="create_qr_title">QR 코드 생성</string>
+    <string name="btn_generate_qr">QR 코드 생성하기</string>
+
+    <string name="scan_qr_code">QR 코드 스캔</string>
+    <string name="scan_history">스캔 기록</string>
+    <string name="profile">프로필</string>
+    <string name="history_and_favorites">기록 및 즐겨찾기</string>
+
+    <string name="all">전체</string>
+    <string name="favorites">즐겨찾기</string>
+    <string name="created">생성됨</string>
+    <string name="scanned">스캔됨</string>
+    <string name="list_is_empty">목록이 비어 있습니다</string>
+
+    <string name="back">뒤로</string>
+    <string name="close">닫기</string>
+    <string name="add_to_favorites">즐겨찾기에 추가</string>
+    <string name="qr_code_created">QR 코드가 생성되었습니다</string>
+
+    <string name="qr_code">QR 코드</string>
+    <string name="download">다운로드</string>
+    <string name="information">정보</string>
+    <string name="type">유형</string>
+    <string name="content">내용</string>
+    <string name="created_date">생성일</string>
+    <string name="view_details">상세 보기</string>
+    <string name="qr_code_details">QR 코드 상세</string>
+    <string name="qr_type">QR 유형</string>
+    <string name="type_label">유형:</string>
+
+    <string name="turn_on_flashlight">플래시 켜기</string>
+    <string name="flip_camera">카메라 전환</string>
+    <string name="select_from_gallery">갤러리에서 선택</string>
+    <string name="camera_permission_denied">카메라 권한이 거부되었습니다</string>
+
+    <string name="enter_your_text">텍스트를 입력하세요...</string>
+    <string name="url_address">URL 주소</string>
+    <string name="specify_name_or_phone">이름 또는 전화번호 입력</string>
+    <string name="enter_text">텍스트 입력</string>
+    <string name="enter_email">이메일 입력</string>
+    <string name="enter_url">URL 입력</string>
+    <string name="enter_network_name_ssid">네트워크 이름 (SSID) 입력</string>
+    <string name="enter_phone_number">전화번호 입력</string>
+    <string name="required">필수</string>
+    <string name="enter_event_title">일정 제목 입력</string>
+
+    <string name="address_label">주소:</string>
+    <string name="note_label">메모:</string>
+    <string name="company_label">회사:</string>
+    <string name="geolocation_label">위치:</string>
+    <string name="select_date">날짜 선택</string>
+
+    <string name="settings_title">설정</string>
+    <string name="preferences_header">기본 설정</string>
+    <string name="label_language">언어</string>
+    <string name="label_theme">테마</string>
+
+    <string name="lang_english">English</string>
+    <string name="lang_russian">Русский</string>
+    <string name="lang_spanish">Español</string>
+    <string name="lang_chinese">简体中文</string>
+    <string name="lang_german">Deutsch</string>
+    <string name="lang_french">Français</string>
+    <string name="lang_japanese">日本語</string>
+    <string name="lang_polish">Polski</string>
+    <string name="lang_portuguese">Português (Brasil)</string>
+    <string name="lang_arabic">العربية</string>
+    <string name="lang_korean">한국어</string>
+    <string name="lang_ukrainian">Українська</string>
+    <string name="lang_hindi">हिन्दी</string>
+
+    <string name="theme_system">시스템 설정에 맞춤</string>
+    <string name="theme_light">라이트 테마</string>
+    <string name="theme_dark">다크 테마</string>
+
+    <string name="qr_saved_to_gallery">QR 코드가 갤러리에 저장되었습니다!</string>
+    <string name="qr_save_error">저장 중 오류가 발생했습니다</string>
+    <string name="qr_share_message">내 QR 코드입니다:</string>
+    <string name="qr_share_title">QR 코드 공유</string>
+    <string name="qr_share_error">공유 중 오류가 발생했습니다</string>
+</resources>

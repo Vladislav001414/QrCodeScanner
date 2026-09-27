@@ -173,4 +173,89 @@
     <string name="create_qr_title">Create QR Code</string>
     <string name="btn_generate_qr">Generate QR Code</string>
 
+    <string name="scan_qr_code">Scan QR Code</string>
+    <string name="scan_history">Scan History</string>
+    <string name="profile">Profile</string>
+    <string name="history_and_favorites">History &amp; Favorites</string>
+
+    <!-- Вкладки и фильтры -->
+    <string name="all">All</string>
+    <string name="favorites">Favorites</string>
+    <string name="created">Created</string>
+    <string name="scanned">Scanned</string>
+    <string name="list_is_empty">The list is empty</string>
+
+    <!-- Верхняя панель и общие кнопки -->
+    <string name="back">Back</string>
+    <string name="close">Close</string>
+    <string name="add_to_favorites">Add to Favorites</string>
+    <string name="qr_code_created">QR code created</string>
+
+    <!-- Просмотр QR-кода -->
+    <string name="qr_code">QR Code</string>
+    <string name="download">Download</string>
+    <string name="information">Information</string>
+    <string name="type">Type</string>
+    <string name="content">Content</string>
+    <string name="created_date">Created</string>
+    <string name="view_details">View Details</string>
+    <string name="qr_code_details">QR Code Details</string>
+    <string name="qr_type">QR Type</string>
+    <string name="type_label">Type:</string>
+
+    <!-- Камера и сканер -->
+    <string name="turn_on_flashlight">Turn on flashlight</string>
+    <string name="flip_camera">Flip camera</string>
+    <string name="select_from_gallery">Select from gallery</string>
+    <string name="camera_permission_denied">Camera permission denied</string>
+
+    <!-- Поля ввода и Плейсхолдеры (Hint) -->
+    <string name="enter_your_text">Enter your text...</string>
+    <string name="url_address">URL Address</string>
+    <string name="specify_name_or_phone">Enter name or phone number</string>
+    <string name="enter_text">Enter text</string>
+    <string name="enter_email">Enter email</string>
+    <string name="enter_url">Enter URL</string>
+    <string name="enter_network_name_ssid">Enter network name (SSID)</string>
+    <string name="enter_phone_number">Enter phone number</string>
+    <string name="required">Required</string>
+    <string name="enter_event_title">Enter event title</string>
+
+    <!-- Метки полей (Labels) -->
+    <string name="address_label">Address:</string>
+    <string name="note_label">Note:</string>
+    <string name="company_label">Company:</string>
+    <string name="geolocation_label">Location:</string>
+    <string name="select_date">Select date</string>
+
+    <string name="settings_title">Settings</string>
+    <string name="preferences_header">PREFERENCES</string>
+    <string name="label_language">Language</string>
+    <string name="label_theme">Theme</string>
+
+    <string name="lang_english">English</string>
+    <string name="lang_russian">Русский</string>
+    <string name="lang_spanish">Español</string>
+    <string name="lang_chinese">简体中文</string>
+    <string name="lang_german">Deutsch</string>
+    <string name="lang_french">Français</string>
+    <string name="lang_japanese">日本語</string>
+    <string name="lang_polish">Polski</string>
+    <string name="lang_portuguese">Português (Brasil)</string>
+    <string name="lang_arabic">العربية</string>
+    <string name="lang_korean">한국어</string>
+    <string name="lang_ukrainian">Українська</string>
+    <string name="lang_hindi">हिन्दी</string>
+
+
+    <string name="theme_system">Follow system</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+
+    <string name="qr_saved_to_gallery">QR code saved to gallery!</string>
+    <string name="qr_save_error">Error saving QR code</string>
+    <string name="qr_share_message">Here is my QR code:</string>
+    <string name="qr_share_title">Share QR code</string>
+    <string name="qr_share_error">Error sharing QR code</string>
+
 </resources>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QrCode Scanner</string>
+    <string name="qr_type_url">رابط URL</string>
+    <string name="qr_type_wifi">Wi-Fi</string>
+    <string name="qr_type_contact">بيانات الاتصال</string>
+    <string name="qr_type_phone">رقم الهاتف</string>
+    <string name="qr_type_email">البريد الإلكتروني</string>
+    <string name="qr_type_sms">رسالة SMS</string>
+    <string name="qr_type_geo">الإحداثيات الجغرافية</string>
+    <string name="qr_type_calendar">حدث التقويم</string>
+    <string name="qr_type_driver_license">رخصة القيادة</string>
+    <string name="qr_type_product">الباركود للمنتج</string>
+    <string name="qr_type_isbn">الرقم الدولي للكتاب (ISBN)</string>
+    <string name="qr_type_text">نص</string>
+    <string name="qr_type_unknown">نوع غير معروف</string>
+    <string name="qr_type_vcard_title">بطاقة عمل (vCard)</string>
+    <string name="qr_type_mecard_title">جهة اتصال سريعة</string>
+    <string name="error_qr_not_found">لم يتم العثور على رمز QR</string>
+    <string name="error_gallery_scan_failed">فشل مسح الصورة. يرجى المحاولة مرة أخرى أو اختيار صورة أخرى.</string>
+
+    <string name="action_share">مشاركة</string>
+    <string name="action_copy">نسخ</string>
+
+    <string name="action_open_browser">فتح في المتصفح</string>
+    <string name="action_search_google">البحث في Google</string>
+    <string name="action_connect_wifi">الاتصال بـ Wi-Fi</string>
+    <string name="action_add_contact">إضافة إلى جهات الاتصال</string>
+    <string name="action_call_phone">اتصال</string>
+    <string name="action_send_sms">إرسال رسالة SMS</string>
+    <string name="action_send_email">إرسال بريد إلكتروني</string>
+    <string name="action_open_maps">فتح في الخرائط</string>
+    <string name="action_add_calendar">إضافة إلى التقويم</string>
+    <string name="action_find_product">البحث عن المنتج</string>
+
+    <string name="nothing_to_copy">لا يوجد شيء لنسخه</string>
+    <string name="copied_to_clipboard">تم النسخ إلى الحافظة</string>
+    <string name="share_via">مشاركة عبر…</string>
+    <string name="share_file">مشاركة الملف…</string>
+
+    <string name="file_creation_error">خطأ في إنشاء الملف</string>
+
+    <string name="record_from_qr">تم المسح من QR</string>
+    <string name="event">حدث</string>
+    <string name="text">نص</string>
+
+    <string name="wi_fi_network">شبكة Wi-Fi</string>
+    <string name="no_password">بدون كلمة سر</string>
+    <string name="password">كلمة السر</string>
+    <string name="unknown_wifi">شبكة Wi-Fi غير معروفة</string>
+
+    <string name="email">البريد الإلكتروني</string>
+    <string name="to">إلى</string>
+    <string name="subject">الموضوع</string>
+    <string name="sms_message">رسالة SMS</string>
+
+    <string name="contact">جهة اتصال</string>
+    <string name="name">الاسم</string>
+    <string name="contact_phone">رقم الهاتف</string>
+
+    <string name="calendar_summary">العنوان</string>
+    <string name="calendar_description">الوصف</string>
+    <string name="calendar_location">الموقع</string>
+    <string name="calendar_start">البداية</string>
+    <string name="calendar_end">النهاية</string>
+
+    <string name="copy_password">نسخ كلمة السر</string>
+    <string name="copy_link">نسخ الرابط</string>
+    <string name="copy_phone_number">نسخ رقم الهاتف</string>
+    <string name="copy_email">نسخ البريد الإلكتروني</string>
+    <string name="copy_event_details">نسخ تفاصيل الحدث</string>
+    <string name="copy_contact_name">نسخ اسم جهة الاتصال</string>
+    <string name="copy_text">نسخ النص</string>
+
+    <string name="contact_title">تفاصيل جهة الاتصال</string>
+    <string name="contact_from_phonebook">استيراد من جهات الاتصال</string>
+    <string name="label_full_name">الاسم الكامل</string>
+    <string name="hint_full_name">أحمد محمد</string>
+    <string name="label_organization">المؤسسة</string>
+    <string name="hint_organization">اسم الشركة</string>
+    <string name="label_phone_number">رقم الهاتف</string>
+    <string name="hint_phone_number">+1 234 567 8900</string>
+    <string name="label_email">البريد الإلكتروني</string>
+    <string name="hint_email">example@mail.com</string>
+    <string name="label_address">العنوان</string>
+    <string name="hint_address">الشارع، المدينة، الدولة</string>
+    <string name="label_notes">ملاحظات</string>
+    <string name="hint_notes">تفاصيل إضافية...</string>
+
+    <string name="email_qr_title">تفاصيل البريد الإلكتروني</string>
+    <string name="label_email_address">عنوان البريد الإلكتروني</string>
+    <string name="hint_email_address">recipient@example.com</string>
+    <string name="label_email_subject">الموضوع</string>
+    <string name="hint_email_subject">أدخل الموضوع...</string>
+    <string name="label_email_body">نص الرسالة</string>
+    <string name="hint_email_body">أدخل محتوى الرسالة...</string>
+
+    <string name="sms_qr_title">رسالة SMS</string>
+    <string name="label_sms_phone_number">رقم الهاتف</string>
+    <string name="hint_sms_phone_number">+1 234 567 8900</string>
+    <string name="label_sms_message">الرسالة</string>
+    <string name="hint_sms_message">أدخل محتوى الرسالة...</string>
+
+    <string name="gps_qr_title">موقع GPS</string>
+    <string name="label_gps_latitude">خط العرض</string>
+    <string name="hint_gps_latitude">مثال: 24.7136</string>
+    <string name="label_gps_longitude">خط الطول</string>
+    <string name="hint_gps_longitude">مثال: 46.6753</string>
+    <string name="label_gps_query">البحث عن الموقع / الاسم (اختياري)</string>
+    <string name="hint_gps_query">مثال: برج إيفل، باريس</string>
+    <string name="btn_select_on_map">تحديد الموقع على الخريطة</string>
+    <string name="text_or">أو</string>
+
+    <string name="phone_qr_title">رقم الهاتف</string>
+    <string name="label_phone_number_input">رقم الهاتف</string>
+    <string name="hint_phone_number_input">+1 234 567 8900</string>
+
+    <string name="event_qr_title">حدث التقويم</string>
+    <string name="label_event_title">عنوان الحدث</string>
+    <string name="hint_event_title">مثال: اجتماع الفريق</string>
+    <string name="label_all_day">حدث طوال اليوم</string>
+    <string name="label_start_date">تاريخ ووقت البدء</string>
+    <string name="hint_start_date">حدد تاريخ البدء</string>
+    <string name="label_end_date">تاريخ ووقت الانتهاء</string>
+    <string name="hint_end_date">حدد تاريخ الانتهاء</string>
+    <string name="label_event_location">الموقع</string>
+    <string name="hint_event_location">مثال: المكتب / رابط Zoom</string>
+    <string name="label_event_description">الوصف</string>
+    <string name="hint_event_description">أضف تفاصيل الحدث أو ملاحظات...</string>
+
+    <string name="wifi_qr_title">شبكة Wi-Fi</string>
+    <string name="label_wifi_ssid">اسم الشبكة (SSID)</string>
+    <string name="hint_wifi_ssid">مثال: Home_Network</string>
+    <string name="label_wifi_password">كلمة السر</string>
+    <string name="hint_wifi_password">أدخل كلمة سر Wi-Fi</string>
+    <string name="label_wifi_encryption">نوع التشفير</string>
+    <string name="label_wifi_hidden">شبكة مخفية</string>
+
+    <string-array name="wifi_encryption_types">
+        <item>WPA / WPA2</item>
+        <item>WPA3</item>
+        <item>WEP</item>
+        <item>بدون (مفتوحة)</item>
+    </string-array>
+
+    <string name="myqr_title">رمز QR لملفي الشخصي</string>
+    <string name="label_myqr_full_name">الاسم الكامل</string>
+    <string name="hint_myqr_full_name">أحمد محمد</string>
+    <string name="label_myqr_organization">المؤسسة</string>
+    <string name="hint_myqr_organization">اسم الشركة</string>
+    <string name="label_myqr_phone_number">رقم الهاتف</string>
+    <string name="hint_myqr_phone_number">+1 234 567 8900</string>
+    <string name="label_myqr_email">البريد الإلكتروني</string>
+    <string name="hint_myqr_email">example@mail.com</string>
+    <string name="label_myqr_address">العنوان</string>
+    <string name="hint_myqr_address">الشارع، المدينة، الدولة</string>
+    <string name="label_myqr_notes">ملاحظات</string>
+    <string name="hint_myqr_notes">تفاصيل إضافية...</string>
+
+    <string name="create_qr_title">إنشاء رمز QR</string>
+    <string name="btn_generate_qr">توليد رمز QR</string>
+
+    <string name="scan_qr_code">مسح رمز QR</string>
+    <string name="scan_history">سجل المسح</string>
+    <string name="profile">الملف الشخصي</string>
+    <string name="history_and_favorites">السجل والمفضلة</string>
+
+    <string name="all">الكل</string>
+    <string name="favorites">المفضلة</string>
+    <string name="created">المُنشأة</string>
+    <string name="scanned">الممسوحة</string>
+    <string name="list_is_empty">القائمة فارغة</string>
+
+    <string name="back">رجوع</string>
+    <string name="close">إغلاق</string>
+    <string name="add_to_favorites">إضافة إلى المفضلة</string>
+    <string name="qr_code_created">تم إنشاء رمز QR</string>
+
+    <string name="qr_code">رمز QR</string>
+    <string name="download">تنزيل</string>
+    <string name="information">معلومات</string>
+    <string name="type">النوع</string>
+    <string name="content">المحتوى</string>
+    <string name="created_date">تاريخ الإنشاء</string>
+    <string name="view_details">عرض التفاصيل</string>
+    <string name="qr_code_details">تفاصيل رمز QR</string>
+    <string name="qr_type">نوع QR</string>
+    <string name="type_label">النوع:</string>
+
+    <string name="turn_on_flashlight">تشغيل الكشاف</string>
+    <string name="flip_camera">تبديل الكاميرا</string>
+    <string name="select_from_gallery">اختيار من المعرض</string>
+    <string name="camera_permission_denied">تم رفض إذن الكاميرا</string>
+
+    <string name="enter_your_text">أدخل النص الخاص بك...</string>
+    <string name="url_address">عنوان URL</string>
+    <string name="specify_name_or_phone">أدخل الاسم أو رقم الهاتف</string>
+    <string name="enter_text">أدخل النص</string>
+    <string name="enter_email">أدخل البريد الإلكتروني</string>
+    <string name="enter_url">أدخل رابط URL</string>
+    <string name="enter_network_name_ssid">أدخل اسم الشبكة (SSID)</string>
+    <string name="enter_phone_number">أدخل رقم الهاتف</string>
+    <string name="required">مطلوب</string>
+    <string name="enter_event_title">أدخل عنوان الحدث</string>
+
+    <string name="address_label">العنوان:</string>
+    <string name="note_label">ملاحظة:</string>
+    <string name="company_label">الشركة:</string>
+    <string name="geolocation_label">الموقع:</string>
+    <string name="select_date">حدد التاريخ</string>
+
+    <string name="settings_title">الإعدادات</string>
+    <string name="preferences_header">التفضيلات</string>
+    <string name="label_language">اللغة</string>
+    <string name="label_theme">المظهر</string>
+
+    <string name="lang_english">English</string>
+    <string name="lang_russian">Русский</string>
+    <string name="lang_spanish">Español</string>
+    <string name="lang_chinese">简体中文</string>
+    <string name="lang_german">Deutsch</string>
+    <string name="lang_french">Français</string>
+    <string name="lang_japanese">日本語</string>
+    <string name="lang_polish">Polski</string>
+    <string name="lang_portuguese">Português (Brasil)</string>
+    <string name="lang_arabic">العربية</string>
+    <string name="lang_korean">한국어</string>
+    <string name="lang_ukrainian">Українська</string>
+    <string name="lang_hindi">हिन्दी</string>
+
+    <string name="theme_system">تلقائي حسب النظام</string>
+    <string name="theme_light">فاتح</string>
+    <string name="theme_dark">داكن</string>
+
+
+    <string name="qr_saved_to_gallery">تم حفظ رمز QR في المعرض!</string>
+    <string name="qr_save_error">حدث خطأ أثناء الحفظ</string>
+    <string name="qr_share_message">إليك رمز QR الخاص بي:</string>
+    <string name="qr_share_title">مشاركة رمز QR</string>
+    <string name="qr_share_error">حدث خطأ أثناء المشاركة</string>
+
+</resources>

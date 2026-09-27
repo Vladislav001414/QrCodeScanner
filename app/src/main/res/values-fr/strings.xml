@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QrCode Scanner</string>
+    <string name="qr_type_url">URL</string>
+    <string name="qr_type_wifi">Wi-Fi</string>
+    <string name="qr_type_contact">Coordonnées</string>
+    <string name="qr_type_phone">Numéro de téléphone</string>
+    <string name="qr_type_email">E-mail</string>
+    <string name="qr_type_sms">Message SMS</string>
+    <string name="qr_type_geo">Coordonnées géographiques</string>
+    <string name="qr_type_calendar">Événement du calendrier</string>
+    <string name="qr_type_driver_license">Permis de conduire</string>
+    <string name="qr_type_product">Code-barres produit</string>
+    <string name="qr_type_isbn">ISBN du livre</string>
+    <string name="qr_type_text">Texte</string>
+    <string name="qr_type_unknown">Type inconnu</string>
+    <string name="qr_type_vcard_title">Carte de visite (vCard)</string>
+    <string name="qr_type_mecard_title">Contact rapide</string>
+    <string name="error_qr_not_found">Aucun code QR trouvé</string>
+    <string name="error_gallery_scan_failed">Échec de la lecture de l\'image. Veuillez réessayer ou choisir une autre photo.</string>
+
+    <string name="action_share">Partager</string>
+    <string name="action_copy">Copier</string>
+
+    <string name="action_open_browser">Ouvrir dans le navigateur</string>
+    <string name="action_search_google">Rechercher sur Google</string>
+    <string name="action_connect_wifi">Se connecter au Wi-Fi</string>
+    <string name="action_add_contact">Ajouter aux contacts</string>
+    <string name="action_call_phone">Appeler</string>
+    <string name="action_send_sms">Envoyer un SMS</string>
+    <string name="action_send_email">Envoyer un e-mail</string>
+    <string name="action_open_maps">Ouvrir dans Maps</string>
+    <string name="action_add_calendar">Ajouter au calendrier</string>
+    <string name="action_find_product">Trouver le produit</string>
+
+    <string name="nothing_to_copy">Rien à copier</string>
+    <string name="copied_to_clipboard">Copié dans le presse-papiers</string>
+    <string name="share_via">Partager via…</string>
+    <string name="share_file">Partager le fichier…</string>
+
+    <string name="file_creation_error">Erreur lors de la création du fichier</string>
+
+    <string name="record_from_qr">Scanné depuis un QR</string>
+    <string name="event">Événement</string>
+    <string name="text">Texte</string>
+
+    <string name="wi_fi_network">Réseau Wi-Fi</string>
+    <string name="no_password">Sans mot de passe</string>
+    <string name="password">Mot de passe</string>
+    <string name="unknown_wifi">Wi-Fi inconnu</string>
+
+    <string name="email">E-mail</string>
+    <string name="to">À</string>
+    <string name="subject">Objet</string>
+    <string name="sms_message">Message SMS</string>
+
+    <string name="contact">Contact</string>
+    <string name="name">Nom</string>
+    <string name="contact_phone">Numéro de téléphone</string>
+
+    <string name="calendar_summary">Titre</string>
+    <string name="calendar_description">Description</string>
+    <string name="calendar_location">Lieu</string>
+    <string name="calendar_start">Début</string>
+    <string name="calendar_end">Fin</string>
+
+    <string name="copy_password">Copier le mot de passe</string>
+    <string name="copy_link">Copier le lien</string>
+    <string name="copy_phone_number">Copier le numéro de téléphone</string>
+    <string name="copy_email">Copier l\'e-mail</string>
+    <string name="copy_event_details">Copier les détails de l\'événement</string>
+    <string name="copy_contact_name">Copier le nom du contact</string>
+    <string name="copy_text">Copier le texte</string>
+
+    <string name="contact_title">Détails du contact</string>
+    <string name="contact_from_phonebook">Importer depuis les contacts</string>
+    <string name="label_full_name">Nom complet</string>
+    <string name="hint_full_name">Jean Dupont</string>
+    <string name="label_organization">Organisation</string>
+    <string name="hint_organization">Nom de l\'entreprise</string>
+    <string name="label_phone_number">Numéro de téléphone</string>
+    <string name="hint_phone_number">+1 234 567 8900</string>
+    <string name="label_email">Adresse e-mail</string>
+    <string name="hint_email">exemple@mail.com</string>
+    <string name="label_address">Adresse</string>
+    <string name="hint_address">123 Rue, Ville, Pays</string>
+    <string name="label_notes">Notes</string>
+    <string name="hint_notes">Détails supplémentaires...</string>
+
+    <string name="email_qr_title">Détails de l\'e-mail</string>
+    <string name="label_email_address">Adresse e-mail</string>
+    <string name="hint_email_address">destinataire@exemple.com</string>
+    <string name="label_email_subject">Objet</string>
+    <string name="hint_email_subject">Entrez l\'objet...</string>
+    <string name="label_email_body">Corps du message</string>
+    <string name="hint_email_body">Entrez le contenu du message...</string>
+
+    <string name="sms_qr_title">Message SMS</string>
+    <string name="label_sms_phone_number">Numéro de téléphone</string>
+    <string name="hint_sms_phone_number">+1 234 567 8900</string>
+    <string name="label_sms_message">Message</string>
+    <string name="hint_sms_message">Entrez le contenu du message...</string>
+
+    <string name="gps_qr_title">Localisation GPS</string>
+    <string name="label_gps_latitude">Latitude</string>
+    <string name="hint_gps_latitude">ex. 51.5074</string>
+    <string name="label_gps_longitude">Longitude</string>
+    <string name="hint_gps_longitude">ex. -0.1278</string>
+    <string name="label_gps_query">Recherche de lieu / Nom (Optionnel)</string>
+    <string name="hint_gps_query">ex. Tour Eiffel, Paris</string>
+    <string name="btn_select_on_map">Choisir un lieu sur la carte</string>
+    <string name="text_or">OU</string>
+
+    <string name="phone_qr_title">Numéro de téléphone</string>
+    <string name="label_phone_number_input">Numéro de téléphone</string>
+    <string name="hint_phone_number_input">+1 234 567 8900</string>
+
+    <string name="event_qr_title">Événement du calendrier</string>
+    <string name="label_event_title">Titre de l\'événement</string>
+    <string name="hint_event_title">ex. Réunion d\'équipe</string>
+    <string name="label_all_day">Événement toute la journée</string>
+    <string name="label_start_date">Date et heure de début</string>
+    <string name="hint_start_date">Sélectionner la date de début</string>
+    <string name="label_end_date">Date et heure de fin</string>
+    <string name="hint_end_date">Sélectionner la date de fin</string>
+    <string name="label_event_location">Lieu</string>
+    <string name="hint_event_location">ex. Bureau / Lien Zoom</string>
+    <string name="label_event_description">Description</string>
+    <string name="hint_event_description">Ajouter des détails ou des notes...</string>
+
+    <string name="wifi_qr_title">Réseau Wi-Fi</string>
+    <string name="label_wifi_ssid">Nom du réseau (SSID)</string>
+    <string name="hint_wifi_ssid">ex. Reseau_Maison</string>
+    <string name="label_wifi_password">Mot de passe</string>
+    <string name="hint_wifi_password">Entrez le mot de passe Wi-Fi</string>
+    <string name="label_wifi_encryption">Type de chiffrement</string>
+    <string name="label_wifi_hidden">Réseau masqué</string>
+
+    <string-array name="wifi_encryption_types">
+        <item>WPA / WPA2</item>
+        <item>WPA3</item>
+        <item>WEP</item>
+        <item>Aucun (Ouvert)</item>
+    </string-array>
+
+    <string name="myqr_title">Mon QR de profil</string>
+    <string name="label_myqr_full_name">Nom complet</string>
+    <string name="hint_myqr_full_name">Jean Dupont</string>
+    <string name="label_myqr_organization">Organisation</string>
+    <string name="hint_myqr_organization">Nom de l\'entreprise</string>
+    <string name="label_myqr_phone_number">Numéro de téléphone</string>
+    <string name="hint_myqr_phone_number">+1 234 567 8900</string>
+    <string name="label_myqr_email">Adresse e-mail</string>
+    <string name="hint_myqr_email">exemple@mail.com</string>
+    <string name="label_myqr_address">Adresse</string>
+    <string name="hint_myqr_address">123 Rue, Ville, Pays</string>
+    <string name="label_myqr_notes">Notes</string>
+    <string name="hint_myqr_notes">Détails supplémentaires...</string>
+
+    <string name="create_qr_title">Créer un code QR</string>
+    <string name="btn_generate_qr">Générer le code QR</string>
+
+    <string name="scan_qr_code">Scanner un code QR</string>
+    <string name="scan_history">Historique des scans</string>
+    <string name="profile">Profil</string>
+    <string name="history_and_favorites">Historique et Favoris</string>
+
+    <string name="all">Tous</string>
+    <string name="favorites">Favoris</string>
+    <string name="created">Créés</string>
+    <string name="scanned">Scannés</string>
+    <string name="list_is_empty">La liste est vide</string>
+
+    <string name="back">Retour</string>
+    <string name="close">Fermer</string>
+    <string name="add_to_favorites">Ajouter aux Favoris</string>
+    <string name="qr_code_created">Code QR créé</string>
+
+    <string name="qr_code">Code QR</string>
+    <string name="download">Télécharger</string>
+    <string name="information">Informations</string>
+    <string name="type">Type</string>
+    <string name="content">Contenu</string>
+    <string name="created_date">Créé</string>
+    <string name="view_details">Voir les détails</string>
+    <string name="qr_code_details">Détails du code QR</string>
+    <string name="qr_type">Type de QR</string>
+    <string name="type_label">Type :</string>
+
+    <string name="turn_on_flashlight">Allumer la lampe</string>
+    <string name="flip_camera">Changer de caméra</string>
+    <string name="select_from_gallery">Choisir depuis la galerie</string>
+    <string name="camera_permission_denied">Autorisation de la caméra refusée</string>
+
+    <string name="enter_your_text">Entrez votre texte...</string>
+    <string name="url_address">Adresse URL</string>
+    <string name="specify_name_or_phone">Entrez un nom ou un numéro</string>
+    <string name="enter_text">Entrez du texte</string>
+    <string name="enter_email">Entrez un e-mail</string>
+    <string name="enter_url">Entrez une URL</string>
+    <string name="enter_network_name_ssid">Entrez le nom du réseau (SSID)</string>
+    <string name="enter_phone_number">Entrez le numéro de téléphone</string>
+    <string name="required">Obligatoire</string>
+    <string name="enter_event_title">Entrez le titre de l\'événement</string>
+
+    <string name="address_label">Adresse :</string>
+    <string name="note_label">Note :</string>
+    <string name="company_label">Entreprise :</string>
+    <string name="geolocation_label">Lieu :</string>
+    <string name="select_date">Sélectionner la date</string>
+
+    <string name="settings_title">Paramètres</string>
+    <string name="preferences_header">PRÉFÉRENCES</string>
+    <string name="label_language">Langue</string>
+    <string name="label_theme">Thème</string>
+
+    <string name="lang_english">English</string>
+    <string name="lang_russian">Русский</string>
+    <string name="lang_spanish">Español</string>
+    <string name="lang_chinese">简体中文</string>
+    <string name="lang_german">Deutsch</string>
+    <string name="lang_french">Français</string>
+    <string name="lang_japanese">日本語</string>
+    <string name="lang_polish">Polski</string>
+    <string name="lang_portuguese">Português (Brasil)</string>
+    <string name="lang_arabic">العربية</string>
+    <string name="lang_korean">한국어</string>
+    <string name="lang_ukrainian">Українська</string>
+    <string name="lang_hindi">हिन्दी</string>
+
+    <string name="theme_system">Thème du système</string>
+    <string name="theme_light">Clair</string>
+    <string name="theme_dark">Sombre</string>
+
+    <string name="qr_saved_to_gallery">Code QR enregistré dans la galerie !</string>
+    <string name="qr_save_error">Erreur lors de l’enregistrement</string>
+    <string name="qr_share_message">Voici mon code QR :</string>
+    <string name="qr_share_title">Partager le code QR</string>
+    <string name="qr_share_error">Erreur lors du partage</string>
+</resources>

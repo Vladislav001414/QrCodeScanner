@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.qrcodescanner.DataBase.Tables.QrCodeItemTable
 import com.example.qrcodescanner.SealedInterface.QrItemCreation
 import com.example.qrcodescanner.UIExtensions.getIcon
 import com.example.qrcodescanner.UIExtensions.getText
@@ -46,5 +47,6 @@ class QrCreationAdapter(
 
         override fun areContentsTheSame(oldItem: QrItemCreation, newItem: QrItemCreation): Boolean =
             oldItem == newItem
-    }
+        }
+
 }

@@ -74,8 +74,8 @@ class QrInsertDataFragment : Fragment() {
 
             val qrItem = QrCodeItemTable(
                 id = null,
-                qrType = qrInfo?.type ?: "TEXT",
-                rawValue = qrInfo?.rawValue ?: "",
+                qrType = qrInfo.type ?: "TEXT",
+                rawValue = qrInfo.rawValue ?: "",
                 status = "Create",
                 favorite = false,
                 dateAdded = System.currentTimeMillis()
@@ -105,7 +105,7 @@ class QrInsertDataFragment : Fragment() {
                     val targetView = binding.viewFlipper.showViewById(qrItemCreation.getFormId())
 
                     if (targetView != null) {
-                        currentHandler = QrFormHandlerFactory.createHandler(qrItemCreation, targetView)
+                        currentHandler = QrFormHandlerFactory.createHandler(qrItemCreation, targetView, parentFragmentManager)
                     }
                 }
             }

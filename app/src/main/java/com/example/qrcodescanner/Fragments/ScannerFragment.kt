@@ -55,7 +55,6 @@ class ScannerFragment : Fragment() {
         private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.CAMERA)
     }
 
-    private val viewModel: ScannerFragmentViewModel by viewModels()
     private lateinit var binding: FragmentScannerBinding
 
     private lateinit var previewView: PreviewView
@@ -232,7 +231,7 @@ class ScannerFragment : Fragment() {
 
                             val result = event.qrResult
                             var text = result.displayValue
-                            viewModel.saveNewScan(result)
+                            fragmentVM.saveNewScan(result)
                             if(result.type == QrType.URL) {
                                 text = URL(result.displayValue).host.removePrefix("www.")
                             }
@@ -285,7 +284,6 @@ class ScannerFragment : Fragment() {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 fragmentVM.flashIsWorking.collect { flashState->
 
-                    Log.d("text", "flashState: $flashState")
 
                     when (flashState){
                         FlashState.Disabled -> {
@@ -338,7 +336,7 @@ class ScannerFragment : Fragment() {
             binding.seekBarZoom.min = (minZoom * 100).toInt()
             if (!isUserTouching) {
                 binding.seekBarZoom.progress = (currentZoom * 100).toInt()
-                Log.d("text", "11")
+
             }
         }
 
@@ -417,13 +415,15 @@ class ScannerFragment : Fragment() {
             if (allPermissionsGranted()) {
                 startCamera()
             } else {
-                Toast.makeText(requireActivity(), "Разрешение на камеру отклонено", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireActivity(), getString(R.string.camera_permission_denied), Toast.LENGTH_SHORT).show()
             }
         }
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        cameraExecutor.shutdown()
+        if (::cameraExecutor.isInitialized) {
+            cameraExecutor.shutdown()
+        }
     }
 }

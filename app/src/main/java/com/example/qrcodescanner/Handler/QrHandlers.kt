@@ -3,9 +3,15 @@ package com.example.qrcodescanner.Handler
 import android.net.Uri
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
+import android.view.View
+import android.widget.ArrayAdapter
+import androidx.fragment.app.FragmentManager
 import com.example.qrcodescanner.DataClass.QrCodeInfo
+import com.example.qrcodescanner.R
+import com.example.qrcodescanner.RVAdapter.QrCreationAdapter
 import com.example.qrcodescanner.SealedInterface.QrItemCreation
 import com.example.qrcodescanner.UIExtensions.getText
+import com.example.qrcodescanner.UIExtensions.toDbKey
 import com.example.qrcodescanner.databinding.ItemContactTypeBinding
 import com.example.qrcodescanner.databinding.ItemEmailTypeBinding
 import com.example.qrcodescanner.databinding.ItemEventTypeBinding
@@ -16,17 +22,22 @@ import com.example.qrcodescanner.databinding.ItemSmsTypeBinding
 import com.example.qrcodescanner.databinding.ItemTextTypeBinding
 import com.example.qrcodescanner.databinding.ItemUrlTypeBinding
 import com.example.qrcodescanner.databinding.ItemWifiTypeBinding
+import com.google.android.material.datepicker.MaterialDatePicker
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
+import java.util.TimeZone
 
 // 1. URL Handler (item_url_type.xml)
 class UrlFormHandler(private val binding: ItemUrlTypeBinding) : QrFormHandler {
     override fun validateAndBuildPayload(): QrCodeInfo? {
         val url = binding.etInput.text.toString().trim()
         if (url.isEmpty()) {
-            binding.etInput.error = "Введите URL"
+            binding.etInput.error = binding.root.context.getString(R.string.enter_url)
             return null
         }
         val rawValue = if (url.startsWith("http://") || url.startsWith("https://")) url else "https://$url"
-        val type = QrItemCreation.URL.getText()
+        val type = QrItemCreation.URL.toDbKey()
         val qrItem = QrCodeInfo(type, rawValue)
         return qrItem
     }
@@ -37,10 +48,10 @@ class TextFormHandler(private val binding: ItemTextTypeBinding) : QrFormHandler 
     override fun validateAndBuildPayload(): QrCodeInfo? {
         val text = binding.etInput.text.toString().trim()
         if (text.isEmpty()) {
-            binding.etInput.error = "Введите текст"
+            binding.etInput.error = binding.root.context.getString(R.string.enter_your_text)
             return null
         }
-        val type = QrItemCreation.TEXT.getText()
+        val type = QrItemCreation.TEXT.toDbKey()
         val qrItem = QrCodeInfo(type, text)
         return qrItem
     }
@@ -56,10 +67,33 @@ class WifiFormHandler(private val binding: ItemWifiTypeBinding) : QrFormHandler 
             isPasswordVisible = !isPasswordVisible
             binding.etWifiPassword.transformationMethod = if (isPasswordVisible) {
                 HideReturnsTransformationMethod.getInstance()
+
             } else {
                 PasswordTransformationMethod.getInstance()
+
             }
+            binding.btnTogglePassword.setImageResource(
+                if (isPasswordVisible)
+                    R.drawable.outline_visibility_24
+                else
+                    R.drawable.outline_visibility_off_24
+            )
             binding.etWifiPassword.setSelection(binding.etWifiPassword.text.length)
+        }
+
+
+        val encryptionTypes = binding.root.resources.getStringArray(R.array.wifi_encryption_types)
+
+        binding.spinnerEncryption.setSimpleItems(encryptionTypes)
+
+        binding.spinnerEncryption.setText(encryptionTypes[0], false)
+
+        binding.spinnerEncryption.setOnItemClickListener { _, _, position, _ ->
+            val lastIndex = binding.spinnerEncryption.adapter.count - 1
+
+            val isLastSelected = (position == lastIndex)
+
+            binding.containerPassword.visibility = if (isLastSelected) View.GONE else View.VISIBLE
         }
     }
 
@@ -70,9 +104,11 @@ class WifiFormHandler(private val binding: ItemWifiTypeBinding) : QrFormHandler 
         val isHidden = binding.switchIsHidden.isChecked
 
         if (ssid.isEmpty()) {
-            binding.etWifiSsid.error = "Введите имя сети (SSID)"
+            binding.etWifiSsid.error = binding.root.context.getString(R.string.enter_network_name_ssid)
             return null
         }
+
+
 
         val passType = when {
             encryptionText.contains("WPA", ignoreCase = true) -> "WPA"
@@ -81,7 +117,7 @@ class WifiFormHandler(private val binding: ItemWifiTypeBinding) : QrFormHandler 
         }
 
         val rawValue = "WIFI:T:$passType;S:$ssid;P:$password;H:$isHidden;;"
-        val type = QrItemCreation.WIFI.getText()
+        val type = QrItemCreation.WIFI.toDbKey()
         val qrItem = QrCodeInfo(type, rawValue )
 
         return qrItem
@@ -96,12 +132,12 @@ class SmsFormHandler(private val binding: ItemSmsTypeBinding) : QrFormHandler {
         val message = binding.etSmsMessage.text.toString().trim()
 
         if (phone.isEmpty()) {
-            binding.etSmsPhone.error = "Введите номер телефона"
+            binding.etSmsPhone.error = binding.root.context.getString(R.string.enter_phone_number)
             return null
         }
 
         val rawValue = "SMSTO:$phone:$message"
-        val type = QrItemCreation.SMS.getText()
+        val type = QrItemCreation.SMS.toDbKey()
         val qrItem = QrCodeInfo(type, rawValue)
         return qrItem
     }
@@ -116,7 +152,7 @@ class PhoneFormHandler(private val binding: ItemPhoneTypeBinding) : QrFormHandle
             return null
         }
         val rawValue = "TEL:$phone"
-        val type = QrItemCreation.PHONE.getText()
+        val type = QrItemCreation.PHONE.toDbKey()
         val qrItem = QrCodeInfo(type, rawValue)
         return qrItem
     }
@@ -135,7 +171,7 @@ class EmailFormHandler(private val binding: ItemEmailTypeBinding) : QrFormHandle
         }
 
         val rawValue = "MATMSG:TO:$email;SUB:$subject;BODY:$body;;"
-        val type = QrItemCreation.EMAIL.getText()
+        val type = QrItemCreation.EMAIL.toDbKey()
         val qrItem = QrCodeInfo(type, rawValue)
         return qrItem
     }
@@ -167,7 +203,7 @@ class ContactFormHandler(private val binding: ItemContactTypeBinding) : QrFormHa
             if (notes.isNotEmpty()) append("NOTE:$notes\n")
             append("END:VCARD")
         }
-        val type = QrItemCreation.VCARD.getText()
+        val type = QrItemCreation.VCARD.toDbKey()
         val qrItem = QrCodeInfo(type, rawValue)
         return qrItem
     }
@@ -199,7 +235,7 @@ class MyQrFormHandler(private val binding: ItemMyqrTypeBinding) : QrFormHandler 
             if (notes.isNotEmpty()) append("NOTE:$notes\n")
             append("END:VCARD")
         }
-        val type = QrItemCreation.MeCARD.getText()
+        val type = QrItemCreation.MeCARD.toDbKey()
         val qrItem = QrCodeInfo(type, rawValue)
 
         return qrItem
@@ -224,14 +260,22 @@ class GpsFormHandler(private val binding: ItemGpsTypeBinding) : QrFormHandler {
         } else {
             "geo:$lat,$lng"
         }
-        val type = QrItemCreation.LOCATION.getText()
+        val type = QrItemCreation.LOCATION.toDbKey()
         val qrItem = QrCodeInfo(type, rawValue)
         return qrItem
     }
 }
 
 // 10. Event / VCalendar Handler (item_event_type.xml)
-class EventFormHandler(private val binding: ItemEventTypeBinding) : QrFormHandler {
+class EventFormHandler(private val binding: ItemEventTypeBinding, private val fragmentManager: FragmentManager) : QrFormHandler {
+    init {
+        binding.etStartDate.setOnClickListener {
+            showCalendarDialog(startDate = true)
+        }
+        binding.etEndDate.setOnClickListener {
+            showCalendarDialog(startDate = false)
+        }
+    }
     override fun validateAndBuildPayload(): QrCodeInfo? {
         val title = binding.etEventTitle.text.toString().trim()
         val startDate = binding.etStartDate.text.toString().trim()
@@ -240,7 +284,7 @@ class EventFormHandler(private val binding: ItemEventTypeBinding) : QrFormHandle
         val description = binding.etEventDescription.text.toString().trim()
 
         if (title.isEmpty()) {
-            binding.etEventTitle.error = "Введите название события"
+            binding.etEventTitle.error = binding.root.context.getString(R.string.enter_event_title)
             return null
         }
 
@@ -253,8 +297,31 @@ class EventFormHandler(private val binding: ItemEventTypeBinding) : QrFormHandle
             if (description.isNotEmpty()) append("DESCRIPTION:$description\n")
             append("END:VEVENT")
         }
-        val type = QrItemCreation.EVENT.getText()
+        val type = QrItemCreation.EVENT.toDbKey()
         val qrItem = QrCodeInfo(type, rawValue)
         return qrItem
+    }
+
+    private fun showCalendarDialog(startDate: Boolean) {
+        val datePicker = MaterialDatePicker.Builder.datePicker()
+            .setTitleText(R.string.select_date)
+            .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
+            .build()
+
+        datePicker.addOnPositiveButtonClickListener { selectionInMillis ->
+            val formatter = SimpleDateFormat("dd MMM yyyy", Locale.getDefault()).apply {
+                timeZone = TimeZone.getTimeZone("UTC")
+            }
+            val formattedDate = formatter.format(Date(selectionInMillis))
+
+            if (startDate) {
+                binding.etStartDate.setText(formattedDate)
+            }
+            else {
+                binding.etEndDate.setText(formattedDate)
+            }
+        }
+
+        datePicker.show(fragmentManager, "MATERIAL_DATE_PICKER")
     }
 }

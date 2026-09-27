@@ -1,6 +1,7 @@
 package com.example.qrcodescanner.Handler
 
 import android.content.Context
+import androidx.collection.buildIntSet
 import com.example.qrcodescanner.R
 
 object TextFormatHandler {
@@ -44,8 +45,8 @@ object TextFormatHandler {
             if (company.isNotEmpty()) append("Компания: $company\n")
             if (phone.isNotEmpty()) append("${context.getString(R.string.contact_phone)}: $phone\n")
             if (email.isNotEmpty()) append("${context.getString(R.string.email)}: $email\n")
-            if (address.isNotEmpty()) append("Адрес: $address\n")
-            if (note.isNotEmpty()) append("Заметка: $note")
+            if (address.isNotEmpty()) append("${context.getString(R.string.address_label)} $address\n")
+            if (note.isNotEmpty()) append("${context.getString(R.string.note_label)} $note")
         }.trimEnd()
     }
 
@@ -92,6 +93,6 @@ object TextFormatHandler {
 
     private fun parseGps(context: Context, raw: String): String {
         val clean = raw.removePrefix("geo:")
-        return "Геолокация: $clean"
+        return "${context.getString(R.string.geolocation_label) }} $clean"
     }
 }

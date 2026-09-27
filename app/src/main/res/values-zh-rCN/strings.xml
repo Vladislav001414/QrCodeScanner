@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QrCode Scanner</string>
+    <string name="qr_type_url">网址</string>
+    <string name="qr_type_wifi">Wi-Fi</string>
+    <string name="qr_type_contact">联系人信息</string>
+    <string name="qr_type_phone">电话号码</string>
+    <string name="qr_type_email">电子邮件</string>
+    <string name="qr_type_sms">短信</string>
+    <string name="qr_type_geo">地理坐标</string>
+    <string name="qr_type_calendar">日历活动</string>
+    <string name="qr_type_driver_license">驾照</string>
+    <string name="qr_type_product">商品条形码</string>
+    <string name="qr_type_isbn">图书 ISBN</string>
+    <string name="qr_type_text">文本</string>
+    <string name="qr_type_unknown">未知类型</string>
+    <string name="qr_type_vcard_title">名片 (vCard)</string>
+    <string name="qr_type_mecard_title">快捷联系人</string>
+    <string name="error_qr_not_found">未找到二维码</string>
+    <string name="error_gallery_scan_failed">图片扫描失败。请重试或选择其他照片。</string>
+
+    <string name="action_share">分享</string>
+    <string name="action_copy">复制</string>
+
+    <string name="action_open_browser">在浏览器中打开</string>
+    <string name="action_search_google">在 Google 中搜索</string>
+    <string name="action_connect_wifi">连接到 Wi-Fi</string>
+    <string name="action_add_contact">添加到联系人</string>
+    <string name="action_call_phone">拨打电话</string>
+    <string name="action_send_sms">发送短信</string>
+    <string name="action_send_email">发送邮件</string>
+    <string name="action_open_maps">在地图中打开</string>
+    <string name="action_add_calendar">添加到日历</string>
+    <string name="action_find_product">查找商品</string>
+
+    <string name="nothing_to_copy">没有可复制的内容</string>
+    <string name="copied_to_clipboard">已复制到剪贴板</string>
+
+    <string name="share_via">分享至…</string>
+    <string name="share_file">分享文件…</string>
+
+    <string name="file_creation_error">创建文件失败</string>
+
+    <string name="record_from_qr">扫描自二维码</string>
+    <string name="event">活动</string>
+    <string name="text">文本</string>
+
+    <string name="wi_fi_network">Wi-Fi 网络</string>
+    <string name="no_password">无密码</string>
+    <string name="password">密码</string>
+    <string name="unknown_wifi">未知 Wi-Fi</string>
+
+    <string name="email">电子邮件</string>
+    <string name="to">收件人</string>
+    <string name="subject">主题</string>
+    <string name="sms_message">短信内容</string>
+
+    <string name="contact">联系人</string>
+    <string name="name">姓名</string>
+    <string name="contact_phone">电话号码</string>
+
+    <string name="calendar_summary">标题</string>
+    <string name="calendar_description">描述</string>
+    <string name="calendar_location">地点</string>
+    <string name="calendar_start">开始</string>
+    <string name="calendar_end">结束</string>
+
+    <string name="copy_password">复制密码</string>
+    <string name="copy_link">复制链接</string>
+    <string name="copy_phone_number">复制电话号码</string>
+    <string name="copy_email">复制电子邮件</string>
+    <string name="copy_event_details">复制活动详情</string>
+    <string name="copy_contact_name">复制联系人姓名</string>
+    <string name="copy_text">复制文本</string>
+
+    <string name="contact_title">联系人详情</string>
+    <string name="contact_from_phonebook">从通讯录导入</string>
+    <string name="label_full_name">姓名</string>
+    <string name="hint_full_name">张三</string>
+    <string name="label_organization">组织/公司</string>
+    <string name="hint_organization">公司名称</string>
+    <string name="label_phone_number">电话号码</string>
+    <string name="hint_phone_number">+1 234 567 8900</string>
+    <string name="label_email">电子邮箱</string>
+    <string name="hint_email">example@mail.com</string>
+    <string name="label_address">地址</string>
+    <string name="hint_address">街道、城市、国家</string>
+    <string name="label_notes">备注</string>
+    <string name="hint_notes">附加详细信息...</string>
+
+    <string name="email_qr_title">电子邮件详情</string>
+    <string name="label_email_address">电子邮箱</string>
+    <string name="hint_email_address">recipient@example.com</string>
+    <string name="label_email_subject">主题</string>
+    <string name="hint_email_subject">输入主题...</string>
+    <string name="label_email_body">正文</string>
+    <string name="hint_email_body">输入邮件内容...</string>
+
+    <string name="sms_qr_title">短信</string>
+    <string name="label_sms_phone_number">电话号码</string>
+    <string name="hint_sms_phone_number">+1 234 567 8900</string>
+    <string name="label_sms_message">短信内容</string>
+    <string name="hint_sms_message">输入短信内容...</string>
+
+    <string name="gps_qr_title">GPS 位置</string>
+    <string name="label_gps_latitude">纬度</string>
+    <string name="hint_gps_latitude">例：51.5074</string>
+    <string name="label_gps_longitude">经度</string>
+    <string name="hint_gps_longitude">例：-0.1278</string>
+    <string name="label_gps_query">位置查询 / 名称（可选）</string>
+    <string name="hint_gps_query">例：埃菲尔铁塔，巴黎</string>
+    <string name="btn_select_on_map">在地图上选择位置</string>
+    <string name="text_or">或</string>
+
+    <string name="phone_qr_title">电话号码</string>
+    <string name="label_phone_number_input">电话号码</string>
+    <string name="hint_phone_number_input">+1 234 567 8900</string>
+
+    <string name="event_qr_title">日历活动</string>
+    <string name="label_event_title">活动标题</string>
+    <string name="hint_event_title">例：团队会议</string>
+    <string name="label_all_day">全天活动</string>
+    <string name="label_start_date">开始日期和时间</string>
+    <string name="hint_start_date">选择开始日期</string>
+    <string name="label_end_date">结束日期和时间</string>
+    <string name="hint_end_date">选择结束日期</string>
+    <string name="label_event_location">地点</string>
+    <string name="hint_event_location">例：办公室 / Zoom 链接</string>
+    <string name="label_event_description">描述</string>
+    <string name="hint_event_description">添加活动详情或备注...</string>
+
+    <string name="wifi_qr_title">Wi-Fi 网络</string>
+    <string name="label_wifi_ssid">网络名称 (SSID)</string>
+    <string name="hint_wifi_ssid">例：Home_Network</string>
+    <string name="label_wifi_password">密码</string>
+    <string name="hint_wifi_password">输入 Wi-Fi 密码</string>
+    <string name="label_wifi_encryption">加密类型</string>
+    <string name="label_wifi_hidden">隐藏网络</string>
+
+    <string-array name="wifi_encryption_types">
+        <item>WPA / WPA2</item>
+        <item>WPA3</item>
+        <item>WEP</item>
+        <item>无（开放）</item>
+    </string-array>
+
+    <string name="myqr_title">我的二维码名片</string>
+    <string name="label_myqr_full_name">姓名</string>
+    <string name="hint_myqr_full_name">张三</string>
+    <string name="label_myqr_organization">组织/公司</string>
+    <string name="hint_myqr_organization">公司名称</string>
+    <string name="label_myqr_phone_number">电话号码</string>
+    <string name="hint_myqr_phone_number">+1 234 567 8900</string>
+    <string name="label_myqr_email">电子邮箱</string>
+    <string name="hint_myqr_email">example@mail.com</string>
+    <string name="label_myqr_address">地址</string>
+    <string name="hint_myqr_address">街道、城市、国家</string>
+    <string name="label_myqr_notes">备注</string>
+    <string name="hint_myqr_notes">附加详细信息...</string>
+
+    <string name="create_qr_title">生成二维码</string>
+    <string name="btn_generate_qr">生成二维码</string>
+
+    <string name="scan_qr_code">扫描二维码</string>
+    <string name="scan_history">扫描历史</string>
+    <string name="profile">个人资料</string>
+    <string name="history_and_favorites">历史与收藏</string>
+
+    <string name="all">全部</string>
+    <string name="favorites">收藏</string>
+    <string name="created">已创建</string>
+    <string name="scanned">已扫描</string>
+    <string name="list_is_empty">列表为空</string>
+
+    <string name="back">返回</string>
+    <string name="close">关闭</string>
+    <string name="add_to_favorites">添加到收藏</string>
+    <string name="qr_code_created">二维码已生成</string>
+
+    <string name="qr_code">二维码</string>
+    <string name="download">下载</string>
+    <string name="information">信息</string>
+    <string name="type">类型</string>
+    <string name="content">内容</string>
+    <string name="created_date">创建时间</string>
+    <string name="view_details">查看详情</string>
+    <string name="qr_code_details">二维码详情</string>
+    <string name="qr_type">二维码类型</string>
+    <string name="type_label">类型：</string>
+
+    <string name="turn_on_flashlight">开启闪光灯</string>
+    <string name="flip_camera">切换摄像头</string>
+    <string name="select_from_gallery">从相册选择</string>
+    <string name="camera_permission_denied">相机权限被拒绝</string>
+
+    <string name="enter_your_text">请输入文本...</string>
+    <string name="url_address">URL 地址</string>
+    <string name="specify_name_or_phone">输入姓名或电话号码</string>
+    <string name="enter_text">输入文本</string>
+    <string name="enter_email">输入电子邮箱</string>
+    <string name="enter_url">输入 URL</string>
+    <string name="enter_network_name_ssid">输入网络名称 (SSID)</string>
+    <string name="enter_phone_number">输入电话号码</string>
+    <string name="required">必填</string>
+    <string name="enter_event_title">输入活动标题</string>
+
+    <string name="address_label">地址：</string>
+    <string name="note_label">备注：</string>
+    <string name="company_label">公司：</string>
+    <string name="geolocation_label">位置：</string>
+    <string name="select_date">选择日期</string>
+
+    <string name="settings_title">设置</string>
+    <string name="preferences_header">偏好设置</string>
+    <string name="label_language">语言</string>
+    <string name="label_theme">主题</string>
+
+    <string name="lang_english">English</string>
+    <string name="lang_russian">Русский</string>
+    <string name="lang_spanish">Español</string>
+    <string name="lang_chinese">简体中文</string>
+    <string name="lang_german">Deutsch</string>
+    <string name="lang_french">Français</string>
+    <string name="lang_japanese">日本語</string>
+    <string name="lang_polish">Polski</string>
+    <string name="lang_portuguese">Português (Brasil)</string>
+    <string name="lang_arabic">العربية</string>
+    <string name="lang_korean">한국어</string>
+    <string name="lang_ukrainian">Українська</string>
+    <string name="lang_hindi">हिन्दी</string>
+
+    <string name="theme_system">跟随系统</string>
+    <string name="theme_light">浅色</string>
+    <string name="theme_dark">深色</string>
+
+    <string name="qr_saved_to_gallery">二维码已保存至相册！</string>
+    <string name="qr_save_error">保存失败</string>
+    <string name="qr_share_message">这是我的二维码：</string>
+    <string name="qr_share_title">分享二维码</string>
+    <string name="qr_share_error">分享失败</string>
+</resources>

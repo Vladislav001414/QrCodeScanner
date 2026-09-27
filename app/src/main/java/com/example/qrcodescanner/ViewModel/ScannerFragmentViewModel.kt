@@ -59,7 +59,7 @@ class ScannerFragmentViewModel(val repository: QrRepository) : ViewModel() {
         viewModelScope.launch(Dispatchers.IO) {
             val qrItem = QrCodeItemTable(
                 id = null,
-                qrType = result.type.stringResId,
+                qrType = result.type.keyToDB,
                 rawValue = result.rawValue,
                 status = "Scanned",
                 favorite = false,

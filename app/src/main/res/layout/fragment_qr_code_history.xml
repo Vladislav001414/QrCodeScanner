@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="12dp">
+
+    <!-- Заголовок экрана -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/history_and_favorites"
+        android:textColor="@color/text_primary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Компактные фильтры (Чипы) -->
+    <HorizontalScrollView
+        android:id="@+id/svFilters"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:chipSpacingHorizontal="6dp"
+            app:singleLine="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipAll"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/all"
+                android:textColor="@color/text_primary"
+                android:textSize="12sp"
+                app:chipBackgroundColor="@color/surface_card"
+                app:chipCornerRadius="8dp"
+                app:chipMinHeight="32dp"
+                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipFavorite"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/favorites"
+                android:textColor="@color/text_primary"
+                android:textSize="12sp"
+                app:chipBackgroundColor="@color/surface_card"
+                app:chipCornerRadius="8dp"
+                app:chipIcon="@drawable/baseline_star_24"
+                app:chipIconSize="16dp"
+                app:chipIconTint="@color/primary"
+                app:chipMinHeight="32dp"
+                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipCreated"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/created"
+                android:textColor="@color/text_primary"
+                android:textSize="12sp"
+                app:chipBackgroundColor="@color/surface_card"
+                app:chipCornerRadius="8dp"
+                app:chipMinHeight="32dp"
+                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipScanned"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/scanned"
+                android:textColor="@color/text_primary"
+                android:textSize="12sp"
+                app:chipBackgroundColor="@color/surface_card"
+                app:chipCornerRadius="8dp"
+                app:chipMinHeight="32dp"
+                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeWidth="1dp" />
+
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+    <!-- Список QR-кодов -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewHistory"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/svFilters"
+        tools:listitem="@layout/qr_history_item" />
+
+    <!-- Заглушка, если список пуст -->
+    <TextView
+        android:id="@+id/tvEmptyState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/list_is_empty"
+        android:textColor="@color/text_secondary"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/svFilters" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,7 @@
 package com.example.qrcodescanner.HandlerFactory
 
 import android.view.View
+import androidx.fragment.app.FragmentManager
 import com.example.qrcodescanner.Handler.ContactFormHandler
 import com.example.qrcodescanner.Handler.EmailFormHandler
 import com.example.qrcodescanner.Handler.EventFormHandler
@@ -25,7 +26,7 @@ import com.example.qrcodescanner.databinding.ItemUrlTypeBinding
 import com.example.qrcodescanner.databinding.ItemWifiTypeBinding
 
 object QrFormHandlerFactory {
-    fun createHandler(type: QrItemCreation, containerView: View): QrFormHandler {
+    fun createHandler(type: QrItemCreation, containerView: View, fragmentManager: FragmentManager): QrFormHandler {
         return when (type) {
             QrItemCreation.URL -> UrlFormHandler(ItemUrlTypeBinding.bind(containerView))
             QrItemCreation.TEXT -> TextFormHandler(ItemTextTypeBinding.bind(containerView))
@@ -36,7 +37,7 @@ object QrFormHandlerFactory {
             QrItemCreation.VCARD -> ContactFormHandler(ItemContactTypeBinding.bind(containerView))
             QrItemCreation.MeCARD -> MyQrFormHandler(ItemMyqrTypeBinding.bind(containerView))
             QrItemCreation.LOCATION -> GpsFormHandler(ItemGpsTypeBinding.bind(containerView))
-            QrItemCreation.EVENT -> EventFormHandler(ItemEventTypeBinding.bind(containerView))
+            QrItemCreation.EVENT -> EventFormHandler(ItemEventTypeBinding.bind(containerView), fragmentManager)
         }
     }
 }

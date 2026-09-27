@@ -65,6 +65,33 @@ fun QrItemCreation.getFormId(): Int = when (this) {
     QrItemCreation.EVENT -> R.id.formEvent
 }
 
+fun QrItemCreation.toDbKey(): String = when (this) {
+    QrItemCreation.URL -> "URL"
+    QrItemCreation.TEXT -> "TEXT"
+    QrItemCreation.EMAIL -> "EMAIL"
+    QrItemCreation.PHONE -> "PHONE"
+    QrItemCreation.SMS -> "SMS"
+    QrItemCreation.VCARD -> "VCARD"
+    QrItemCreation.MeCARD -> "MeCARD"
+    QrItemCreation.LOCATION -> "LOCATION"
+    QrItemCreation.WIFI -> "WIFI"
+    QrItemCreation.EVENT -> "EVENT"
+}
+
+fun QrItemCreation.Companion.fromString(type: String?): QrItemCreation = when (type) {
+    "URL" -> QrItemCreation.URL
+    "TEXT" -> QrItemCreation.TEXT
+    "EMAIL" -> QrItemCreation.EMAIL
+    "PHONE" -> QrItemCreation.PHONE
+    "SMS" -> QrItemCreation.SMS
+    "VCARD" -> QrItemCreation.VCARD
+    "MeCARD" -> QrItemCreation.MeCARD
+    "LOCATION" -> QrItemCreation.LOCATION
+    "WIFI" -> QrItemCreation.WIFI
+    "EVENT" -> QrItemCreation.EVENT
+    else -> QrItemCreation.TEXT // Значение по умолчанию
+}
+
 fun ViewFlipper.showViewById(@IdRes viewId: Int): View? {
     val targetView = findViewById<View>(viewId) ?: return null
     val index = indexOfChild(targetView)
@@ -73,6 +100,8 @@ fun ViewFlipper.showViewById(@IdRes viewId: Int): View? {
     }
     return targetView
 }
+
+
 
 fun QrItemCreation.Companion.getAllItems(): List<QrItemCreation> = listOf(
     QrItemCreation.URL,

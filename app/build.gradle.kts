@@ -55,6 +55,7 @@ dependencies {
     implementation(libs.androidx.camera.camera2)
     implementation(libs.androidx.camera.lifecycle)
     implementation(libs.androidx.camera.view)
+    implementation(libs.play.services.maps)
     implementation(libs.play.services.mlkit.barcode.scanning)
     implementation(libs.androidx.fragment)
     implementation(libs.androidx.camera.core)
@@ -62,7 +63,7 @@ dependencies {
     implementation(libs.androidx.cardview)
     implementation ("com.github.Dimezis:BlurView:version-3.2.0")
     implementation("com.journeyapps:zxing-android-embedded:4.3.0")
-
+    implementation("com.google.android.material:material:1.12.0")
     implementation(libs.androidx.room.runtime)
     implementation(libs.room.ktx) // Для поддержки Coroutines и Flow
     ksp(libs.room.compiler)
