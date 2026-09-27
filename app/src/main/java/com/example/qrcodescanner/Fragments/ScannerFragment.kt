@@ -73,9 +73,9 @@ class ScannerFragment : Fragment() {
     private val pickImageLauncher = registerForActivityResult(
         ActivityResultContracts.PickVisualMedia()
     ) { uri: Uri? ->
-        // Этот блок кода выполнится АВТОМАТИЧЕСКИ, когда пользователь выберет картинку
+
         if (uri != null) {
-            // Передаем полученный Uri файла в ваш обновленный qrCodeAnalyzer
+
             qrCodeAnalyzer.analyzeStaticImage(uri)
         }
     }
@@ -109,7 +109,7 @@ class ScannerFragment : Fragment() {
 
 
 
-        // 4. Обращаемся к BlurView напрямую через binding без findViewById
+
         binding.blurview.setupWith(rootView)
             .setFrameClearDrawable(windowBackground)
             .setBlurRadius(25f)
@@ -155,25 +155,25 @@ class ScannerFragment : Fragment() {
 
     private fun setupInfoCardView(){
         binding.moreOptionsBtn.setOnClickListener {
-            // Запускаем автоматическую плавную анимацию для всего экрана
-            val materialTransition = TransitionSet().apply {
-                // Заставляем элементы внутри карточки (текст, кнопки) растворяться и появляться одновременно
-                ordering = TransitionSet.ORDERING_TOGETHER
-                duration = 375 // Оптимальное время по гайдлайнам Material 3 для крупных объектов
 
-                // Магия плавности: используем кривую FastOutSlowIn, как в системных анимациях Android
+            val materialTransition = TransitionSet().apply {
+
+                ordering = TransitionSet.ORDERING_TOGETHER
+                duration = 375
+
+
                 interpolator = PathInterpolatorCompat.create(0.4f, 0.0f, 0.2f, 1.0f)
 
-                // Добавляем плавное изменение границ (ширины и высоты) стекла
+
                 addTransition(ChangeBounds())
-                // Добавляем мягкое исчезновение старого и проявление нового текста
+
                 addTransition(Fade())
             }
 
-            // Запускаем созданную анимацию на экране
+
             TransitionManager.beginDelayedTransition(binding.root, materialTransition)
 
-            // Переключаем видимость элементов внутри карточки
+
             binding.shortQrInfoLayout.visibility = View.GONE
             binding.blurview.visibility = View.VISIBLE
 
@@ -183,30 +183,30 @@ class ScannerFragment : Fragment() {
             binding.qrInfoCardView.layoutParams = params
         }
 
-// 2. СВОРАЧИВАЕМ ОБРАТНО (Возврат к свободному wrap_content)
+
         binding.closeOptionsBtn.setOnClickListener {
             val materialTransition = TransitionSet().apply {
-                // Заставляем элементы внутри карточки (текст, кнопки) растворяться и появляться одновременно
-                ordering = TransitionSet.ORDERING_TOGETHER
-                duration = 375 // Оптимальное время по гайдлайнам Material 3 для крупных объектов
 
-                // Магия плавности: используем кривую FastOutSlowIn, как в системных анимациях Android
+                ordering = TransitionSet.ORDERING_TOGETHER
+                duration = 375
+
+
                 interpolator = PathInterpolatorCompat.create(0.4f, 0.0f, 0.2f, 1.0f)
 
-                // Добавляем плавное изменение границ (ширины и высоты) стекла
+
                 addTransition(ChangeBounds())
-                // Добавляем мягкое исчезновение старого и проявление нового текста
+
                 addTransition(Fade())
             }
 
-            // Запускаем созданную анимацию на экране
+
             TransitionManager.beginDelayedTransition(binding.root, materialTransition)
 
-            // Возвращаем короткий контент
+
             binding.blurview.visibility = View.GONE
             binding.shortQrInfoLayout.visibility = View.VISIBLE
 
-            // ВОЗВРАЩАЕМ РЕЖИМ ШИРИНЫ ПО РАЗМЕРУ ТЕКСТА (WRAP_CONTENT)
+
             val params = binding.qrInfoCardView.layoutParams
             params.width = ViewGroup.LayoutParams.WRAP_CONTENT
             binding.qrInfoCardView.layoutParams = params
@@ -329,9 +329,9 @@ class ScannerFragment : Fragment() {
         binding.cameraPreviewView.controller = cameraController
 
         cameraController.zoomState.observe(viewLifecycleOwner) { zoomState ->
-            val currentZoom: Float = zoomState.zoomRatio       // Текущий коэффициент зума (например, 1.0)
-            val maxZoom: Float = zoomState.maxZoomRatio         // МАКСИМАЛЬНЫЙ зум этого телефона (например, 8.0 или 10.0)
-            val minZoom: Float = zoomState.minZoomRatio         // Минимальный зум этого телефона (обычно 1.0)
+            val currentZoom: Float = zoomState.zoomRatio
+            val maxZoom: Float = zoomState.maxZoomRatio
+            val minZoom: Float = zoomState.minZoomRatio
             binding.seekBarZoom.max = (maxZoom * 100).toInt()
             binding.seekBarZoom.min = (minZoom * 100).toInt()
             if (!isUserTouching) {
@@ -350,8 +350,7 @@ class ScannerFragment : Fragment() {
                 if (p2) {
                     val currentTime = System.currentTimeMillis()
 
-                    // ОПТИМИЗАЦИЯ: Отправляем команду камере не чаще, чем раз в 30 миллисекунд.
-                    // Это убирает перегрузку потока камеры и ликвидирует задержку.
+
                     if (currentTime - lastZoomTime > 30) {
                         lastZoomTime = currentTime
                     }
@@ -363,12 +362,12 @@ class ScannerFragment : Fragment() {
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {
-                // Пользователь коснулся ползунка — блокируем обновления из камеры
+
                 isUserTouching = true
             }
 
             override fun onStopTrackingTouch(seekBar: SeekBar?) {
-                // Пользователь отпустил ползунок — возвращаем управление камере
+
                 isUserTouching = false
             }
 
@@ -379,27 +378,27 @@ class ScannerFragment : Fragment() {
 
 
 
-     // Переменная для сохранения старой яркости
+
 
     private fun setMaxScreenBrightness(enable: Boolean) {
         val window = requireActivity().window
         val layoutParams = window.attributes
 
         if (enable) {
-            // 1. Сохраняем текущую яркость пользователя, чтобы вернуть её потом
+
             if (originalBrightness == -1f) {
                 originalBrightness = layoutParams.screenBrightness
             }
-            // 2. Выкручиваем яркость на максимум (1.0f — это 100%)
+
             layoutParams.screenBrightness = 1.0f
         } else {
-            // 3. Возвращаем яркость пользователя назад
+
             if (originalBrightness != -1f) {
                 layoutParams.screenBrightness = originalBrightness
-                originalBrightness = -1f // Сбрасываем буфер
+                originalBrightness = -1f
             }
         }
-        window.attributes = layoutParams // Применяем изменения к окну
+        window.attributes = layoutParams
     }
 
 

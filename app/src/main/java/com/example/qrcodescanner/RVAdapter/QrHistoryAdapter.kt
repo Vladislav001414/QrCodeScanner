@@ -70,14 +70,14 @@ class QrHistoryAdapter(
                 newItem: QrCodeItemTable
             ): Boolean = oldItem == newItem
 
-            // ВОТ ЭТОГО НЕ ХВАТАЛО:
+
             override fun getChangePayload(
                 oldItem: QrCodeItemTable,
                 newItem: QrCodeItemTable
             ): Any? {
-                // Если изменился ТОЛЬКО статус favorite
+
                 return if (oldItem.favorite != newItem.favorite) {
-                    newItem.favorite // Передаем новое значение как payload
+                    newItem.favorite
                 } else {
                     super.getChangePayload(oldItem, newItem)
                 }

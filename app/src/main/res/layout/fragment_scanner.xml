@@ -9,8 +9,7 @@
     tools:context=".Fragments.ScannerFragment">
 
 
-    <!-- 1. Сканер камеры (на весь экран, под всеми элементами) -->
-    <!-- Можно заменить на androidx.camera.view.PreviewView для CameraX -->
+
     <eightbitlab.com.blurview.BlurTarget
         android:id="@+id/blurTarget"
         android:layout_width="match_parent"
@@ -36,7 +35,7 @@
 
     </eightbitlab.com.blurview.BlurTarget>
 
-    <!-- 2. Верхняя панель управления (Фонарик, Камера, Галерея) -->
+
 
     <LinearLayout
         android:id="@+id/topControlsLayout"
@@ -53,7 +52,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!-- Кнопка фонарика -->
+
         <ImageButton
             android:id="@+id/btnFlashlight"
             android:layout_width="48dp"
@@ -63,7 +62,7 @@
             android:src="@drawable/outline_flash_on_24"
             app:tint="@color/text_primary" />
 
-        <!-- Кнопка переключения камеры -->
+
         <ImageButton
             android:id="@+id/btnSwitchCamera"
             android:layout_width="48dp"
@@ -74,7 +73,7 @@
             android:src="@drawable/outline_cameraswitch_24"
             app:tint="@color/text_primary" />
 
-        <!-- Кнопка галереи -->
+
         <ImageButton
             android:id="@+id/btnGallery"
             android:layout_width="48dp"
@@ -85,7 +84,7 @@
             app:tint="@color/text_primary" />
     </LinearLayout>
 
-    <!-- 3. Ползунок Зума (Вертикальный, аккуратный, справа) -->
+
     <SeekBar
         android:id="@+id/seekBarZoom"
         android:layout_width="160dp"
@@ -100,10 +99,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/topControlsLayout" />
 
-    <!-- 4. Современное плавающее нижнее меню (Стиль One UI / iOS) -->
-
-
-    <!-- 5. Рекламный баннер (Прижат к самому низу экрана) -->
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/qrInfoCardView"
@@ -111,7 +106,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
-        android:layout_marginBottom="102dp"
+        android:layout_marginBottom="142dp"
         android:visibility="visible"
         app:cardBackgroundColor="@android:color/transparent"
         app:cardCornerRadius="25dp"

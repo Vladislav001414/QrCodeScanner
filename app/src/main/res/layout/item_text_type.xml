@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Заголовок и счетчик символов -->
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,10 +24,10 @@
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <!-- Доп. фича: Счетчик символов -->
+
     </RelativeLayout>
 
-    <!-- Поле ввода, увеличивающееся по высоте -->
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
             android:textColorHint="@color/text_secondary"
             android:textSize="14sp" />
 
-        <!-- Быстрая кнопка «Вставить» / «Очистить» -->
+
     </RelativeLayout>
 
 </LinearLayout>

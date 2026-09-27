@@ -8,6 +8,7 @@ import android.net.Uri
 import android.provider.MediaStore
 import android.widget.Toast
 import androidx.core.content.FileProvider
+import com.example.qrcodescanner.R
 import java.io.File
 import java.io.FileOutputStream
 import java.io.OutputStream
@@ -32,18 +33,17 @@ object QrHelper {
                 if (outputStream != null) {
                     bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream)
                     outputStream.close()
-                    Toast.makeText(context, "QR-код сохранен в галерею!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, context.getString(R.string.qr_saved_to_gallery), Toast.LENGTH_SHORT).show()
                 }
             } catch (e: Exception) {
                 e.printStackTrace()
-                Toast.makeText(context, "Ошибка при сохранении", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, context.getString(R.string.qr_save_error), Toast.LENGTH_SHORT).show()
             }
         }
     }
 
     fun shareQrCode(context: Context, bitmap: Bitmap) {
         try {
-            // Сохраняем во временную папку cache
             val cachePath = File(context.cacheDir, "images")
             cachePath.mkdirs()
             val file = File(cachePath, "shared_qr.png")
@@ -51,7 +51,6 @@ object QrHelper {
             bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream)
             stream.close()
 
-            // Получаем безопасный Uri через FileProvider
             val contentUri: Uri = FileProvider.getUriForFile(
                 context,
                 "${context.packageName}.fileprovider",
@@ -64,16 +63,15 @@ object QrHelper {
                     addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION) // Предоставляем доступ другим приложениям
                     setDataAndType(contentUri, context.contentResolver.getType(contentUri))
                     putExtra(Intent.EXTRA_STREAM, contentUri)
-                    putExtra(Intent.EXTRA_TEXT, "Вот мой QR-код:")
+                    putExtra(Intent.EXTRA_TEXT, context.getString(R.string.qr_share_message))
                     type = "image/png"
                 }
 
-                // Запуск системного меню выборки приложений
-                context.startActivity(Intent.createChooser(shareIntent, "Поделиться QR-кодом"))
+                context.startActivity(Intent.createChooser(shareIntent, context.getString(R.string.qr_share_title)))
             }
         } catch (e: Exception) {
             e.printStackTrace()
-            Toast.makeText(context, "Ошибка при попытке поделиться", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, context.getString(R.string.qr_share_error), Toast.LENGTH_SHORT).show()
         }
     }
 }

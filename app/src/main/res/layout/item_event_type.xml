@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Header -->
+
     <TextView
         android:id="@+id/tvEventTitleHeader"
         android:layout_width="wrap_content"
@@ -19,7 +19,7 @@
         android:textSize="14sp"
         android:textStyle="bold" />
 
-    <!-- 1. Event Title -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
             android:textSize="14sp" />
     </RelativeLayout>
 
-    <!-- 2. All-Day Event Switch -->
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -71,7 +71,7 @@
             app:useMaterialThemeColors="false" />
     </RelativeLayout>
 
-    <!-- 3. Start Date Picker Input -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -117,7 +117,7 @@
             app:tint="@color/secondary" />
     </RelativeLayout>
 
-    <!-- 4. End Date Picker Input -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -162,7 +162,7 @@
             app:tint="@color/secondary" />
     </RelativeLayout>
 
-    <!-- 5. Location -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -190,7 +190,6 @@
             android:textSize="14sp" />
     </RelativeLayout>
 
-    <!-- 6. Description (Dynamic Height) -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

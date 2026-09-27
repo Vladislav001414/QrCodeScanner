@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Header -->
+
     <TextView
         android:id="@+id/tvGpsTitle"
         android:layout_width="wrap_content"
@@ -19,18 +19,14 @@
         android:textSize="14sp"
         android:textStyle="bold" />
 
-    <!-- Action Button: Pick on Map -->
 
-    <!-- Divider with OR text -->
-
-    <!-- Coordinates Row (Latitude & Longitude side by side) -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:baselineAligned="false"
         android:orientation="horizontal">
 
-        <!-- 1. Latitude -->
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -65,7 +61,7 @@
             </RelativeLayout>
         </LinearLayout>
 
-        <!-- 2. Longitude -->
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -102,7 +98,7 @@
 
     </LinearLayout>
 
-    <!-- 3. Query / Location Name -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

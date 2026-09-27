@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Header -->
+
     <TextView
         android:id="@+id/tvSmsTitle"
         android:layout_width="wrap_content"
@@ -19,7 +19,7 @@
         android:textSize="14sp"
         android:textStyle="bold" />
 
-    <!-- 1. Phone Number -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
             android:textSize="14sp" />
     </RelativeLayout>
 
-    <!-- 2. Message (Dynamic Height) -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

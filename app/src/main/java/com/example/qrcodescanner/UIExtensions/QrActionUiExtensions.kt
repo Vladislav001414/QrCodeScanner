@@ -12,7 +12,7 @@ fun QrAction.getIcon(): Int = when (this) {
     QrAction.CallPhone -> R.drawable.baseline_call_24
     QrAction.SendSms -> R.drawable.outline_sms_24
     QrAction.SearchInGoogle -> R.drawable.captive_portal_24px
-    // Компилятор заставит вас перечислить абсолютно все действия из QrAction
+
     QrAction.AddCalendar -> R.drawable.baseline_edit_calendar_24
     QrAction.AddContact -> R.drawable.baseline_person_outline_24
     QrAction.ConnectWifi -> R.drawable.outline_wifi_24

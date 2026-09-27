@@ -89,7 +89,7 @@ fun QrItemCreation.Companion.fromString(type: String?): QrItemCreation = when (t
     "LOCATION" -> QrItemCreation.LOCATION
     "WIFI" -> QrItemCreation.WIFI
     "EVENT" -> QrItemCreation.EVENT
-    else -> QrItemCreation.TEXT // Значение по умолчанию
+    else -> QrItemCreation.TEXT
 }
 
 fun ViewFlipper.showViewById(@IdRes viewId: Int): View? {

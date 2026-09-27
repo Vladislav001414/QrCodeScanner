@@ -31,7 +31,7 @@ class QrCreationAdapter(
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: QrItemCreation) {
-            // Применяем ваши Extension-функции
+
             binding.ivIcon.setImageResource(item.getIcon())
             binding.tvTitle.setText(item.getText())
 

@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Header -->
+
     <TextView
         android:id="@+id/tvEmailTitle"
         android:layout_width="wrap_content"
@@ -19,7 +19,7 @@
         android:textSize="14sp"
         android:textStyle="bold" />
 
-    <!-- 1. Email Address -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
             android:textSize="14sp" />
     </RelativeLayout>
 
-    <!-- 2. Subject -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
             android:textSize="14sp" />
     </RelativeLayout>
 
-    <!-- 3. Message Body (Dynamic Height) -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

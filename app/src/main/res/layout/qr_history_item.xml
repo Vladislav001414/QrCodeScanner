@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:padding="10dp">
 
-        <!-- Иконка типа QR -->
+
         <View
             android:id="@+id/iconBackground"
             android:layout_width="38dp"
@@ -37,7 +37,7 @@
             app:layout_constraintTop_toTopOf="@id/iconBackground"
             app:tint="@color/secondary" />
 
-        <!-- Контент -->
+
         <TextView
             android:id="@+id/tvContent"
             android:layout_width="0dp"
@@ -54,7 +54,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="https://example.com" />
 
-        <!-- Тип и дата -->
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -94,7 +94,7 @@
                 android:textSize="12sp" />
         </LinearLayout>
 
-        <!-- Кнопка «Избранное» -->
+
         <ImageButton
             android:id="@+id/btnFavorite"
             android:layout_width="32dp"
@@ -107,7 +107,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:tint="@color/primary" />
 
-        <!-- Кнопка «Удалить» -->
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

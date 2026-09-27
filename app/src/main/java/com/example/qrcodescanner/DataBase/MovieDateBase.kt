@@ -10,7 +10,7 @@ import com.example.qrcodescanner.DataBase.Tables.QrCodeItemTable
 
 @Database(entities = [QrCodeItemTable::class, ProfileTable::class], version = 1, exportSchema = false)
 abstract class MovieDateBase : RoomDatabase() {
-    abstract fun getDBDao(): com.example.qrcodescanner.DataBase.Dao
+    abstract fun getDBDao(): Dao
 
     companion object {
         @Volatile private var INSTANCE: MovieDateBase? = null

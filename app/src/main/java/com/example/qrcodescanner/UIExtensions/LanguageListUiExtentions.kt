@@ -31,34 +31,34 @@ fun LanguageList.getIsoCode(): String = when (this) {
     LanguageList.French -> "fr"
     LanguageList.Japanese -> "ja"
     LanguageList.Polish -> "pl"
-    LanguageList.BrazilianPortuguese -> "pt" // Или "pt-BR" для конкретного региона
+    LanguageList.BrazilianPortuguese -> "pt"
     LanguageList.Arabic -> "ar"
     LanguageList.Korean -> "ko"
     LanguageList.Ukrainian -> "uk"
     LanguageList.Hindi -> "hi"
 }
 
-// Ищет объект языка по его строковому коду. Если код не найден, возвращает English по умолчанию
+
 
 fun LanguageList.Companion.fromIsoCode(code: String?): LanguageList {
-    // 1. Если код передан (из БД), ищем его в нашем списке
+
     if (code != null) {
         val found = LanguageList.getAll().find { it.getIsoCode() == code }
         if (found != null) return found
     }
 
-    // 2. Если в БД пусто (первый запуск), берем язык системы смартфона
-    val systemLanguageCode = Locale.getDefault().language // вернет "ru", "uk", "en" и т.д.
 
-    // 3. Ищем, поддерживает ли наше приложение этот системный язык
+    val systemLanguageCode = Locale.getDefault().language
+
+
     return LanguageList.getAll().find { it.getIsoCode() == systemLanguageCode }
-        ?: LanguageList.English // 4. Если системный язык не поддерживается, возвращаем Английский
+        ?: LanguageList.English
 }
 
 
 
 
-// Для языков
+
 fun LanguageList.Companion.getAll(): List<LanguageList> {
     return listOf(
         LanguageList.English, LanguageList.Russian, LanguageList.Spanish,

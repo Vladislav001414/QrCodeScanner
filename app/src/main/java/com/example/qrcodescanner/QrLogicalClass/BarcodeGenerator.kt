@@ -16,7 +16,7 @@ object BarcodeGenerator {
 
         return try {
             val barcodeEncoder = BarcodeEncoder()
-            // Одна строчка генерирует готовый Bitmap для выбранного формата
+
             barcodeEncoder.encodeBitmap(content, format, width, height)
         } catch (e: Exception) {
             e.printStackTrace()

@@ -17,10 +17,10 @@ class QrCodeHistoryViewModel(private val repository: QrRepository) : ViewModel()
     private val _selectedFilter = MutableStateFlow(QrFilter.ALL)
     val selectedFilter: StateFlow<QrFilter> = _selectedFilter.asStateFlow()
     val qrHistoryList: StateFlow<List<QrCodeItemTable>> = combine(
-        repository.getAllItem(), // Поток из Room БД
-        _selectedFilter          // Поток с текущим фильтром
+        repository.getAllItem(),
+        _selectedFilter
     ) { itemsList, currentFilter ->
-        // Логика фильтрации в памяти
+
         when (currentFilter) {
             QrFilter.ALL -> itemsList
             QrFilter.FAVORITE -> itemsList.filter { it.favorite }
@@ -29,7 +29,7 @@ class QrCodeHistoryViewModel(private val repository: QrRepository) : ViewModel()
         }
     }.stateIn(
         scope = viewModelScope,
-        started = SharingStarted.WhileSubscribed(5000), // Пауза при сворачивании
+        started = SharingStarted.WhileSubscribed(5000),
         initialValue = emptyList()
     )
 

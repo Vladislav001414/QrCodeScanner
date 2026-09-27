@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Header -->
+
     <TextView
         android:id="@+id/tvWifiTitleHeader"
         android:layout_width="wrap_content"
@@ -19,7 +19,7 @@
         android:textSize="14sp"
         android:textStyle="bold" />
 
-    <!-- 1. Network Name (SSID) -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,9 +47,9 @@
             android:textSize="14sp" />
     </RelativeLayout>
 
-    <!-- 2. Encryption Type (Exposed Dropdown Menu) -->
 
-    <!-- 3. Password Field -->
+
+
     <LinearLayout
         android:id="@+id/containerPassword"
         android:layout_width="match_parent"
@@ -91,12 +91,12 @@
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:src="@drawable/outline_visibility_24"
+                android:src="@drawable/outline_visibility_off_24"
                 app:tint="@color/text_secondary" />
         </RelativeLayout>
     </LinearLayout>
 
-    <!-- 4. Hidden Network Switch -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

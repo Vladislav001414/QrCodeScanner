@@ -12,7 +12,7 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <!-- Заголовок экрана -->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
             android:textSize="22sp"
             android:textStyle="bold" />
 
-        <!-- Подзаголовок секции -->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
             android:textSize="12sp"
             android:textStyle="bold" />
 
-        <!-- Единая карточка настроек -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -41,8 +41,7 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Выбор языка -->
-            <!-- Секция выбора языка -->
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -90,15 +89,14 @@
 
             </LinearLayout>
 
-            <!-- Разделитель -->
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginVertical="4dp"
                 android:background="@color/surface_elevated" />
 
-            <!-- Выбор темы -->
-            <!-- Секция выбора темы -->
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

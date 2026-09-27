@@ -61,11 +61,11 @@ class QrCreatorFragment : Fragment() {
         val adapter = QrCreationAdapter { selectedType ->
             sharedVM.selectQrType(selectedType)
             findNavController().navigate(R.id.qrCreationFragment)
-            // Обработка клика (например, открытие экрана ввода данных)
+
         }
 
         binding.rvQrTypes.adapter = adapter
-// Передаем ваш список всех элементов через Extension
+
         adapter.submitList(QrItemCreation.getAllItems())
     }
 

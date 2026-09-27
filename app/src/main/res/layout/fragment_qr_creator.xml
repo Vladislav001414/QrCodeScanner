@@ -7,7 +7,7 @@
     android:background="@color/bg_main"
     tools:context=".Fragments.QrCreatorFragment">
 
-    <!-- Заголовок экрана -->
+
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
@@ -21,7 +21,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Сетка категорий -->
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvQrTypes"
         android:layout_width="0dp"
@@ -38,6 +38,6 @@
         app:spanCount="1"
         tools:listitem="@layout/item_qr_type" />
 
-    <!-- Рекламный баннер внизу, как на первом экране -->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

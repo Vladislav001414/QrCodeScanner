@@ -65,10 +65,7 @@ class QrInsertDataFragment : Fragment() {
 
         setupVM()
 
-        // 2. Переключаем ViewFlipper на нужный дочерний View
 
-
-        // 4. Обработка нажатия на кнопку "Создать QR"
         binding.btnGenerate.setOnClickListener {
             val qrInfo = currentHandler?.validateAndBuildPayload()?: return@setOnClickListener
 
@@ -82,6 +79,10 @@ class QrInsertDataFragment : Fragment() {
                 )
             sharedViewVM.saveNewQrItem(qrItem)
             findNavController().navigate(R.id.qrViewFragment)
+        }
+
+        binding.btnBack.setOnClickListener {
+            findNavController().popBackStack()
         }
     }
 

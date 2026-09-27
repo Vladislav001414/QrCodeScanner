@@ -20,7 +20,7 @@ import com.example.qrcodescanner.databinding.DialogQrDetailsBottomSheetBinding
 
 class LanguageBottomSheetDialog(
     private val currentLanguage: LanguageList,
-    private val availableLanguages: List<LanguageList>, // Передаем полный список
+    private val availableLanguages: List<LanguageList>,
     private val onLanguageSelected: (LanguageList) -> Unit
 ) : BottomSheetDialogFragment(R.layout.dialog_language_picker) {
 
@@ -43,7 +43,7 @@ class LanguageBottomSheetDialog(
         val primaryColor = ContextCompat.getColor(requireContext(), R.color.primary)
         val textColor = ContextCompat.getColor(requireContext(), R.color.text_primary)
 
-        // Генерируем RadioButton для каждого языка из интерфейса
+
         availableLanguages.forEach { language ->
             val radioButton = RadioButton(requireContext()).apply {
                 id = View.generateViewId()
@@ -53,20 +53,20 @@ class LanguageBottomSheetDialog(
                 buttonTintList = ColorStateList.valueOf(primaryColor)
                 layoutParams = RadioGroup.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT,
-                    dpToPx(48) // Высота кликабельной зоны
+                    dpToPx(48)
                 )
 
-                // Сохраняем ссылку на объект sealed interface прямо в тег кнопки
+
                 tag = language
 
-                // Отмечаем текущий выбранный язык
+
                 isChecked = (language == currentLanguage)
             }
 
             rgLanguages.addView(radioButton)
         }
 
-        // Слушатель клика
+
         rgLanguages.setOnCheckedChangeListener { group, checkedId ->
             val checkedRadioButton = group.findViewById<RadioButton>(checkedId)
             val selectedLanguage = checkedRadioButton?.tag as? LanguageList

@@ -55,11 +55,10 @@ class IntentLauncher(val context: Context){
 
         if (intent != null) {
             try {
-                // 🟢 Вместо resolveActivity мы сразу пытаемся запустить окно
+
                 context.startActivity(intent as Intent?)
             } catch (e: ActivityNotFoundException) {
-                // 🟢 Если на телефоне нет нужного приложения (например, нет карт или браузера),
-                // система выкинет этот эксепшн, и мы красиво покажем ошибку без краша приложения!
+
                 fallbackOrShowError(action, result)
             }
         }
@@ -67,7 +66,7 @@ class IntentLauncher(val context: Context){
 
 
     private fun createBrowserIntent(url: String): Intent {
-        // Добавляем http, если пользователь отсканировал ссылку без него
+
         val formattedUrl = if (!url.startsWith("http://") && !url.startsWith("https://")) {
             "https://$url"
         } else url
@@ -81,7 +80,7 @@ class IntentLauncher(val context: Context){
             barcode.phone?.number
         }
         if (phoneNumber == null) return null
-        // Извлекаем чистую строку номера через phone.number
+
         return Intent(Intent.ACTION_DIAL, "tel:${phoneNumber}".toUri())
     }
 
@@ -103,7 +102,7 @@ class IntentLauncher(val context: Context){
         return Intent(Intent.ACTION_SENDTO).apply {
             data = "smsto:${phoneNumber}".toUri()
 
-            // 3. Используем официальный системный ключ для текста СМС-сообщения
+
             putExtra("sms_body", message)
         }
     }
@@ -115,7 +114,7 @@ class IntentLauncher(val context: Context){
     }
 
     private fun createMapsIntent(coordinates: String): Intent {
-        // Принимаетgeo-координаты. Если там текст, Maps попытается найти это как адрес
+
         return Intent(Intent.ACTION_VIEW, "geo:0,0?q=${Uri.encode(coordinates)}".toUri())
     }
 
@@ -126,7 +125,7 @@ class IntentLauncher(val context: Context){
     private fun createEmailIntent(email: Barcode.Email?): Intent? {
         if (email == null) return null
         return Intent(Intent.ACTION_SENDTO).apply {
-            data = "mailto:".toUri() // Гарантирует, что откроются только почтовые приложения
+            data = "mailto:".toUri()
             putExtra(Intent.EXTRA_EMAIL, arrayOf(email.address))
             putExtra(Intent.EXTRA_SUBJECT, email.subject ?: "")
             putExtra(Intent.EXTRA_TEXT, email.body ?: "")
@@ -137,11 +136,11 @@ class IntentLauncher(val context: Context){
         if (contact == null) return null
         return Intent(Intent.ACTION_INSERT).apply {
             type = ContactsContract.Contacts.CONTENT_TYPE
-            // Берем первое имя из списка
+
             putExtra(ContactsContract.Intents.Insert.NAME, contact.name?.formattedName ?: "")
-            // Берем первый телефон из списка
+
             putExtra(ContactsContract.Intents.Insert.PHONE, contact.phones.firstOrNull()?.number ?: "")
-            // Берем первую почту
+
             putExtra(ContactsContract.Intents.Insert.EMAIL, contact.emails.firstOrNull()?.address ?: "")
         }
     }
@@ -163,18 +162,18 @@ class IntentLauncher(val context: Context){
         if (wifi == null) return
 
         try {
-            // 1. Создаем предложение сети через официальный Builder (без проверок на SDK)
+
             val suggestionBuilder = WifiNetworkSuggestion.Builder()
                 .setSsid(wifi.ssid ?: "")
 
-            // Настраиваем тип защиты (WPA/WEP)
+
             when (wifi.encryptionType) {
                 Barcode.WiFi.TYPE_WPA -> suggestionBuilder.setWpa2Passphrase(wifi.password ?: "")
                 Barcode.WiFi.TYPE_WEP -> suggestionBuilder.setWpa3Passphrase(wifi.password ?: "")
-                Barcode.WiFi.TYPE_OPEN -> { /* Открытая сеть */ }
+                Barcode.WiFi.TYPE_OPEN -> { /* Open Network */ }
             }
 
-            // 2. Упаковываем предложение в список и создаем интент шторки Android
+
             val list = arrayListOf(suggestionBuilder.build())
             val intent = Intent(Settings.ACTION_WIFI_ADD_NETWORKS).apply {
                 putParcelableArrayListExtra("android.provider.extra.WIFI_NETWORK_LIST", list)
@@ -184,17 +183,17 @@ class IntentLauncher(val context: Context){
             context.startActivity(intent)
 
         } catch (e: Exception) {
-            // Резервный вариант: если на прошивке нет шторки, просто открываем настройки Wi-Fi
+
             context.startActivity(Intent(Settings.ACTION_WIFI_SETTINGS))
         }
     }
     private fun convertToMillis(dateTime: Barcode.CalendarDateTime?): Long? {
         if (dateTime == null) return null
 
-        // Создаем экземпляр стандартного системного календаря
+
         val calendar = Calendar.getInstance()
 
-        // Заполняем его полями, которые мы увидели у вас на скриншоте (month в java-календаре идет от 0 до 11, поэтому делаем -1)
+
         calendar.set(
             dateTime.year,
             dateTime.month - 1,
@@ -204,20 +203,20 @@ class IntentLauncher(val context: Context){
             if (dateTime.seconds != -1) dateTime.seconds else 0
         )
 
-        return calendar.timeInMillis // Возвращаем чистый Long
+        return calendar.timeInMillis
     }
 
     private fun copyToClipBoard(barcode: Barcode){
         Log.d("text", "copyToClipBoard")
         val textToCopy = when (barcode.valueType) {
             Barcode.TYPE_WIFI -> barcode.wifi?.password ?: ""
-            Barcode.TYPE_URL -> barcode.url?.url ?: "" // Для ссылок копируем саму ссылку
+            Barcode.TYPE_URL -> barcode.url?.url ?: ""
             Barcode.TYPE_PHONE -> barcode.phone?.number ?: ""
             Barcode.TYPE_SMS,
             Barcode.TYPE_EMAIL,
             Barcode.TYPE_CALENDAR_EVENT,
             Barcode.TYPE_CONTACT_INFO -> getCleanTextForSharingAndCopying(barcode)
-            // Для остальных типов (или если данных нет) копируем то, что отображается на экране
+
             else -> barcode.displayValue ?: ""
         }
 
@@ -226,18 +225,16 @@ class IntentLauncher(val context: Context){
             return
         }
 
-        // 2. Получаем системный менеджер буфера обмена Android
+
         val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
 
-        // 3. Создаем контейнер с данными (ClipData)
-        // Первый параметр "QR_Code_Data" — это просто служебный ярлык (label) для системы
+
         val clip = ClipData.newPlainText("QR_Code_Data", textToCopy)
 
-        // 4. Кладем данные в буфер
+
         clipboard.setPrimaryClip(clip)
 
-        // 🟢 В Android 13+ система сама показывает красивое всплывающее окошко снизу
-        // при копировании, поэтому Toast можно показывать только для старых версий.
+
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
             Toast.makeText(context, context.getString(R.string.copied_to_clipboard), Toast.LENGTH_SHORT).show()
         }
@@ -245,7 +242,7 @@ class IntentLauncher(val context: Context){
     fun shareResult(barcode: Barcode) {
 
         when (barcode.valueType) {
-            // 🟢 1. ДЕЛИТЬСЯ КОНТАКТОМ КАК ВЗРОСЛОЙ ВИЗИТКОЙ (.vcf)
+
             Barcode.TYPE_CONTACT_INFO -> {
                 val vCardText = createVCardContent(barcode.contactInfo)
                 if (vCardText != null) {
@@ -254,7 +251,7 @@ class IntentLauncher(val context: Context){
                 }
             }
 
-            // 🟢 2. ДЕЛИТЬСЯ КАЛЕНДАРЕМ КАК ФАЙЛОМ СОБЫТИЯ (.ics)
+
             Barcode.TYPE_CALENDAR_EVENT -> {
                 val iCalText = createICalendarContent(barcode.calendarEvent)
                 if (iCalText != null) {
@@ -264,7 +261,7 @@ class IntentLauncher(val context: Context){
             }
         }
 
-        // 3. Резервный дефолтный вариант для остальных типов (делимся как обычным текстом)
+
         val shareText = getCleanTextForSharingAndCopying(barcode)
         val sendIntent = Intent(Intent.ACTION_SEND).apply {
             type = "text/plain"
@@ -273,32 +270,30 @@ class IntentLauncher(val context: Context){
         context.startActivity(Intent.createChooser(sendIntent, context.getString(R.string.share_via)))
     }
 
-    /**
-     * Универсальный метод для сохранения текста в файл и отправки через FileProvider
-     */
+
     private fun shareAsFile(fileContent: String, fileName: String, mimeType: String) {
         try {
-            // Создаем временный файл в кэш-папке приложения
+
             val cacheDir = context.cacheDir
             val sharedFile = File(cacheDir, fileName)
 
-            // Записываем данные в файл
+
             val writer = FileWriter(sharedFile)
             writer.write(fileContent)
             writer.close()
 
-            // 🟢 Превращаем файл в безопасный контентный URI через наш FileProvider
+
             val contentUri = FileProvider.getUriForFile(
                 context,
                 "${context.packageName}.fileprovider",
                 sharedFile
             )
 
-            // Строим интент отправки файла
+
             val sendIntent = Intent(Intent.ACTION_SEND).apply {
                 type = mimeType
-                putExtra(Intent.EXTRA_STREAM, contentUri) // Передаем сам файл, а не текст!
-                // Даем временные права принимающему приложению (Telegram, WhatsApp) на чтение этого файла
+                putExtra(Intent.EXTRA_STREAM, contentUri)
+
                 addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
             }
 
@@ -311,9 +306,7 @@ class IntentLauncher(val context: Context){
         }
     }
 
-    /**
-     * Генератор мирового стандарта vCard 3.0 для контактов
-     */
+
     private fun createVCardContent(contact: Barcode.ContactInfo?): String? {
         if (contact == null) return null
         val name = contact.name?.formattedName ?: context.getString(R.string.record_from_qr)
@@ -330,16 +323,14 @@ class IntentLauncher(val context: Context){
     """.trimIndent()
     }
 
-    /**
-     * Генератор мирового стандарта iCalendar для событий
-     */
+
     private fun createICalendarContent(calendarEvent: Barcode.CalendarEvent?): String? {
         if (calendarEvent == null) return null
         val summary = calendarEvent.summary ?: context.getString(R.string.event)
         val description = calendarEvent.description ?: ""
         val location = calendarEvent.location ?: ""
 
-        // Форматируем время в строковый стандарт ISO 8601 (Календарь требует именно текст вида 20260727T230000)
+
         val startStr = calendarEvent.start?.rawValue ?: ""
         val endStr = calendarEvent.end?.rawValue ?: ""
 
@@ -362,14 +353,14 @@ class IntentLauncher(val context: Context){
 
 
         return when (barcode.valueType) {
-            // Для Wi-Fi собираем понятный текст
+
             Barcode.TYPE_WIFI -> {
                 val ssid = barcode.wifi?.ssid ?: ""
                 val password = barcode.wifi?.password ?: context.getString(R.string.no_password)
                 "${context.getString(R.string.wi_fi_network)}:\n${context.getString(R.string.name)}: $ssid\n${context.getString(
                     R.string.password)}: $password"
             }
-            // For SMS
+
             Barcode.TYPE_SMS -> {
                 val sms = barcode.sms
                 val phone = sms?.phoneNumber ?: ""
@@ -377,7 +368,7 @@ class IntentLauncher(val context: Context){
                 "${context.getString(R.string.sms_message)}:\n${context.getString(R.string.to)}: $phone\n${context.getString(
                     R.string.text)}: $msg"
             }
-            // For Email
+
             Barcode.TYPE_EMAIL -> {
                 val email = barcode.email
                 val to = email?.address ?: ""
@@ -410,7 +401,7 @@ class IntentLauncher(val context: Context){
                 "${context.getString(R.string.calendar_end)}: $end }"
             }
 
-            // Для обычных ссылок, гео-координат и простого текста оставляем чистый сырой текст
+
             else -> barcode.displayValue ?: ""
         }
     }
@@ -420,7 +411,7 @@ class IntentLauncher(val context: Context){
 
         val calendar = Calendar.getInstance()
 
-        // Собираем дату из полей (месяц в Java/Kotlin Calendar идет от 0 до 11, поэтому делаем -1)
+
         calendar.set(
             dateTime.year,
             dateTime.month - 1,
@@ -430,7 +421,7 @@ class IntentLauncher(val context: Context){
             if (dateTime.seconds != -1) dateTime.seconds else 0
         )
 
-        // Задаем шаблон вывода. Смартфон сам подстроит локальные стандарты отображения времени.
+
         val formatter = SimpleDateFormat("dd.MM.yyyy HH:mm", Locale.getDefault())
         return formatter.format(calendar.time)
     }

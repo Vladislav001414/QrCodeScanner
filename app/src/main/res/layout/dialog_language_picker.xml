@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Handle bar для BottomSheet -->
+
         <View
             android:layout_width="32dp"
             android:layout_height="4dp"
@@ -27,7 +27,7 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <!-- Пустой RadioGroup, элементы создадим в коде -->
+
         <RadioGroup
             android:id="@+id/rgLanguages"
             android:layout_width="match_parent"

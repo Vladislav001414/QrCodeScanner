@@ -11,7 +11,7 @@ class QrCreatorAndInsertSharedVM: ViewModel() {
     private val _selectedType = MutableStateFlow<QrItemCreation>(QrItemCreation.TEXT)
     val selectedType: StateFlow<QrItemCreation> = _selectedType
 
-    // Метод для установки выбранного типа из Фрагмента 1
+
     fun selectQrType(type: QrItemCreation) {
         _selectedType.value = type
     }

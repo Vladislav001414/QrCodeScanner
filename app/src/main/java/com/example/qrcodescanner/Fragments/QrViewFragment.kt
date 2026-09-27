@@ -87,14 +87,12 @@ class QrViewFragment : Fragment() {
         }
 
 
-// Ваша сгенерированная картинка QR-кода
 
-// Слушатель для кнопки "Скачать"
         binding.btnDownload.setOnClickListener {
             currentQrBitmap?.let { QrHelper.saveQrToGallery(requireContext(), it) }
         }
 
-// Слушатель для кнопки "Поделиться"
+
         binding.btnShare.setOnClickListener {
             currentQrBitmap?.let { QrHelper.shareQrCode(requireContext(), it) }
         }
@@ -137,7 +135,6 @@ class QrViewFragment : Fragment() {
                             }
                         )
                     }
-
                 }
             }
         }

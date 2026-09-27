@@ -13,7 +13,6 @@ import com.example.qrcodescanner.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
- // Флаг, чтобы не ска
 
     lateinit var binding: ActivityMainBinding
 
@@ -28,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         binding.floatingBottomNav.setOnApplyWindowInsetsListener { view, insets ->
-            // Просто возвращаем инсеты дальше, не применяя padding к нашему меню
+
             insets
         }
 
@@ -36,10 +35,8 @@ class MainActivity : AppCompatActivity() {
             .findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         val navController = navHostFragment.navController
 
-        // 2. Связываем BottomNavigationView с NavController (Вся переключалка работает автоматически!)
         binding.floatingBottomNav.setupWithNavController(navController)
 
-        // 3. (Опционально) Прячем меню на экране ввода конкретной формы QR
         navController.addOnDestinationChangedListener { _, destination, _ ->
             if (destination.id == R.id.qrCreationFragment || destination.id == R.id.qrViewFragment)  {
                 binding.floatingBottomNav.visibility = View.GONE

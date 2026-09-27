@@ -25,7 +25,7 @@ class QrCodeAnalyzer(
     private val onQrCodeScanned: (BarcodeScanState) -> Unit
 ){
 
-    // Инициализируем сканер ML Kit с настройкой под QR-коды
+
 
     private val options = BarcodeScannerOptions.Builder().setBarcodeFormats(Barcode.FORMAT_ALL_FORMATS).build()
     private val scanner = BarcodeScanning.getClient(options)
@@ -100,18 +100,18 @@ class QrCodeAnalyzer(
         val qrText = barcode.rawValue ?: return
         val qrType = QrType.fromMlKitType(barcode.valueType)
         val displayText = when (barcode.valueType) {
-            // Если это Wi-Fi, выводим только имя сети! Никаких паролей и двоеточий.
+
             Barcode.TYPE_WIFI -> {
                 val wifiName = barcode.wifi?.ssid ?: R.string.unknown_wifi
                 "Wi-Fi: $wifiName"
             }
-            // Если это контакты, выводим имя человека
+
             Barcode.TYPE_CONTACT_INFO -> barcode.contactInfo?.name?.formattedName ?: qrText
-            // Для обычных ссылок и текстов оставляем как было
+
             else -> barcode.displayValue ?: qrText
         }
 
-        // Передаем готовый результат в тот же самый колбэк
+
         onQrCodeScanned(BarcodeScanState.Success(QrCodeResult(qrText, displayText, qrType, barcode)))
     }
 

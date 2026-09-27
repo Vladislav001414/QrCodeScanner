@@ -39,7 +39,7 @@ class QrViewSharedVM(private val repository: QrRepository) : ViewModel() {
         val id = qrItem.id
         val currentFavorite = !qrItem.favorite
 
-        // 1. Сразу обновляем StateFlow (UI мгновенно изменится)
+
         viewModelScope.launch {
             if (id != null) {
                 repository.updateFavoriteStatus(id, currentFavorite)

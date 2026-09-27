@@ -28,7 +28,7 @@ import java.util.Date
 import java.util.Locale
 import java.util.TimeZone
 
-// 1. URL Handler (item_url_type.xml)
+
 class UrlFormHandler(private val binding: ItemUrlTypeBinding) : QrFormHandler {
     override fun validateAndBuildPayload(): QrCodeInfo? {
         val url = binding.etInput.text.toString().trim()
@@ -43,7 +43,7 @@ class UrlFormHandler(private val binding: ItemUrlTypeBinding) : QrFormHandler {
     }
 }
 
-// 2. Text Handler (item_text_type.xml)
+
 class TextFormHandler(private val binding: ItemTextTypeBinding) : QrFormHandler {
     override fun validateAndBuildPayload(): QrCodeInfo? {
         val text = binding.etInput.text.toString().trim()
@@ -57,12 +57,12 @@ class TextFormHandler(private val binding: ItemTextTypeBinding) : QrFormHandler 
     }
 }
 
-// 3. Wi-Fi Handler (item_wifi_type.xml)
+
 class WifiFormHandler(private val binding: ItemWifiTypeBinding) : QrFormHandler {
     private var isPasswordVisible = false
 
     init {
-        // Логика переключения видимости пароля
+
         binding.btnTogglePassword.setOnClickListener {
             isPasswordVisible = !isPasswordVisible
             binding.etWifiPassword.transformationMethod = if (isPasswordVisible) {
@@ -125,7 +125,7 @@ class WifiFormHandler(private val binding: ItemWifiTypeBinding) : QrFormHandler 
     }
 }
 
-// 4. SMS Handler (item_sms_type.xml)
+
 class SmsFormHandler(private val binding: ItemSmsTypeBinding) : QrFormHandler {
     override fun validateAndBuildPayload(): QrCodeInfo? {
         val phone = binding.etSmsPhone.text.toString().trim()
@@ -143,7 +143,7 @@ class SmsFormHandler(private val binding: ItemSmsTypeBinding) : QrFormHandler {
     }
 }
 
-// 5. Phone Handler (item_phone_type.xml)
+
 class PhoneFormHandler(private val binding: ItemPhoneTypeBinding) : QrFormHandler {
     override fun validateAndBuildPayload(): QrCodeInfo? {
         val phone = binding.etPhoneNumber.text.toString().trim()
@@ -158,7 +158,7 @@ class PhoneFormHandler(private val binding: ItemPhoneTypeBinding) : QrFormHandle
     }
 }
 
-// 6. Email Handler (item_email_type.xml)
+
 class EmailFormHandler(private val binding: ItemEmailTypeBinding) : QrFormHandler {
     override fun validateAndBuildPayload(): QrCodeInfo? {
         val email = binding.etEmailAddress.text.toString().trim()
@@ -177,7 +177,7 @@ class EmailFormHandler(private val binding: ItemEmailTypeBinding) : QrFormHandle
     }
 }
 
-// 7. Contact / VCard Handler (item_contact_type.xml)
+
 class ContactFormHandler(private val binding: ItemContactTypeBinding) : QrFormHandler {
     override fun validateAndBuildPayload(): QrCodeInfo? {
         val fullName = binding.etFullName.text.toString().trim()
@@ -209,7 +209,7 @@ class ContactFormHandler(private val binding: ItemContactTypeBinding) : QrFormHa
     }
 }
 
-// 8. MyQR Handler (item_myqr_type.xml)
+
 class MyQrFormHandler(private val binding: ItemMyqrTypeBinding) : QrFormHandler {
     override fun validateAndBuildPayload(): QrCodeInfo? {
         val fullName = binding.etMyQrFullName.text.toString().trim()
@@ -242,7 +242,7 @@ class MyQrFormHandler(private val binding: ItemMyqrTypeBinding) : QrFormHandler 
     }
 }
 
-// 9. GPS Handler (item_gps_type.xml)
+
 class GpsFormHandler(private val binding: ItemGpsTypeBinding) : QrFormHandler {
     override fun validateAndBuildPayload(): QrCodeInfo? {
         val lat = binding.etLatitude.text.toString().trim()
@@ -266,7 +266,7 @@ class GpsFormHandler(private val binding: ItemGpsTypeBinding) : QrFormHandler {
     }
 }
 
-// 10. Event / VCalendar Handler (item_event_type.xml)
+
 class EventFormHandler(private val binding: ItemEventTypeBinding, private val fragmentManager: FragmentManager) : QrFormHandler {
     init {
         binding.etStartDate.setOnClickListener {

@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.Flow
 
 class QrRepository(private val dao: Dao) {
 
-    // Сохранить QR
+
     suspend fun saveQrCode(qrItem: QrCodeItemTable): Long {
         return dao.addNewQrItem(qrItem)
     }
@@ -41,7 +41,5 @@ class QrRepository(private val dao: Dao) {
     suspend fun saveDefProfileSettings(settings: ProfileTable){
         dao.addDefaultSettings(settings)
     }
-
-
 
 }

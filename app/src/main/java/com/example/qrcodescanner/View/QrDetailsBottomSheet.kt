@@ -38,17 +38,17 @@ class QrDetailsBottomSheet(
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Заполнение данных
+
         binding.tvSheetType.text = qrType
         binding.tvSheetContent.text = qrContent
         binding.tvSheetDate.text = qrDate
 
-        // Закрыть
+
         binding.btnSheetClose.setOnClickListener {
             dismiss()
         }
 
-        // Скопировать
+
         binding.btnSheetCopy.setOnClickListener {
             val clipboard = requireContext().getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
             val clip = ClipData.newPlainText("QR Content", qrContent)

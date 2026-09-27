@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Header -->
+
     <TextView
         android:id="@+id/tvMyQrTitle"
         android:layout_width="wrap_content"
@@ -19,7 +19,7 @@
         android:textSize="14sp"
         android:textStyle="bold" />
 
-    <!-- 1. Full Name -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
             android:textSize="14sp" />
     </RelativeLayout>
 
-    <!-- 2. Organization -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
             android:textSize="14sp" />
     </RelativeLayout>
 
-    <!-- 3. Phone Number -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -103,7 +103,7 @@
             android:textSize="14sp" />
     </RelativeLayout>
 
-    <!-- 4. Email -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -131,7 +131,7 @@
             android:textSize="14sp" />
     </RelativeLayout>
 
-    <!-- 5. Address -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -159,7 +159,7 @@
             android:textSize="14sp" />
     </RelativeLayout>
 
-    <!-- 6. Notes (Dynamic Height) -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

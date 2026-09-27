@@ -24,7 +24,7 @@
         android:paddingHorizontal="12dp"
         android:paddingVertical="10dp">
 
-        <!-- Иконка с аккуратным круглым фоном (36x36dp) -->
+
         <FrameLayout
             android:layout_width="36dp"
             android:layout_height="36dp"
@@ -39,7 +39,7 @@
                 tools:src="@drawable/baseline_link_24" />
         </FrameLayout>
 
-        <!-- Текст справа от иконки -->
+
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="0dp"
@@ -53,7 +53,7 @@
             android:textSize="14sp"
             tools:text="Website URL" />
 
-        <!-- Стрелочка справа для указания кликабельности -->
+
         <ImageView
             android:layout_width="16dp"
             android:layout_height="16dp"

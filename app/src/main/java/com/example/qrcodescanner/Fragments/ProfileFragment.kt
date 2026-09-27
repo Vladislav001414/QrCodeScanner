@@ -102,18 +102,18 @@ class ProfileFragment : Fragment() {
 
     private fun showLanguageDialog(currentLanguage: String) {
 
-        // Создаем и показываем диалог
+
         val dialog = LanguageBottomSheetDialog(
             currentLanguage = LanguageList.fromIsoCode(currentLanguage),
             availableLanguages = LanguageList.getAll()
         ) { selectedLanguage ->
-            // Это лямбда-колбэк: вызывается при выборе языка в диалоге
+
             viewModel.updateLanguage(selectedLanguage.getIsoCode())
             val appLocale = LocaleListCompat.forLanguageTags(selectedLanguage.getIsoCode())
             AppCompatDelegate.setApplicationLocales(appLocale)
         }
 
-        // Показываем диалог через childFragmentManager
+
         dialog.show(childFragmentManager, "LanguageBottomSheet")
     }
 }

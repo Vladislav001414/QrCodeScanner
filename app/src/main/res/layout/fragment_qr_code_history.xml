@@ -9,7 +9,7 @@
     android:paddingHorizontal="16dp"
     android:paddingTop="12dp">
 
-    <!-- Заголовок экрана -->
+
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
@@ -21,7 +21,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Компактные фильтры (Чипы) -->
+
     <HorizontalScrollView
         android:id="@+id/svFilters"
         android:layout_width="0dp"
@@ -103,7 +103,7 @@
         </com.google.android.material.chip.ChipGroup>
     </HorizontalScrollView>
 
-    <!-- Список QR-кодов -->
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewHistory"
         android:layout_width="0dp"
@@ -118,7 +118,7 @@
         app:layout_constraintTop_toBottomOf="@id/svFilters"
         tools:listitem="@layout/qr_history_item" />
 
-    <!-- Заглушка, если список пуст -->
+
     <TextView
         android:id="@+id/tvEmptyState"
         android:layout_width="wrap_content"
