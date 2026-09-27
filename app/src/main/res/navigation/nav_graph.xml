@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_scanner">
+
+    <fragment
+        android:id="@+id/nav_scanner"
+        android:name="com.example.qrcodescanner.Fragments.ScannerFragment"
+        android:label="Scanner" />
+
+    <fragment
+        android:id="@+id/nav_create"
+        android:name="com.example.qrcodescanner.Fragments.QrCreatorFragment"
+        android:label="Create" />
+    <fragment
+        android:id="@+id/qrCreationFragment"
+        android:name="com.example.qrcodescanner.Fragments.QrInsertDataFragment"
+        android:label="Create Form" />
+    <fragment
+        android:id="@+id/qrViewFragment"
+        android:name="com.example.qrcodescanner.Fragments.QrViewFragment"
+        android:label="View QR" />
+</navigation>

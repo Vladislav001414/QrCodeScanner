@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.QrCodeScanner" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.QrCodeScanner" parent="Base.Theme.QrCodeScanner" />
+
+        <!-- Стиль самого меню -->
+    <style name="CustomBottomNav" parent="Widget.Material3.BottomNavigationView">
+        <!-- Фон вокруг выбранной иконки (чип) -->
+        <item name="itemActiveIndicatorStyle">@style/CustomIndicator</item>
+        <!-- Цвет самого чипа -->
+        <item name="colorContainer">@color/primary</item> <!-- Наш пурпурный #8B5CF6 -->
+    </style>
+
+    <!-- Форма и вид активного чипа -->
+    <style name="CustomIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:width">64dp</item>
+        <item name="android:height">32dp</item>
+        <item name="marginHorizontal">12dp</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.App.Circular</item>
+    </style>
+
+    <!-- Закругление чипа (овальный) -->
+    <style name="ShapeAppearance.App.Circular" parent="ShapeAppearance.Material3.Corner.Full" />
+</resources>
+

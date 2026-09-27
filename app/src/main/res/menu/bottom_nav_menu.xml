@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_scanner"
+        android:icon="@drawable/baseline_qr_code_scanner_24"
+        android:title="Сканер" />
+
+    <item
+        android:id="@+id/nav_create"
+        android:icon="@drawable/baseline_qr_code_2_24"
+        android:title="Создать" />
+
+    <item
+        android:id="@+id/nav_history"
+        android:icon="@drawable/baseline_history_24"
+        android:title="История" />
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/baseline_person_outline_24"
+        android:title="Профиль" />
+
+</menu>

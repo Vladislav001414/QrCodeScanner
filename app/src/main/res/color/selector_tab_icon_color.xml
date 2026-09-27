@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Цвет для АКТИВНОЙ (выбранной) вкладки -->
+    <item android:state_selected="true" android:color="#00F2FE" />
+
+    <!-- Цвет для НЕАКТИВНОЙ вкладки (по умолчанию) -->
+    <item android:color="#8B949E" />
+</selector>

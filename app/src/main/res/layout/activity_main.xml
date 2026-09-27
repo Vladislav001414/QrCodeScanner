@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bannerAdContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph"/>
+
+
+    <FrameLayout
+        android:id="@+id/bannerAdContainer"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Здесь будет инициализироваться AdView (Yandex Ads / Google AdMob) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Рекламный баннер"
+            android:textColor="#757575"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/floatingBottomNav"
+        style="@style/CustomBottomNav"
+        android:layout_width="250dp"
+        android:layout_height="56dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_floating_nav"
+        android:elevation="8dp"
+        android:fitsSystemWindows="false"
+        android:paddingHorizontal="10dp"
+        app:backgroundTint="@color/surface_card"
+        app:itemGravity="center"
+        app:itemIconGravity="top"
+        app:itemIconTint="@color/bottom_nav_colors"
+        app:itemRippleColor="@color/secondary"
+        app:itemTextColor="@color/nav_icon_inactive"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toTopOf="@+id/bannerAdContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu"
+        app:paddingBottomSystemWindowInsets="false"
+        app:paddingTopSystemWindowInsets="false">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,176 @@
+<resources>
+    <string name="app_name">QrCode Scanner</string>
+    <string name="qr_type_url">URL</string>
+    <string name="qr_type_wifi">Wi-Fi</string>
+    <string name="qr_type_contact">Contact Info</string>
+    <string name="qr_type_phone">Phone Number</string>
+    <string name="qr_type_email">Email</string>
+    <string name="qr_type_sms">SMS Message</string>
+    <string name="qr_type_geo">Geographic Coordinates</string>
+    <string name="qr_type_calendar">Calendar Event</string>
+    <string name="qr_type_driver_license">Driver\'s License</string>
+    <string name="qr_type_product">Product Barcode</string>
+    <string name="qr_type_isbn">Book ISBN</string>
+    <string name="qr_type_text">Text</string>
+    <string name="qr_type_unknown">Unknown Type</string>
+    <string name="qr_type_vcard_title">Business Card (vCard)</string>
+    <string name="qr_type_mecard_title">Quick Contact</string>
+    <string name="error_qr_not_found">No QR code found</string>
+    <string name="error_gallery_scan_failed">Failed to scan the image. Please try again or select another photo.</string>
+        <!-- Статичные кнопки -->
+    <string name="action_share">Share</string>
+    <string name="action_copy">Copy</string>
+
+    <!-- Тексты для кнопки «Копировать» в зависимости от контекста -->
+
+    <!-- Динамические кнопки действий (Главные и дополнительные) -->
+    <string name="action_open_browser">Open in browser</string>
+    <string name="action_search_google">Search in Google</string>
+    <string name="action_connect_wifi">Connect to Wi-Fi</string>
+    <string name="action_add_contact">Add to contacts</string>
+    <string name="action_call_phone">Call</string>
+    <string name="action_send_sms">Send SMS</string>
+    <string name="action_send_email">Send email</string>
+    <string name="action_open_maps">Open in Maps</string>
+    <string name="action_add_calendar">Add to calendar</string>
+    <string name="action_find_product">Find product</string>
+
+    <string name="nothing_to_copy">Nothing to copy</string>
+    <string name="copied_to_clipboard">Copied to clipboard</string>
+    <string name="share_via">Share via…</string>
+    <string name="share_file">Share file…</string>
+
+    <!-- Ошибки -->
+    <string name="file_creation_error">Error creating file</string>
+
+    <!-- Сканирование и типы QR -->
+    <string name="record_from_qr">Scanned from QR</string>
+    <string name="event">Event</string>
+    <string name="text">Text</string>
+
+    <!-- Настройки Wi-Fi -->
+    <string name="wi_fi_network">Wi-Fi network</string>
+    <string name="no_password">No password</string>
+    <string name="password">Password</string>
+    <string name="unknown_wifi">Unknown Wi-Fi</string>
+
+    <!-- Почта и СМС -->
+    <string name="email">Email</string>
+    <string name="to">To</string>
+    <string name="subject">Subject</string>
+    <string name="sms_message">SMS message</string>
+
+    <!-- Контакты -->
+    <string name="contact">Contact</string>
+    <string name="name">Name</string>
+    <string name="contact_phone">Phone number</string>
+
+
+    <string name="calendar_summary">Title</string>
+    <string name="calendar_description">Description</string>
+    <string name="calendar_location">Location</string>
+    <string name="calendar_start">Start</string>
+    <string name="calendar_end">End</string>
+
+    <!-- Строки для контекстной кнопки копирования -->
+    <string name="copy_password">Copy Password</string>
+    <string name="copy_link">Copy Link</string>
+    <string name="copy_phone_number">Copy Phone Number</string>
+    <string name="copy_email">Copy Email</string>
+    <string name="copy_event_details">Copy Event Details</string>
+    <string name="copy_contact_name">Copy Contact Name</string>
+    <string name="copy_text">Copy Text</string>
+
+
+    <string name="contact_title">Contact Details</string>
+    <string name="contact_from_phonebook">Import from Contacts</string>
+    <string name="label_full_name">Full Name</string>
+    <string name="hint_full_name">John Doe</string>
+    <string name="label_organization">Organization</string>
+    <string name="hint_organization">Company Name</string>
+    <string name="label_phone_number">Phone Number</string>
+    <string name="hint_phone_number">+1 234 567 8900</string>
+    <string name="label_email">Email Address</string>
+    <string name="hint_email">example@mail.com</string>
+    <string name="label_address">Address</string>
+    <string name="hint_address">123 Street, City, Country</string>
+    <string name="label_notes">Notes</string>
+    <string name="hint_notes">Additional details...</string>
+
+    <string name="email_qr_title">Email Details</string>
+    <string name="label_email_address">Email Address</string>
+    <string name="hint_email_address">recipient@example.com</string>
+    <string name="label_email_subject">Subject</string>
+    <string name="hint_email_subject">Enter subject...</string>
+    <string name="label_email_body">Message Body</string>
+    <string name="hint_email_body">Enter message content...</string>
+
+
+    <string name="sms_qr_title">SMS Message</string>
+    <string name="label_sms_phone_number">Phone Number</string>
+    <string name="hint_sms_phone_number">+1 234 567 8900</string>
+    <string name="label_sms_message">Message</string>
+    <string name="hint_sms_message">Enter message content...</string>
+
+    <string name="gps_qr_title">GPS Location</string>
+    <string name="label_gps_latitude">Latitude</string>
+    <string name="hint_gps_latitude">e.g. 51.5074</string>
+    <string name="label_gps_longitude">Longitude</string>
+    <string name="hint_gps_longitude">e.g. -0.1278</string>
+    <string name="label_gps_query">Location Query / Name (Optional)</string>
+    <string name="hint_gps_query">e.g. Eiffel Tower, Paris</string>
+    <string name="btn_select_on_map">Pick Location on Map</string>
+    <string name="text_or">OR</string>
+
+    <string name="phone_qr_title">Phone Number</string>
+    <string name="label_phone_number_input">Phone Number</string>
+    <string name="hint_phone_number_input">+1 234 567 8900</string>
+
+    <string name="event_qr_title">Calendar Event</string>
+    <string name="label_event_title">Event Title</string>
+    <string name="hint_event_title">e.g. Team Meeting</string>
+    <string name="label_all_day">All-Day Event</string>
+    <string name="label_start_date">Start Date &amp; Time</string>
+    <string name="hint_start_date">Select start date</string>
+    <string name="label_end_date">End Date &amp; Time</string>
+    <string name="hint_end_date">Select end date</string>
+    <string name="label_event_location">Location</string>
+    <string name="hint_event_location">e.g. Office / Zoom Link</string>
+    <string name="label_event_description">Description</string>
+    <string name="hint_event_description">Add event details or notes...</string>
+
+    <string name="wifi_qr_title">Wi-Fi Network</string>
+    <string name="label_wifi_ssid">Network Name (SSID)</string>
+    <string name="hint_wifi_ssid">e.g. Home_Network</string>
+    <string name="label_wifi_password">Password</string>
+    <string name="hint_wifi_password">Enter Wi-Fi password</string>
+    <string name="label_wifi_encryption">Encryption Type</string>
+    <string name="label_wifi_hidden">Hidden Network</string>
+
+    <string-array name="wifi_encryption_types">
+        <item>WPA / WPA2</item>
+        <item>WPA3</item>
+        <item>WEP</item>
+        <item>None (Open)</item>
+    </string-array>
+
+    <!-- MyQR Form Strings -->
+    <string name="myqr_title">My Profile QR</string>
+    <string name="label_myqr_full_name">Full Name</string>
+    <string name="hint_myqr_full_name">John Doe</string>
+    <string name="label_myqr_organization">Organization</string>
+    <string name="hint_myqr_organization">Company Name</string>
+    <string name="label_myqr_phone_number">Phone Number</string>
+    <string name="hint_myqr_phone_number">+1 234 567 8900</string>
+    <string name="label_myqr_email">Email Address</string>
+    <string name="hint_myqr_email">example@mail.com</string>
+    <string name="label_myqr_address">Address</string>
+    <string name="hint_myqr_address">123 Street, City, Country</string>
+    <string name="label_myqr_notes">Notes</string>
+    <string name="hint_myqr_notes">Additional details...</string>
+
+    <!-- Main Generator Screen -->
+    <string name="create_qr_title">Create QR Code</string>
+    <string name="btn_generate_qr">Generate QR Code</string>
+
+</resources>

@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/scanner_bg_light"
+    android:fitsSystemWindows="false"
+    tools:context=".Fragments.ScannerFragment">
+
+
+    <!-- 1. Сканер камеры (на весь экран, под всеми элементами) -->
+    <!-- Можно заменить на androidx.camera.view.PreviewView для CameraX -->
+    <eightbitlab.com.blurview.BlurTarget
+        android:id="@+id/blurTarget"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/cameraPreviewView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:implementationMode="compatible"
+            app:overlay="@drawable/round_border_background">
+
+        </androidx.camera.view.PreviewView>
+
+        <com.example.qrcodescanner.View.ScannerOverlayView
+            android:id="@+id/scannerOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.example.qrcodescanner.View.ScannerOverlayView>
+
+    </eightbitlab.com.blurview.BlurTarget>
+
+    <!-- 2. Верхняя панель управления (Фонарик, Камера, Галерея) -->
+
+    <LinearLayout
+        android:id="@+id/topControlsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_rounded_controls"
+        android:backgroundTint="#1E202E"
+        android:elevation="4dp"
+        android:orientation="horizontal"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Кнопка фонарика -->
+        <ImageButton
+            android:id="@+id/btnFlashlight"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Включить фонарик"
+            android:src="@drawable/outline_flash_on_24"
+            app:tint="@color/text_primary" />
+
+        <!-- Кнопка переключения камеры -->
+        <ImageButton
+            android:id="@+id/btnSwitchCamera"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Развернуть камеру"
+            android:src="@drawable/outline_cameraswitch_24"
+            app:tint="@color/text_primary" />
+
+        <!-- Кнопка галереи -->
+        <ImageButton
+            android:id="@+id/btnGallery"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Выбрать из галереи"
+            android:src="@drawable/outline_insert_photo_24"
+            app:tint="@color/text_primary" />
+    </LinearLayout>
+
+    <!-- 3. Ползунок Зума (Вертикальный, аккуратный, справа) -->
+    <SeekBar
+        android:id="@+id/seekBarZoom"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-50dp"
+        android:max="100"
+        android:progress="0"
+        android:progressBackgroundTint="#2A2D3F"
+        android:rotation="270"
+        android:thumbTint="#C4B5FD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topControlsLayout" />
+
+    <!-- 4. Современное плавающее нижнее меню (Стиль One UI / iOS) -->
+
+
+    <!-- 5. Рекламный баннер (Прижат к самому низу экрана) -->
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/qrInfoCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="102dp"
+        android:visibility="visible"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/blurTarget"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeWidth="0dp">
+
+        <LinearLayout
+            android:id="@+id/shortQrInfoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:backgroundTint="@color/surface_card"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0"
+                android:src="@drawable/baseline_qr_code_scanner_24"
+                app:tint="@color/success"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/shortQrTypeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0"
+                android:text="Type:"
+                android:textColor="@color/success" />
+
+            <TextView
+                android:id="@+id/shortQrCodeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:autoLink="all"
+                android:ellipsize="end"
+                android:linksClickable="true"
+                android:maxLines="1"
+                android:text="TextView"
+                android:textColor="@color/success"
+                android:textColorLink="@color/success"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/moreOptionsBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0"
+                android:background="@drawable/bg_floating_nav"
+                android:backgroundTint="@color/surface_elevated"
+                android:src="@drawable/baseline_keyboard_arrow_up_24"
+                app:tint="@color/text_primary" />
+        </LinearLayout>
+
+        <eightbitlab.com.blurview.BlurView
+            android:id="@+id/blurview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:blurOverlayColor="#1E202E">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="30dp">
+
+                <TextView
+                    android:id="@+id/btnAction2TV"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Open link"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/btnQrAction2"
+                    app:layout_constraintStart_toStartOf="@+id/btnQrAction2"
+                    app:layout_constraintTop_toBottomOf="@+id/btnQrAction2" />
+
+                <ImageButton
+                    android:id="@+id/btnQrAction2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_floating_nav"
+                    android:backgroundTint="@color/surface_elevated"
+                    android:foregroundGravity="center"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/captive_portal_24px"
+                    app:tint="@color/text_primary"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@+id/btnQrAction1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+                <ImageButton
+                    android:id="@+id/closeOptionsBtn"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/bg_floating_nav"
+                    android:backgroundTint="@color/surface_elevated"
+                    android:padding="3dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/baseline_close_24"
+                    app:tint="@color/text_primary"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/btnShareTV"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Share"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/btnQrShareData"
+                    app:layout_constraintStart_toStartOf="@+id/btnQrShareData"
+                    app:layout_constraintTop_toBottomOf="@+id/btnQrShareData" />
+
+                <TextView
+                    android:id="@+id/btnAction1TV"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Open link"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/btnQrAction1"
+                    app:layout_constraintStart_toStartOf="@+id/btnQrAction1"
+                    app:layout_constraintTop_toBottomOf="@+id/btnQrAction1" />
+
+                <TextView
+                    android:id="@+id/btnCopyTV"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Copy"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/btnQrDataCopy"
+                    app:layout_constraintStart_toStartOf="@+id/btnQrDataCopy"
+                    app:layout_constraintTop_toBottomOf="@+id/btnQrDataCopy" />
+
+                <ImageButton
+                    android:id="@+id/btnQrAction1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_floating_nav"
+                    android:backgroundTint="@color/surface_elevated"
+                    android:foregroundGravity="center"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/captive_portal_24px"
+                    app:tint="@color/text_primary"
+                    app:layout_constraintEnd_toStartOf="@+id/btnQrDataCopy"
+                    app:layout_constraintStart_toEndOf="@+id/btnQrAction2"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+                <ImageButton
+                    android:id="@+id/btnQrDataCopy"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_floating_nav"
+                    android:backgroundTint="@color/surface_elevated"
+                    android:foregroundGravity="center"
+                    android:padding="10dp"
+                    android:rotationY="180"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/baseline_content_copy_24"
+                    app:tint="@color/text_primary"
+                    app:layout_constraintEnd_toStartOf="@+id/btnQrShareData"
+                    app:layout_constraintStart_toEndOf="@+id/btnQrAction1"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+                <ImageButton
+                    android:id="@+id/btnQrShareData"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_floating_nav"
+                    android:backgroundTint="@color/surface_elevated"
+                    android:foregroundGravity="center"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/baseline_share_24"
+                    app:tint="@color/text_primary"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btnQrDataCopy"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/baseline_qr_code_scanner_24"
+                    app:tint="#FFFFFF"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/qrTypeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center_vertical"
+                    android:text="QrType"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                    app:layout_constraintStart_toEndOf="@+id/imageView3"
+                    app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/round_border_background"
+                    android:backgroundTint="#2A2D3F"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                    tools:layout_editor_absoluteX="10dp">
+
+                    <TextView
+                        android:id="@+id/qrCodeTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:autoLink="all"
+                        android:ellipsize="end"
+                        android:linksClickable="true"
+                        android:text="https://www.qrcodescannertest.com"
+                        android:textColor="@color/text_primary"
+                        android:textColorLink="@color/secondary" />
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        app:tint="#FFFFFF" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </eightbitlab.com.blurview.BlurView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
