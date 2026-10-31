@@ -75,16 +75,16 @@ ani wysyłane na zewnątrz — cała logika działa lokalnie na urządzeniu.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/be6f7401-5a9a-4a5c-ae55-876333597897" width="23%">&nbsp;
-  <img src="https://github.com/user-attachments/assets/098cecbf-a30b-440f-ac16-b991059fa987" width="23%">&nbsp;
   <img src="https://github.com/user-attachments/assets/e5dfad05-f09e-4fd0-a87a-1ae586b3cc20" width="23%">&nbsp;
-  <img src="https://github.com/user-attachments/assets/9e7e64a7-56e3-41b5-8bab-888748c0f1ef" width="23%">
+  <img src="https://github.com/user-attachments/assets/098cecbf-a30b-440f-ac16-b991059fa987" width="23%">&nbsp;
+  <img src="https://github.com/user-attachments/assets/1576ad79-c4d7-4340-b256-e8c4af10cc3d" width="23%">
 </p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/36b69936-026c-4931-a731-02ab4bca9db9" width="23%">&nbsp;
   <img src="https://github.com/user-attachments/assets/f2c8d659-aeac-4500-b99e-4e78a1b20e29" width="23%">&nbsp;
+  <img src="https://github.com/user-attachments/assets/36b69936-026c-4931-a731-02ab4bca9db9" width="23%">&nbsp;
   <img src="https://github.com/user-attachments/assets/c34ca685-b937-43bf-b817-123ec503c3a5" width="23%">&nbsp;
-  <img src="https://github.com/user-attachments/assets/1576ad79-c4d7-4340-b256-e8c4af10cc3d" width="23%">
+  <img src="https://github.com/user-attachments/assets/9e7e64a7-56e3-41b5-8bab-888748c0f1ef" width="23%">
 </p>
 
 
