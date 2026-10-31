@@ -1,4 +1,4 @@
-<img width="1472" height="3111" alt="Screenshot_20261031_163656" src="https://github.com/user-attachments/assets/8206c128-99fa-4e89-bee4-3f7c38f46244" /># QrCode Scanner
+QrCode Scanner
 
 Natywna aplikacja Android do skanowania i generowania kodów QR / kodów kreskowych, 
 napisana w Kotlinie z wykorzystaniem architektury MVVM.
