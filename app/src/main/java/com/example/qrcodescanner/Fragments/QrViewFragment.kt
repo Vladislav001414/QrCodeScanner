@@ -5,6 +5,7 @@ import android.content.ClipboardManager
 import android.content.Context
 import android.graphics.Bitmap
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -111,12 +112,23 @@ class QrViewFragment : Fragment() {
 
                     qrViewItem?.let {
                         val payload = qrViewItem.rawValue
-                        currentQrBitmap = BarcodeGenerator.generateBarcode(
-                            payload,
-                            BarcodeFormat.QR_CODE,
-                            400,
-                            400
-                        )
+                        if (qrViewItem.qrType == "PRODUCT"){
+                            val barcode = Regex("barcode:([^;]+)", RegexOption.IGNORE_CASE).find(payload)?.groupValues?.get(1)?.trim() ?: ""
+                            currentQrBitmap = BarcodeGenerator.generateBarcode(
+                                barcode,
+                                BarcodeFormat.EAN_13,
+                                400,
+                                200
+                            )
+                        }
+                        else {
+                            currentQrBitmap = BarcodeGenerator.generateBarcode(
+                                payload,
+                                BarcodeFormat.QR_CODE,
+                                400,
+                                400
+                            )
+                        }
                         val clearQrInfo =
                             TextFormatHandler.formatRawPayload(requireContext(), payload)
                         binding.ivQrCode.setImageBitmap(currentQrBitmap)

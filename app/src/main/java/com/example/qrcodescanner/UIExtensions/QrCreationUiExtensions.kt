@@ -21,6 +21,7 @@ fun QrItemCreation.getIcon(): Int = when (this){
     QrItemCreation.LOCATION -> R.drawable.outline_fmd_good_24
     QrItemCreation.WIFI -> R.drawable.outline_wifi_24
     QrItemCreation.EVENT -> R.drawable.baseline_calendar_month_24
+    QrItemCreation.PRODUCT -> R.drawable.baseline_shopping_basket_24
 }
 
 @StringRes
@@ -35,20 +36,7 @@ fun QrItemCreation.getText(): Int = when (this){
     QrItemCreation.LOCATION -> R.string.qr_type_geo
     QrItemCreation.WIFI -> R.string.qr_type_wifi
     QrItemCreation.EVENT -> R.string.qr_type_calendar
-}
-
-@LayoutRes
-fun QrItemCreation.getLayout(): Int = when (this){
-    QrItemCreation.URL -> R.layout.item_url_type
-    QrItemCreation.TEXT -> R.layout.item_text_type
-    QrItemCreation.EMAIL -> R.layout.item_email_type
-    QrItemCreation.PHONE -> R.layout.item_phone_type
-    QrItemCreation.SMS -> R.layout.item_sms_type
-    QrItemCreation.VCARD -> R.layout.item_contact_type
-    QrItemCreation.MeCARD -> R.layout.item_myqr_type
-    QrItemCreation.LOCATION -> R.layout.item_gps_type
-    QrItemCreation.WIFI -> R.layout.item_wifi_type
-    QrItemCreation.EVENT -> R.layout.item_event_type
+    QrItemCreation.PRODUCT -> R.string.qr_type_product
 }
 
 @IdRes
@@ -63,6 +51,7 @@ fun QrItemCreation.getFormId(): Int = when (this) {
     QrItemCreation.MeCARD -> R.id.formMeCard
     QrItemCreation.LOCATION -> R.id.formLocation
     QrItemCreation.EVENT -> R.id.formEvent
+    QrItemCreation.PRODUCT -> TODO()
 }
 
 fun QrItemCreation.toDbKey(): String = when (this) {
@@ -76,6 +65,7 @@ fun QrItemCreation.toDbKey(): String = when (this) {
     QrItemCreation.LOCATION -> "LOCATION"
     QrItemCreation.WIFI -> "WIFI"
     QrItemCreation.EVENT -> "EVENT"
+    QrItemCreation.PRODUCT -> "PRODUCT"
 }
 
 fun QrItemCreation.Companion.fromString(type: String?): QrItemCreation = when (type) {
@@ -89,6 +79,7 @@ fun QrItemCreation.Companion.fromString(type: String?): QrItemCreation = when (t
     "LOCATION" -> QrItemCreation.LOCATION
     "WIFI" -> QrItemCreation.WIFI
     "EVENT" -> QrItemCreation.EVENT
+    "PRODUCT" -> QrItemCreation.PRODUCT
     else -> QrItemCreation.TEXT
 }
 

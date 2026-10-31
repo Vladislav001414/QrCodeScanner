@@ -15,7 +15,7 @@ enum class QrType(val mlKitType: Int, val keyToDB: String, @StringRes val string
     GEO(Barcode.TYPE_GEO,"LOCATION", R.string.qr_type_geo, QrAction.OpenMaps, QrAction.SearchInGoogle),
     CALENDAR(Barcode.TYPE_CALENDAR_EVENT,"EVENT", R.string.qr_type_calendar, QrAction.AddCalendar),
     DRIVER_LICENSE(Barcode.TYPE_DRIVER_LICENSE,"", R.string.qr_type_driver_license, QrAction.SearchInGoogle),
-    PRODUCT(Barcode.TYPE_PRODUCT,"", R.string.qr_type_product, QrAction.SearchInGoogle),
+    PRODUCT(Barcode.TYPE_PRODUCT,"PRODUCT", R.string.qr_type_product, QrAction.SearchInGoogle),
     ISBN(Barcode.TYPE_ISBN,"", R.string.qr_type_isbn, QrAction.SearchInGoogle),
     TEXT(Barcode.TYPE_TEXT,"TEXT", R.string.qr_type_text, QrAction.SearchInGoogle),
     UNKNOWN(-1, "",R.string.qr_type_unknown, QrAction.SearchInGoogle);

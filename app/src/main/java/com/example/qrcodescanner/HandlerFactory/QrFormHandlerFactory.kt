@@ -38,6 +38,7 @@ object QrFormHandlerFactory {
             QrItemCreation.MeCARD -> MyQrFormHandler(ItemMyqrTypeBinding.bind(containerView))
             QrItemCreation.LOCATION -> GpsFormHandler(ItemGpsTypeBinding.bind(containerView))
             QrItemCreation.EVENT -> EventFormHandler(ItemEventTypeBinding.bind(containerView), fragmentManager)
+            QrItemCreation.PRODUCT -> TODO()
         }
     }
 }

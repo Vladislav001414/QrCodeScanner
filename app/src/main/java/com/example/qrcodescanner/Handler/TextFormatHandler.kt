@@ -16,6 +16,7 @@ object TextFormatHandler {
             trimmed.startsWith("MATMSG:", ignoreCase = true) || trimmed.startsWith("mailto:", ignoreCase = true) -> parseEmail(context, trimmed)
             trimmed.startsWith("BEGIN:VEVENT", ignoreCase = true) -> parseEvent(context, trimmed)
             trimmed.startsWith("geo:", ignoreCase = true) -> parseGps(context, trimmed)
+            trimmed.startsWith("productName:", ignoreCase = true) -> parseBarcode(context, trimmed)
             else -> trimmed
         }
     }
@@ -94,5 +95,12 @@ object TextFormatHandler {
     private fun parseGps(context: Context, raw: String): String {
         val clean = raw.removePrefix("geo:")
         return "${context.getString(R.string.geolocation_label) }} $clean"
+    }
+
+    private fun parseBarcode(context: Context, raw: String): String{
+        val productName = Regex("productName:([^;]+)", RegexOption.IGNORE_CASE).find(raw)?.groupValues?.get(1) ?: context.getString(R.string.product_unnamed)
+        val barcode = Regex("barcode:([^;]+)", RegexOption.IGNORE_CASE).find(raw)?.groupValues?.get(1) ?: ""
+        return "${context.getString(R.string.label_product)}: $productName\n"+
+                "${context.getString(R.string.label_barcode)}: $barcode"
     }
 }

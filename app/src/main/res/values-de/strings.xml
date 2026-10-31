@@ -238,5 +238,16 @@
     <string name="qr_share_title">QR-Code teilen</string>
     <string name="qr_share_error">Fehler beim Teilen</string>
 
+    <string name="label_product">Produkt</string>
+    <string name="label_barcode">Barcode</string>
+
+
+    <string name="product_unnamed">Produkt ohne Namen</string>
+    <string name="error_product_not_found">Produkt nicht in der Datenbank gefunden.</string>
+    <string name="error_server_with_code">Keine Antwort vom Server.</string>
+    <string name="error_invalid_server_data">Serverdaten konnten nicht verarbeitet werden.</string>
+    <string name="error_empty_response">Der Server hat eine leere Antwort gesendet.</string>
+    <string name="error_network">Netzwerkfehler. Bitte versuchen Sie es später noch einmal.</string>
+
 
 </resources>

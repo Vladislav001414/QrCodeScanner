@@ -238,4 +238,14 @@
     <string name="qr_share_message">这是我的二维码：</string>
     <string name="qr_share_title">分享二维码</string>
     <string name="qr_share_error">分享失败</string>
+
+    <string name="label_product">商品</string>
+    <string name="label_barcode">条形码</string>
+
+    <string name="product_unnamed">未命名商品</string>
+    <string name="error_product_not_found">数据库中未找到商品。</string>
+    <string name="error_server_with_code">服务器无响应。</string>
+    <string name="error_invalid_server_data">解析服务器数据失败。</string>
+    <string name="error_empty_response">服务器返回空响应。</string>
+    <string name="error_network">网络错误。请稍后再试。</string>
 </resources>

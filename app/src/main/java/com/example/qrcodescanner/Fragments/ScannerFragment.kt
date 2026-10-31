@@ -4,7 +4,6 @@ import android.Manifest
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,7 +18,6 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.view.animation.PathInterpolatorCompat
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
@@ -34,7 +32,7 @@ import com.example.qrcodescanner.enumClass.QrType
 import com.example.qrcodescanner.R
 import com.example.qrcodescanner.VmFactory.ScannerFragmentVMFactory
 import com.example.qrcodescanner.ViewModel.ScannerFragmentViewModel
-import com.example.qrcodescanner.SealedInterface.BarcodeScanState
+import com.example.qrcodescanner.SealedInterface.QrCodeScanState
 import com.example.qrcodescanner.SealedInterface.FlashState
 import com.example.qrcodescanner.SealedInterface.QrAction
 import com.example.qrcodescanner.databinding.FragmentScannerBinding
@@ -219,7 +217,7 @@ class ScannerFragment : Fragment() {
                 fragmentVM.qrCodeEvent.collect { event ->
 
                     when (event) {
-                        is BarcodeScanState.Error -> {
+                        is QrCodeScanState.Error -> {
                             Toast.makeText(
                                 requireActivity(),
                                 getString(event.stringResId),
@@ -227,7 +225,7 @@ class ScannerFragment : Fragment() {
                             ).show()
                         }
 
-                        is BarcodeScanState.Success -> {
+                        is QrCodeScanState.Success -> {
 
                             val result = event.qrResult
                             var text = result.displayValue

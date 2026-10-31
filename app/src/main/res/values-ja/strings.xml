@@ -237,4 +237,14 @@
     <string name="qr_share_message">私のQRコードはこちらです：</string>
     <string name="qr_share_title">QRコードを共有</string>
     <string name="qr_share_error">共有に失敗しました</string>
+
+    <string name="label_product">商品</string>
+    <string name="label_barcode">バーコード</string>
+
+    <string name="product_unnamed">名前のない商品</string>
+    <string name="error_product_not_found">商品がデータベースに見つかりません。</string>
+    <string name="error_server_with_code">サーバーから応答がありません。</string>
+    <string name="error_invalid_server_data">サーバーデータの解析に失敗しました。</string>
+    <string name="error_empty_response">サーバーから空の応答が返されました。</string>
+    <string name="error_network">ネットワークエラー。しばらく経ってからもう一度お試しください。</string>
 </resources>

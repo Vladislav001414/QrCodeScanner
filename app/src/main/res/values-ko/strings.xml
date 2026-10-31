@@ -237,4 +237,14 @@
     <string name="qr_share_message">내 QR 코드입니다:</string>
     <string name="qr_share_title">QR 코드 공유</string>
     <string name="qr_share_error">공유 중 오류가 발생했습니다</string>
+
+    <string name="label_product">제품</string>
+    <string name="label_barcode">바코드</string>
+
+    <string name="product_unnamed">이름 없는 제품</string>
+    <string name="error_product_not_found">데이터베이스에서 제품을 찾을 수 없습니다.</string>
+    <string name="error_server_with_code">서버에서 응답이 없습니다.</string>
+    <string name="error_invalid_server_data">서버 데이터 파싱에 실패했습니다.</string>
+    <string name="error_empty_response">서버가 빈 응답을 반환했습니다.</string>
+    <string name="error_network">네트워크 오류. 나중에 다시 시도해 주세요.</string>
 </resources>

@@ -237,4 +237,14 @@
     <string name="qr_share_message">Вот мой QR-код:</string>
     <string name="qr_share_title">Поделиться QR-кодом</string>
     <string name="qr_share_error">Ошибка при попытке поделиться</string>
+
+    <string name="label_product">Товар</string>
+    <string name="label_barcode">Штрихкод</string>
+
+    <string name="product_unnamed">Товар без названия</string>
+    <string name="error_product_not_found">Товар не найден в базе данных.</string>
+    <string name="error_server_with_code">Нет ответа от сервера.</string>
+    <string name="error_invalid_server_data">Не удалось распознать данные от сервера.</string>
+    <string name="error_empty_response">Сервер прислал пустой ответ.</string>
+    <string name="error_network">Проблема с интернетом. Попробуйте позже.</string>
 </resources>

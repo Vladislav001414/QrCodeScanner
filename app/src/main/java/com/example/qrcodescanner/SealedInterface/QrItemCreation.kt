@@ -13,5 +13,7 @@ sealed interface QrItemCreation {
     data object WIFI: QrItemCreation
     data object EVENT: QrItemCreation
 
+    data object PRODUCT: QrItemCreation
+
     companion object
 }

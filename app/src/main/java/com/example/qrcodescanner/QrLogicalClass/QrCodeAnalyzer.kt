@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.Rect
 import android.net.Uri
 import android.util.Log
+import android.view.Display
 import androidx.annotation.OptIn
 import androidx.camera.core.ExperimentalGetImage
 import androidx.camera.core.ImageAnalysis
@@ -12,17 +13,24 @@ import androidx.camera.view.LifecycleCameraController
 import androidx.core.content.ContextCompat
 import com.example.qrcodescanner.DataClass.QrCodeResult
 import com.example.qrcodescanner.R
-import com.example.qrcodescanner.View.ScannerOverlayView
+import com.example.qrcodescanner.Repository.BarcodeRepository
+import com.example.qrcodescanner.Repository.QrRepository
 import com.example.qrcodescanner.SealedInterface.BarcodeScanState
+import com.example.qrcodescanner.View.ScannerOverlayView
+import com.example.qrcodescanner.SealedInterface.QrCodeScanState
 import com.example.qrcodescanner.enumClass.QrType
 import com.google.mlkit.vision.barcode.BarcodeScannerOptions
 import com.google.mlkit.vision.barcode.BarcodeScanning
 import com.google.mlkit.vision.barcode.common.Barcode
 import com.google.mlkit.vision.common.InputImage
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import okhttp3.Dispatcher
 
 class QrCodeAnalyzer(
     private val context: Context,
-    private val onQrCodeScanned: (BarcodeScanState) -> Unit
+    private val onQrCodeScanned: (QrCodeScanState) -> Unit
 ){
 
 
@@ -82,12 +90,12 @@ class QrCodeAnalyzer(
                         processDetectedBarcode(barcode)
                     }
                     else{
-                        onQrCodeScanned(BarcodeScanState.Error(R.string.error_qr_not_found))
+                        onQrCodeScanned(QrCodeScanState.Error(R.string.error_qr_not_found))
                     }
                 }
                 .addOnFailureListener { e ->
                     Log.e("QR_ANALYZER", "ML Kit failed to process image", e)
-                    onQrCodeScanned(BarcodeScanState.Error(R.string.error_gallery_scan_failed))
+                    onQrCodeScanned(QrCodeScanState.Error(R.string.error_gallery_scan_failed))
                 }
         }
         catch (e: Exception){
@@ -106,13 +114,28 @@ class QrCodeAnalyzer(
                 "Wi-Fi: $wifiName"
             }
 
+            Barcode.TYPE_PRODUCT -> {
+                Log.d("BarcodeScanner", "PRODUCT HAVE SCANNED")
+                val repository = BarcodeRepository()
+                repository.getDataFromBarcode(barcode.rawValue.toString(), onResult = { response->
+                    when(response){
+                        is BarcodeScanState.Success -> onQrCodeScanned(QrCodeScanState.Success(
+                            QrCodeResult("productName: ${response.productName}; barcode: $qrText", response.productName, qrType, barcode)))
+                        is BarcodeScanState.Error -> onQrCodeScanned(QrCodeScanState.Error(response.stringResId))
+                    }
+                    Log.d("BarcodeScanner", response.toString())
+                })
+                return
+            }
+
             Barcode.TYPE_CONTACT_INFO -> barcode.contactInfo?.name?.formattedName ?: qrText
 
             else -> barcode.displayValue ?: qrText
+
         }
 
 
-        onQrCodeScanned(BarcodeScanState.Success(QrCodeResult(qrText, displayText, qrType, barcode)))
+        onQrCodeScanned(QrCodeScanState.Success(QrCodeResult(qrText, displayText, qrType, barcode)))
     }
 
 

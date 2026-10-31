@@ -237,4 +237,15 @@
     <string name="qr_share_message">Aqui está o meu código QR:</string>
     <string name="qr_share_title">Compartilhar código QR</string>
     <string name="qr_share_error">Erro ao compartilhar o código QR</string>
+
+    <string name="label_product">Produto</string>
+    <string name="label_barcode">Código de barras</string>
+
+    <string name="product_unnamed">Produto sem nome</string>
+    <string name="error_product_not_found">Produto não encontrado no banco de dados.</string>
+    <string name="error_server_with_code">Sem resposta do servidor.</string>
+    <string name="error_invalid_server_data">Falha ao processar os dados do servidor.</string>
+    <string name="error_empty_response">O servidor retornou uma resposta vazia.</string>
+    <string name="error_network">Erro de rede. Por favor, tente novamente mais tarde.</string>
+
 </resources>

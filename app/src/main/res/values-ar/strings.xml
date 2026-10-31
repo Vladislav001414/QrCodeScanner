@@ -239,4 +239,16 @@
     <string name="qr_share_title">مشاركة رمز QR</string>
     <string name="qr_share_error">حدث خطأ أثناء المشاركة</string>
 
+    <string name="label_product">المنتج</string>
+    <string name="label_barcode">الباركود</string>
+
+
+    <string name="product_unnamed">منتج بدون اسم</string>
+    <string name="error_product_not_found">لم يتم العثور على المنتج في قاعدة البيانات.</string>
+    <string name="error_server_with_code">لا يوجد رد من الخادم.</string>
+    <string name="error_invalid_server_data">فشل تحليل بيانات الخادم.</string>
+    <string name="error_empty_response">أعاد الخادم استجابة فارغة.</string>
+    <string name="error_network">خطأ في الشبكة. يرجى المحاولة مرة أخرى لاحقاً.</string>
+
+
 </resources>

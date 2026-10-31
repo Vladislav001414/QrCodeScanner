@@ -258,4 +258,16 @@
     <string name="qr_share_title">Share QR code</string>
     <string name="qr_share_error">Error sharing QR code</string>
 
+    <string name="label_product">Product</string>
+    <string name="label_barcode">Barcode</string>
+
+
+    <string name="product_unnamed">Unnamed product</string>
+    <string name="error_product_not_found">Product not found in the database.</string>
+    <string name="error_server_with_code">No response from the server.</string>
+    <string name="error_invalid_server_data">Failed to parse server data.</string>
+    <string name="error_empty_response">The server returned an empty response.</string>
+    <string name="error_network">Network error. Please try again later.</string>
+
+
 </resources>

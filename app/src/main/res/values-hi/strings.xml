@@ -237,4 +237,14 @@
     <string name="qr_share_message">यह मेरा QR कोड है:</string>
     <string name="qr_share_title">QR कोड साझा करें</string>
     <string name="qr_share_error">साझा करने में त्रुटि हुई</string>
+
+    <string name="label_product">उत्पाद</string>
+    <string name="label_barcode">बारकोड</string>
+
+    <string name="product_unnamed">बिना नाम का उत्पाद</string>
+    <string name="error_product_not_found">उत्पाद डेटाबेस में नहीं मिला।</string>
+    <string name="error_server_with_code">सर्वर से कोई प्रतिक्रिया नहीं।</string>
+    <string name="error_invalid_server_data">सर्वर डेटा को पार्स करने में विफल।</string>
+    <string name="error_empty_response">सर्वर ने खाली प्रतिक्रिया दी।</string>
+    <string name="error_network">नेटवर्क त्रुटि। कृपया बाद में पुनः प्रयास करें।</string>
 </resources>

@@ -65,7 +65,12 @@ dependencies {
     implementation("com.journeyapps:zxing-android-embedded:4.3.0")
     implementation("com.google.android.material:material:1.12.0")
     implementation(libs.androidx.room.runtime)
-    implementation(libs.room.ktx) // Для поддержки Coroutines и Flow
+    implementation(libs.room.ktx)
+
+    implementation(platform(libs.okhttp.bom))
+    implementation(libs.okhttp)
+    implementation(libs.okhttp.logging)
+    // Для поддержки Coroutines и Flow
     ksp(libs.room.compiler)
 
     testImplementation(libs.junit)

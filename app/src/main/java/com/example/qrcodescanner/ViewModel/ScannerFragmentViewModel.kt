@@ -1,12 +1,13 @@
 package com.example.qrcodescanner.ViewModel
 
+import android.util.Log
 import androidx.camera.core.CameraSelector
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.qrcodescanner.DataBase.Tables.QrCodeItemTable
 import com.example.qrcodescanner.DataClass.QrCodeResult
 import com.example.qrcodescanner.Repository.QrRepository
-import com.example.qrcodescanner.SealedInterface.BarcodeScanState
+import com.example.qrcodescanner.SealedInterface.QrCodeScanState
 import com.example.qrcodescanner.SealedInterface.FlashState
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -23,8 +24,8 @@ class ScannerFragmentViewModel(val repository: QrRepository) : ViewModel() {
     private var isScanningAllowed = true
 
 
-    private val _qrCodeEvent = MutableSharedFlow<BarcodeScanState>()
-    val qrCodeEvent: SharedFlow<BarcodeScanState> = _qrCodeEvent.asSharedFlow()
+    private val _qrCodeEvent = MutableSharedFlow<QrCodeScanState>()
+    val qrCodeEvent: SharedFlow<QrCodeScanState> = _qrCodeEvent.asSharedFlow()
 
     private val _flashIsWorking = MutableStateFlow<FlashState>(FlashState.Disabled)
     val flashIsWorking: StateFlow<FlashState> = _flashIsWorking
@@ -34,7 +35,7 @@ class ScannerFragmentViewModel(val repository: QrRepository) : ViewModel() {
     val cameraSelector = _cameraSelector.asStateFlow()
 
 
-    fun onQrCodeDetected(qrResult: BarcodeScanState) {
+    fun onQrCodeDetected(qrResult: QrCodeScanState) {
 
         if (!isScanningAllowed) return
 
@@ -44,6 +45,7 @@ class ScannerFragmentViewModel(val repository: QrRepository) : ViewModel() {
 
         viewModelScope.launch {
 
+            Log.i("QrVMValue", qrResult.toString())
 
             _qrCodeEvent.emit(qrResult)
 

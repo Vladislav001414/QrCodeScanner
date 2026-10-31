@@ -3,11 +3,12 @@ package com.example.qrcodescanner.Repository
 import com.example.qrcodescanner.DataBase.Dao
 import com.example.qrcodescanner.DataBase.Tables.ProfileTable
 import com.example.qrcodescanner.DataBase.Tables.QrCodeItemTable
+import com.example.qrcodescanner.QrLogicalClass.BarcodeScanner
+import com.example.qrcodescanner.SealedInterface.BarcodeScanState
+import com.google.mlkit.vision.barcode.common.Barcode
 import kotlinx.coroutines.flow.Flow
 
 class QrRepository(private val dao: Dao) {
-
-
     suspend fun saveQrCode(qrItem: QrCodeItemTable): Long {
         return dao.addNewQrItem(qrItem)
     }
@@ -41,5 +42,4 @@ class QrRepository(private val dao: Dao) {
     suspend fun saveDefProfileSettings(settings: ProfileTable){
         dao.addDefaultSettings(settings)
     }
-
 }

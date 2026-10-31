@@ -238,4 +238,14 @@
     <string name="qr_share_message">Oto mój kod QR:</string>
     <string name="qr_share_title">Udostępnij kod QR</string>
     <string name="qr_share_error">Błąd podczas udostępniania</string>
+
+    <string name="label_product">Produkt</string>
+    <string name="label_barcode">Kod kreskowy</string>
+
+    <string name="product_unnamed">Produkt bez nazwy</string>
+    <string name="error_product_not_found">Nie znaleziono produktu w bazie danych.</string>
+    <string name="error_server_with_code">Brak odpowiedzi ze strony serwera.</string>
+    <string name="error_invalid_server_data">Nie udało się przetworzyć danych z serwera.</string>
+    <string name="error_empty_response">Serwer zwrócił pustą odpowiedź.</string>
+    <string name="error_network">Błąd sieci. Spróbuj ponownie później.</string>
 </resources>
