@@ -1,4 +1,4 @@
-# QrCode Scanner
+<img width="1472" height="3111" alt="Screenshot_20261031_163656" src="https://github.com/user-attachments/assets/8206c128-99fa-4e89-bee4-3f7c38f46244" /># QrCode Scanner
 
 Natywna aplikacja Android do skanowania i generowania kodów QR / kodów kreskowych, 
 napisana w Kotlinie z wykorzystaniem architektury MVVM.
@@ -71,20 +71,22 @@ Aplikacja wymaga dostępu do **kamery** (`android.permission.CAMERA`) — wyłą
 do skanowania kodów QR / kodów kreskowych. Żadne inne dane nie są zbierane 
 ani wysyłane na zewnątrz — cała logika działa lokalnie na urządzeniu.
 
-<img width="1472" height="3111" alt="Screenshot_20261031_163621" src="https://github.com/user-attachments/assets/c8ab1f21-d2ae-47c6-9a44-b556b8549c48" />
-<img width="1472" height="3111" alt="Screenshot_20261031_163612" src="https://github.com/user-attachments/assets/399c71d8-1743-47db-adc7-bda78612d1d4" />
-<img width="1472" height="3111" alt="Screenshot_20261031_163551" src="https://github.com/user-attachments/assets/cf218cb5-9e5b-4038-88e9-a742d4f81d80" />
-<img width="1472" height="3111" alt="Screenshot_20261031_163544" src="https://github.com/user-attachments/assets/31e8f1c1-50d9-482b-8d23-0949f51afa12" />
-<img width="1472" height="3111" alt="Screenshot_20261031_163535" src="https://github.com/user-attachments/assets/2fcdadde-4dd5-4af5-9287-d96cf383f20f" />
-<img width="1472" height="3111" alt="Screenshot_20261031_163430" src="https://github.com/user-attachments/assets/1098a070-a82b-470e-abb8-c5b5ae18a2b9" />
-<img width="1472" height="3111" alt="Screenshot_20261031_163416" src="https://github.com/user-attachments/assets/3aa1e828-7385-48ec-affc-c0b2d15e3838" />
-<img width="1472" height="3111" alt="Screenshot_20261031_163758" src="https://github.com/user-attachments/assets/83cccc94-3235-4065-935a-8c4c18be67ee" />
-<img width="1472" height="3111" alt="Screenshot_20261031_163752" src="https://github.com/user-attachments/assets/4632b62d-8423-4e37-9919-875fcee8013d" />
-<img width="1472" height="3111" alt="Screenshot_20261031_163714" src="https://github.com/user-attachments/assets/51d1ab3a-8062-4c20-af8c-fbec90239ee2" />
-<img width="1472" height="3111" alt="Screenshot_20261031_163707" src="https://github.com/user-attachments/assets/88d1e807-7c8f-4eec-a458-34e79dc3a43b" />
-<img width="1472" height="3111" alt="Screenshot_20261031_163656" src="https://github.com/user-attachments/assets/b849d892-ef39-4491-b52b-283cfd8148e4" />
-<img width="1472" height="3111" alt="Screenshot_20261031_163651" src="https://github.com/user-attachments/assets/3f3cc579-214b-4d90-a6ba-d22b97ffb390" />
-<img width="1472" height="3111" alt="Screenshot_20261031_163644" src="https://github.com/user-attachments/assets/89a034ec-1ed8-43a1-96f2-2a7c4e968530" />
-<img width="1472" height="3111" alt="Screenshot_20261031_163636" src="https://github.com/user-attachments/assets/96815244-49dc-4de7-9479-9c1ce20ac35e" />
-<img width="1472" height="3111" alt="Screenshot_20261031_163629" src="https://github.com/user-attachments/assets/a69d3ba4-0555-45ba-9c66-6665dc6ce2d3" />
+## Interfejs Aplikacji
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/be6f7401-5a9a-4a5c-ae55-876333597897" width="23%" alt="Экран 1">&nbsp;
+  <img src="https://github.com/user-attachments/assets/098cecbf-a30b-440f-ac16-b991059fa987" width="23%" alt="Экран 2">&nbsp;
+  <img src="https://github.com/user-attachments/assets/e5dfad05-f09e-4fd0-a87a-1ae586b3cc20" width="23%" alt="Экран 3">&nbsp;
+  <img src="https://github.com/user-attachments/assets/9e7e64a7-56e3-41b5-8bab-888748c0f1ef" width="23%" alt="Экран 4">
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/36b69936-026c-4931-a731-02ab4bca9db9" width="23%" alt="Экран 5">&nbsp;
+  <img src="https://github.com/user-attachments/assets/f2c8d659-aeac-4500-b99e-4e78a1b20e29" width="23%" alt="Экран 6">&nbsp;
+  <img src="https://github.com/user-attachments/assets/c34ca685-b937-43bf-b817-123ec503c3a5" width="23%" alt="Экран 7">&nbsp;
+  <img src="https://github.com/user-attachments/assets/1576ad79-c4d7-4340-b256-e8c4af10cc3d" width="23%" alt="Экран 8">
+</p>
+
+
+
 
