@@ -83,7 +83,7 @@ ani wysyłane na zewnątrz — cała logika działa lokalnie na urządzeniu.
 <p align="center">
   <img src="https://github.com/user-attachments/assets/f2c8d659-aeac-4500-b99e-4e78a1b20e29" width="23%">&nbsp;
   <img src="https://github.com/user-attachments/assets/36b69936-026c-4931-a731-02ab4bca9db9" width="23%">&nbsp;
-  <img src="https://github.com/user-attachments/assets/c34ca685-b937-43bf-b817-123ec503c3a5" width="23%">&nbsp;
+  <img src="https://github.com/user-attachments/assets/9bb3a0ad-372e-4bef-a33d-d9d1d376eb72" width="23%">&nbsp;
   <img src="https://github.com/user-attachments/assets/9e7e64a7-56e3-41b5-8bab-888748c0f1ef" width="23%">
 </p>
 
